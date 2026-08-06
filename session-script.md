@@ -20,9 +20,9 @@ Open with the *why* before any clicking:
 Mechanics to state:
 
 - Session is recorded; they keep the recording + the manual (show the three tabs).
-- Ground rule: interrupt freely. A "wait, go back" is data, not a derail.
+- Ground rule: interrupt freely. Every "wait, go back" tells us something worth writing down.
 - You (David) keep a visible running list — **"the remedy list"** — anything raised
-  gets written down in front of them. Nothing is promised in-session; it's triaged after.
+  gets written down in front of them. Don't promise anything in the room; we triage after.
 - Confirm the two `[confirm]` placeholders live, and fill them in the manual afterwards:
   - Juicebox support contact for content questions: ____________
   - Change-request channel (email? ticket?): ____________
@@ -153,7 +153,8 @@ Demo on the practice draft product, then one real product (e.g. TURBOPlane).
 
 ## 5 · Theme editor & the Module Guide tab (~15 min) — Manual §5, Modules tab
 
-The deepest water. Structure it as: *what's safe* → *what's data* → *what's ours*.
+This is the section most likely to lose people. Structure it as: *what's safe* →
+*what's data* → *what's ours*.
 
 - SHOW: Customize on the homepage.
   - Click a section, change a heading, DON'T save — show the preview updating live.
@@ -168,8 +169,8 @@ The deepest water. Structure it as: *what's safe* → *what's data* → *what's 
   - Do ONE metaobject edit live — an event or retailer is safest; story panels are the
     fiddliest, don't start there.
 - Be honest about metaobject forms.
-  - Functional but not lovely: long forms, every field visible whether relevant or not.
-  - Say we know — it's Shopify's editing surface, not something we misbuilt.
+  - They work, but they're clunky: long forms, every field visible whether relevant or not.
+  - Say we know — this is Shopify's editing surface; we didn't build it this way.
   - Watch their reaction during the live edit — if they recoil, remedy list (§8.2).
 - GUARDRAIL (non-negotiables, stated plainly):
   - Never Publish a different theme — that swaps the whole live site.
@@ -250,16 +251,16 @@ The deepest water. Structure it as: *what's safe* → *what's data* → *what's 
 
 ## 8 · The remedy list — seed it yourself (~10 min)
 
-Don't wait for them to find these; put our own known issues on the table first. It
-builds trust and models the candour we asked for. Each item: the headline, then
-bullets to speak to.
+Don't wait for them to find these; put our own known issues on the table first. If we
+go first with the awkward stuff, they'll follow — it proves we meant it when we asked
+them to be blunt. Each item: the headline, then bullets to speak to.
 
 1. **Story-article editability** — designed articles are Juicebox-gated today.
    - The polished stories (quote banners, carousels, video bands) come from structured
      layout data, not the Content box — that's what makes them look designed.
    - We prototyped admin-native block editing this month and rejected it: the editing
-     forms Shopify gives us are genuinely poor (every field visible on every block,
-     nothing rich-text where it matters). We'd rather be honest than ship you a bad tool.
+     forms Shopify gives us are poor (every field visible on every block, nothing
+     rich-text where it matters). We'd rather tell you that than ship you a bad tool.
    - Realistic options, in cost order: (a) you draft in ordinary posts, we "design
      them up" on a turnaround SLA; (b) a scheduled batch cadence — send us N stories a
      month; (c) budget a proper hosted editor later if volume justifies it.
@@ -269,8 +270,8 @@ bullets to speak to.
 2. **Metafield discoverability** — the "fields that don't look like fields."
    - Much of the richest content (story panels, clever bits, compatibility, short
      descriptions) hides behind View all / ⋮ → Edit metafields / Settings → Custom data.
-   - The risk isn't breaking things — it's editing the visible field, seeing nothing
-     change, and losing trust in the CMS.
+   - The real risk: they edit the visible field, nothing changes on the site, and
+     they stop trusting the CMS.
    - Candidate remedy: we pin the handful of fields you'll actually touch to the top of
      the product screen and unpin the plumbing. Cheap, high value.
    - ASK: "Which fields did you find yourself hunting for during the demos?" → pin list.
@@ -278,7 +279,8 @@ bullets to speak to.
 3. **The Content-box trap on designed pages.**
    - ~100 of the 134 pages have bespoke templates where the Content box is secondary
      or ignored (Sitemap tab shows exactly which).
-   - Editing the box on those pages does nothing visible — same trust-erosion risk.
+   - Editing the box on those pages does nothing visible — same risk of them losing
+     faith in the CMS.
    - Candidate remedies: a naming convention ("[designed]" prefix in the page title?);
      a one-line note in each affected page's body saying where the content really lives;
      or just the Sitemap tab as the reference. ASK: "What would have saved you?"
@@ -331,7 +333,8 @@ bullets to speak to.
 ## 9 · Wrap-up (~5 min)
 
 - Read back the remedy list, owners, dates.
-  - Every item aloud, with its owner's name — commitments made in the room stick.
+  - Every item aloud, with its owner's name — people keep commitments they made out
+    loud in front of colleagues.
   - Undecided items get an explicit "parked until <date>", not silence.
 - Restate the line (the manual's former summary now lives here, verbally):
   - Safe to edit yourselves: content — product/page/post text and images, prices, tags,
