@@ -1,0 +1,8712 @@
+[
+ {
+  "file": "_blocks.liquid",
+  "type": "_blocks",
+  "name": "Custom section",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "remove_vertical_spacing",
+    "type": "checkbox",
+    "label": "Remove vertical spacing"
+   },
+   {
+    "id": "remove_horizontal_spacing",
+    "type": "checkbox",
+    "label": "Remove horizontal spacing"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "@theme",
+    "name": null,
+    "nsettings": 0
+   },
+   {
+    "type": "@app",
+    "name": null,
+    "nsettings": 0
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "accordion-content.liquid",
+  "type": "accordion-content",
+  "name": "Accordion content",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "button_text",
+    "type": "text",
+    "label": "Button text"
+   },
+   {
+    "id": "button_url",
+    "type": "url",
+    "label": "Button link"
+   },
+   {
+    "id": "text_position",
+    "type": "select",
+    "label": "Text position"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   },
+   {
+    "id": "accordion_background",
+    "type": "color",
+    "label": "Accordion background"
+   },
+   {
+    "id": "accordion_text_color",
+    "type": "color",
+    "label": "Accordion text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "item",
+    "name": "Item",
+    "nsettings": 6
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "account-banner.liquid",
+  "type": "account-banner",
+  "name": "Account banner",
+  "presets": false,
+  "settings": [
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "image_size",
+    "type": "select",
+    "label": "Image size"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "overlay_color",
+    "type": "color",
+    "label": "Overlay"
+   },
+   {
+    "id": "overlay_opacity",
+    "type": "range",
+    "label": "Overlay opacity"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "announcement-bar.liquid",
+  "type": "announcement-bar",
+  "name": "Announcement bar",
+  "presets": false,
+  "settings": [
+   {
+    "id": "enable_sticky",
+    "type": "checkbox",
+    "label": "Enable sticky bar"
+   },
+   {
+    "id": "show_on_homepage_only",
+    "type": "checkbox",
+    "label": "Show on homepage only"
+   },
+   {
+    "id": "navigation_mode",
+    "type": "select",
+    "label": "Multiple message navigation"
+   },
+   {
+    "id": "autoplay",
+    "type": "checkbox",
+    "label": "Auto rotate between messages"
+   },
+   {
+    "id": "cycle_speed",
+    "type": "range",
+    "label": "Change messages every"
+   },
+   {
+    "id": "scrolling_speed",
+    "type": "range",
+    "label": "Scrolling speed"
+   },
+   {
+    "id": "text_size",
+    "type": "select",
+    "label": "Text size"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "message",
+    "name": "Message",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [
+   "sections/header-group.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "apps.liquid",
+  "type": "apps",
+  "name": "Apps",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "remove_vertical_spacing",
+    "type": "checkbox",
+    "label": "Remove vertical spacing"
+   },
+   {
+    "id": "remove_horizontal_spacing",
+    "type": "checkbox",
+    "label": "Remove horizontal spacing"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "@app",
+    "name": null,
+    "nsettings": 0
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-about-quote.liquid",
+  "type": "arb-about-quote",
+  "name": "About Quote",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "bio",
+    "type": "richtext",
+    "label": "Bio"
+   },
+   {
+    "id": "button_label",
+    "type": "text",
+    "label": "Button label"
+   },
+   {
+    "id": "button_link",
+    "type": "url",
+    "label": "Button link"
+   },
+   {
+    "id": "button_aria",
+    "type": "text",
+    "label": "Button accessibility label"
+   },
+   {
+    "id": "quote",
+    "type": "textarea",
+    "label": "Quote"
+   },
+   {
+    "id": "cite",
+    "type": "text",
+    "label": "Attribution"
+   },
+   {
+    "id": "portrait_image",
+    "type": "image_picker",
+    "label": "Wide photo (top)"
+   },
+   {
+    "id": "portrait_default",
+    "type": "text",
+    "label": "Wide photo fallback (asset filename)"
+   },
+   {
+    "id": "portrait_alt",
+    "type": "text",
+    "label": "Wide photo alt text"
+   },
+   {
+    "id": "detail_image",
+    "type": "image_picker",
+    "label": "Detail photo (bottom)"
+   },
+   {
+    "id": "detail_default",
+    "type": "text",
+    "label": "Detail photo fallback (asset filename)"
+   },
+   {
+    "id": "detail_alt",
+    "type": "text",
+    "label": "Detail photo alt text"
+   },
+   {
+    "id": "photos_label",
+    "type": "text",
+    "label": "Photo group accessibility label"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.artist.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.artist_detail_image",
+   "arbortech.artist_portrait",
+   "arbortech.artist_quote",
+   "arbortech.artist_quote_cite"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-artist-hero.liquid",
+  "type": "arb-artist-hero",
+  "name": "Artist Hero",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Background image"
+   },
+   {
+    "id": "default_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "script_text",
+    "type": "text",
+    "label": "Role eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "subline",
+    "type": "text",
+    "label": "Script subline"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "meta",
+    "name": "Meta item",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [
+   "templates/page.artist.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.artist_hero_image",
+   "arbortech.artist_meta",
+   "arbortech.artist_role",
+   "arbortech.artist_subline"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-artist-tools-choice.liquid",
+  "type": "arb-artist-tools-choice",
+  "name": "Artist Tools of Choice",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding top"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "body",
+    "type": "textarea",
+    "label": "Body"
+   },
+   {
+    "id": "cta_label",
+    "type": "text",
+    "label": "Button label"
+   },
+   {
+    "id": "cta_link",
+    "type": "url",
+    "label": "Button link"
+   },
+   {
+    "id": "rail_label",
+    "type": "text",
+    "label": "Product rail accessibility label"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "tool",
+    "name": "Tool",
+    "nsettings": 4
+   }
+  ],
+  "used_in": [
+   "templates/page.artist.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-artists-techniques.liquid",
+  "type": "arb-artists-techniques",
+  "name": "Techniques",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "technique",
+    "name": "Technique card",
+    "nsettings": 5
+   }
+  ],
+  "used_in": [
+   "templates/page.artist.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-bento-grid.liquid",
+  "type": "arb-bento-grid",
+  "name": "Bento Grid",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "featured_image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "featured_default_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "featured_eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "featured_title",
+    "type": "text",
+    "label": "Title"
+   },
+   {
+    "id": "featured_copy",
+    "type": "textarea",
+    "label": "Copy"
+   },
+   {
+    "id": "featured_link",
+    "type": "url",
+    "label": "Link"
+   },
+   {
+    "id": "artist_image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "artist_default_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "artist_eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "artist_title",
+    "type": "text",
+    "label": "Title"
+   },
+   {
+    "id": "artist_copy",
+    "type": "textarea",
+    "label": "Copy"
+   },
+   {
+    "id": "artist_link",
+    "type": "url",
+    "label": "Link"
+   },
+   {
+    "id": "event_image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "event_default_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "event_eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "event_title",
+    "type": "text",
+    "label": "Title"
+   },
+   {
+    "id": "event_date",
+    "type": "text",
+    "label": "Date"
+   },
+   {
+    "id": "event_location",
+    "type": "text",
+    "label": "Location"
+   },
+   {
+    "id": "event_link",
+    "type": "url",
+    "label": "Link"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/index.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-blog-posts-preview.liquid",
+  "type": "arb-blog-posts-preview",
+  "name": "Blog Posts Preview",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding top"
+   },
+   {
+    "id": "blog",
+    "type": "blog",
+    "label": "Blog"
+   },
+   {
+    "id": "articles_limit",
+    "type": "range",
+    "label": "Articles to show"
+   },
+   {
+    "id": "randomize",
+    "type": "checkbox",
+    "label": "Randomize selection"
+   },
+   {
+    "id": "aria_label",
+    "type": "text",
+    "label": "Section accessibility label"
+   },
+   {
+    "id": "empty_message",
+    "type": "text",
+    "label": "Empty state message"
+   },
+   {
+    "id": "feature_first_article",
+    "type": "checkbox",
+    "label": "Feature first blog post"
+   },
+   {
+    "id": "feature_article_background",
+    "type": "color",
+    "label": "Featured article background"
+   },
+   {
+    "id": "feature_article_text_color",
+    "type": "color",
+    "label": "Featured article text"
+   },
+   {
+    "id": "show_excerpt",
+    "type": "checkbox",
+    "label": "Show excerpt"
+   },
+   {
+    "id": "show_date",
+    "type": "checkbox",
+    "label": "Show date"
+   },
+   {
+    "id": "show_author",
+    "type": "checkbox",
+    "label": "Show author"
+   },
+   {
+    "id": "show_comments_count",
+    "type": "checkbox",
+    "label": "Show comments count"
+   },
+   {
+    "id": "show_category",
+    "type": "checkbox",
+    "label": "Show category"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.inspiration.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "banner.background_color",
+   "banner.text_color"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-breadcrumbs.liquid",
+  "type": "arb-breadcrumbs",
+  "name": "Breadcrumbs",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "home_label",
+    "type": "text",
+    "label": "Home link label"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "crumb",
+    "name": "Crumb",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [
+   "templates/blog.json",
+   "templates/collection.arbt-accessory-hub.json",
+   "templates/collection.arbt-masonry-trade.json",
+   "templates/collection.arbt-outdoor-grounds-care.json",
+   "templates/collection.arbt-power-carving.json",
+   "templates/collection.json",
+   "templates/page.arbt-power-carve-ball-gouge.json",
+   "templates/page.arbt-power-carve-contour-sander.json",
+   "templates/page.arbt-power-carve-industrial-woodcarver.json",
+   "templates/page.arbt-power-carve-mg1000-mini-grinder.json",
+   "templates/page.arbt-power-carve-mini-carver.json",
+   "templates/page.arbt-power-carve-mini-turbo.json",
+   "templates/page.arbt-power-carve-power-carving-unit.json",
+   "templates/page.arbt-power-carve-power-chisel.json",
+   "templates/page.arbt-power-carve-precision-carving-system.json",
+   "templates/page.arbt-power-carve-spheroplane.json",
+   "templates/page.arbt-power-carve-turbo-scraper.json",
+   "templates/page.arbt-power-carve-turbo-shaft.json",
+   "templates/page.arbt-power-carve-turboplane.json",
+   "templates/page.arbt-power-carve.json",
+   "templates/page.arbt-tool-resource.json",
+   "templates/page.arbt-tool-resources.json",
+   "templates/page.artist.json",
+   "templates/page.artists.json",
+   "templates/page.bounce-back-pages.json",
+   "templates/page.brick-and-block-repair.json",
+   "templates/page.community-projects.json",
+   "templates/page.contact.json",
+   "templates/page.detail-and-texturing.json",
+   "templates/page.edging-and-trenches.json",
+   "templates/page.events.json",
+   "templates/page.find-a-retailer.json",
+   "templates/page.furniture-and-sculpting.json",
+   "templates/page.heritage-masonry-repairs.json",
+   "templates/page.inspiration.json",
+   "templates/page.investors.json",
+   "templates/page.landscaping.json",
+   "templates/page.masonry.json",
+   "templates/page.our-story.json",
+   "templates/page.powered-by-dewalt.json",
+   "templates/page.projects.json",
+   "templates/page.research-and-development.json",
+   "templates/page.resource-hub.json",
+   "templates/page.shop-by-project.json",
+   "templates/page.spoon-and-bowl-carving.json",
+   "templates/page.staff-competition.json",
+   "templates/page.support.json",
+   "templates/page.sustainability-and-values.json",
+   "templates/page.technical-documents.json",
+   "templates/page.timber-landscaping.json",
+   "templates/page.tuckpointing-and-repointing.json",
+   "templates/page.turf-and-grounds-care.json",
+   "templates/page.who-we-are.json",
+   "templates/page.woodworking.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-card-grid.liquid",
+  "type": "arb-card-grid",
+  "name": "Card Grid",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "layout",
+    "type": "select",
+    "label": "Layout"
+   },
+   {
+    "id": "card_mode",
+    "type": "select",
+    "label": "Card mode"
+   },
+   {
+    "id": "card_play_label",
+    "type": "text",
+    "label": "Video card accessibility label"
+   },
+   {
+    "id": "close_label",
+    "type": "text",
+    "label": "Close video label"
+   },
+   {
+    "id": "grid_columns",
+    "type": "select",
+    "label": "Grid columns"
+   },
+   {
+    "id": "card_eyebrow_orange",
+    "type": "checkbox",
+    "label": "Orange card eyebrows"
+   },
+   {
+    "id": "paper_background",
+    "type": "checkbox",
+    "label": "Paper background"
+   },
+   {
+    "id": "show_header",
+    "type": "checkbox",
+    "label": "Show header"
+   },
+   {
+    "id": "header_layout",
+    "type": "select",
+    "label": "Header layout"
+   },
+   {
+    "id": "center_header",
+    "type": "checkbox",
+    "label": "Center header"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading accent"
+   },
+   {
+    "id": "description",
+    "type": "textarea",
+    "label": "Description"
+   },
+   {
+    "id": "button_label",
+    "type": "text",
+    "label": "Button label"
+   },
+   {
+    "id": "button_link",
+    "type": "url",
+    "label": "Button link"
+   },
+   {
+    "id": "empty_message",
+    "type": "text",
+    "label": "Empty state message"
+   },
+   {
+    "id": "featured_image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "featured_default_image",
+    "type": "text",
+    "label": "Default image filename"
+   },
+   {
+    "id": "featured_eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "featured_title",
+    "type": "text",
+    "label": "Title"
+   },
+   {
+    "id": "featured_text",
+    "type": "text",
+    "label": "Text"
+   },
+   {
+    "id": "featured_link_label",
+    "type": "text",
+    "label": "Link label"
+   },
+   {
+    "id": "featured_link",
+    "type": "url",
+    "label": "Link"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "card",
+    "name": "Card",
+    "nsettings": 7
+   }
+  ],
+  "used_in": [
+   "templates/index.json",
+   "templates/page.arbt-power-carve-ball-gouge.json",
+   "templates/page.arbt-power-carve-contour-sander.json",
+   "templates/page.arbt-power-carve-industrial-woodcarver.json",
+   "templates/page.arbt-power-carve-mg1000-mini-grinder.json",
+   "templates/page.arbt-power-carve-mini-carver.json",
+   "templates/page.arbt-power-carve-mini-turbo.json",
+   "templates/page.arbt-power-carve-power-carving-unit.json",
+   "templates/page.arbt-power-carve-power-chisel.json",
+   "templates/page.arbt-power-carve-precision-carving-system.json",
+   "templates/page.arbt-power-carve-spheroplane.json",
+   "templates/page.arbt-power-carve-turbo-scraper.json",
+   "templates/page.arbt-power-carve-turbo-shaft.json",
+   "templates/page.arbt-power-carve-turboplane.json",
+   "templates/page.bounce-back-pages.json",
+   "templates/page.brick-and-block-repair.json",
+   "templates/page.community-projects.json",
+   "templates/page.competitions.json",
+   "templates/page.detail-and-texturing.json",
+   "templates/page.edging-and-trenches.json",
+   "templates/page.furniture-and-sculpting.json",
+   "templates/page.guides.json",
+   "templates/page.heritage-masonry-repairs.json",
+   "templates/page.landscaping.json",
+   "templates/page.masonry.json",
+   "templates/page.spoon-and-bowl-carving.json",
+   "templates/page.stories.json",
+   "templates/page.timber-landscaping.json",
+   "templates/page.tuckpointing-and-repointing.json",
+   "templates/page.turf-and-grounds-care.json",
+   "templates/page.woodworking.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-clever-bits.liquid",
+  "type": "arb-clever-bits",
+  "name": "Clever Bits",
+  "presets": true,
+  "settings": [
+   {
+    "id": "content_source",
+    "type": "select",
+    "label": "Content source"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading (accent word)"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "feature",
+    "name": "Feature",
+    "nsettings": 4
+   }
+  ],
+  "used_in": [
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.clever_bits",
+   "arbortech.clever_bits_au",
+   "arbortech.clever_bits_ca",
+   "arbortech.clever_bits_de",
+   "arbortech.clever_bits_landscaping",
+   "arbortech.clever_bits_masonry",
+   "arbortech.clever_bits_us",
+   "arbortech.clever_bits_woodworking"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-clever-engineering.liquid",
+  "type": "arb-clever-engineering",
+  "name": "Promo Band",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "remove_bottom_padding",
+    "type": "checkbox",
+    "label": "Remove bottom padding"
+   },
+   {
+    "id": "content_alignment",
+    "type": "select",
+    "label": "Content position"
+   },
+   {
+    "id": "panel_segment",
+    "type": "select",
+    "label": "Panel segment"
+   },
+   {
+    "id": "show_eyebrow",
+    "type": "checkbox",
+    "label": "Show eyebrow"
+   },
+   {
+    "id": "show_heading",
+    "type": "checkbox",
+    "label": "Show heading"
+   },
+   {
+    "id": "show_body",
+    "type": "checkbox",
+    "label": "Show paragraph"
+   },
+   {
+    "id": "show_buttons",
+    "type": "checkbox",
+    "label": "Show buttons"
+   },
+   {
+    "id": "section_label",
+    "type": "text",
+    "label": "Section label (when heading hidden)"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "eyebrow_style",
+    "type": "select",
+    "label": "Eyebrow style"
+   },
+   {
+    "id": "eyebrow_background_color",
+    "type": "color",
+    "label": "Eyebrow background colour"
+   },
+   {
+    "id": "eyebrow_text_color",
+    "type": "color",
+    "label": "Eyebrow text colour"
+   },
+   {
+    "id": "heading_line1",
+    "type": "text",
+    "label": "Heading line 1"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading accent line"
+   },
+   {
+    "id": "heading_layout",
+    "type": "select",
+    "label": "Heading layout"
+   },
+   {
+    "id": "body",
+    "type": "textarea",
+    "label": "Paragraph"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "media_position",
+    "type": "select",
+    "label": "Image position"
+   },
+   {
+    "id": "primary_label",
+    "type": "text",
+    "label": "Primary button label"
+   },
+   {
+    "id": "primary_link",
+    "type": "url",
+    "label": "Primary button link"
+   },
+   {
+    "id": "secondary_label",
+    "type": "text",
+    "label": "Secondary button label"
+   },
+   {
+    "id": "secondary_link",
+    "type": "url",
+    "label": "Secondary button link"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/collection.arbt-masonry-trade.json",
+   "templates/collection.arbt-outdoor-grounds-care.json",
+   "templates/collection.arbt-power-carving.json",
+   "templates/index.json",
+   "templates/page.find-a-retailer.json",
+   "templates/page.inspiration.json",
+   "templates/page.landscaping.json",
+   "templates/page.masonry.json",
+   "templates/page.support.json",
+   "templates/page.who-we-are.json",
+   "templates/page.woodworking.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-events-calendar.liquid",
+  "type": "arb-events-calendar",
+  "name": "Events Calendar",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading accent"
+   },
+   {
+    "id": "text",
+    "type": "textarea",
+    "label": "Text"
+   },
+   {
+    "id": "timezone",
+    "type": "text",
+    "label": "Calendar timezone"
+   },
+   {
+    "id": "fallback_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "max_events",
+    "type": "range",
+    "label": "Maximum events"
+   },
+   {
+    "id": "card_button_label",
+    "type": "text",
+    "label": "Default card button label"
+   },
+   {
+    "id": "no_events_text",
+    "type": "text",
+    "label": "No events text"
+   },
+   {
+    "id": "show_location",
+    "type": "checkbox",
+    "label": "Show event location"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/index.json",
+   "templates/page.events.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": [
+   "arb_event"
+  ]
+ },
+ {
+  "file": "arb-faq.liquid",
+  "type": "arb-faq",
+  "name": "FAQ Accordion",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading accent (orange)"
+   },
+   {
+    "id": "body",
+    "type": "textarea",
+    "label": "Body text"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "item",
+    "name": "FAQ item",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [
+   "templates/page.support.json",
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.faq_body",
+   "arbortech.faq_heading",
+   "arbortech.faq_heading_accent",
+   "arbortech.faqs"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-feature-tool.liquid",
+  "type": "arb-feature-tool",
+  "name": "Featured Tool",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "intro_eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "intro_heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "intro_heading_accent",
+    "type": "text",
+    "label": "Heading accent"
+   },
+   {
+    "id": "intro_text",
+    "type": "textarea",
+    "label": "Text"
+   },
+   {
+    "id": "intro_image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "intro_default_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "detail_eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "detail_heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "product",
+    "type": "product",
+    "label": "Product"
+   },
+   {
+    "id": "detail_text",
+    "type": "textarea",
+    "label": "Text"
+   },
+   {
+    "id": "button_label",
+    "type": "text",
+    "label": "Button label"
+   },
+   {
+    "id": "button_link",
+    "type": "url",
+    "label": "Button link"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "check",
+    "name": "Checklist item",
+    "nsettings": 1
+   },
+   {
+    "type": "side_product",
+    "name": "Side product",
+    "nsettings": 8
+   }
+  ],
+  "used_in": [],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-featured-guide.liquid",
+  "type": "arb-featured-guide",
+  "name": "Featured Guide",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Background image"
+   },
+   {
+    "id": "default_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Title"
+   },
+   {
+    "id": "copy",
+    "type": "textarea",
+    "label": "Copy"
+   },
+   {
+    "id": "link",
+    "type": "url",
+    "label": "Link (default fallback)"
+   },
+   {
+    "id": "link_au",
+    "type": "url",
+    "label": "Australia (AU)"
+   },
+   {
+    "id": "link_us",
+    "type": "url",
+    "label": "United States (US)"
+   },
+   {
+    "id": "link_gb",
+    "type": "url",
+    "label": "United Kingdom (GB)"
+   },
+   {
+    "id": "link_de",
+    "type": "url",
+    "label": "Germany (DE)"
+   },
+   {
+    "id": "link_ca",
+    "type": "url",
+    "label": "Canada (CA)"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/index.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-featured-product.liquid",
+  "type": "arb-featured-product",
+  "name": "Featured Carousel",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "min_height",
+    "type": "range",
+    "label": "Minimum height (desktop)"
+   },
+   {
+    "id": "background_color",
+    "type": "color",
+    "label": "Background color"
+   },
+   {
+    "id": "background_image",
+    "type": "image_picker",
+    "label": "Background image"
+   },
+   {
+    "id": "radial_gradient_color",
+    "type": "color",
+    "label": "Radial gradient color"
+   },
+   {
+    "id": "autoplay",
+    "type": "checkbox",
+    "label": "Auto-rotate slides"
+   },
+   {
+    "id": "cycle_speed",
+    "type": "range",
+    "label": "Change slides every"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "slide",
+    "name": "Slide",
+    "nsettings": 9
+   }
+  ],
+  "used_in": [
+   "templates/index.json",
+   "templates/page.landscaping.json",
+   "templates/page.masonry.json",
+   "templates/page.woodworking.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-footer.liquid",
+  "type": "arb-footer",
+  "name": "Footer",
+  "presets": true,
+  "settings": [
+   {
+    "id": "facebook_url",
+    "type": "url",
+    "label": "Facebook URL"
+   },
+   {
+    "id": "instagram_url",
+    "type": "url",
+    "label": "Instagram URL"
+   },
+   {
+    "id": "youtube_url",
+    "type": "url",
+    "label": "YouTube URL"
+   },
+   {
+    "id": "show_signup",
+    "type": "checkbox",
+    "label": "Show signup"
+   },
+   {
+    "id": "signup_eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "signup_heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "signup_text",
+    "type": "text",
+    "label": "Text"
+   },
+   {
+    "id": "signup_select_label",
+    "type": "text",
+    "label": "Category select label"
+   },
+   {
+    "id": "signup_categories",
+    "type": "text",
+    "label": "Categories (comma-separated)"
+   },
+   {
+    "id": "logo",
+    "type": "image_picker",
+    "label": "Logo"
+   },
+   {
+    "id": "brand_text",
+    "type": "text",
+    "label": "Brand statement"
+   },
+   {
+    "id": "legal_menu",
+    "type": "link_list",
+    "label": "Legal menu"
+   },
+   {
+    "id": "legal_menu_de",
+    "type": "link_list",
+    "label": "Legal menu (German)"
+   },
+   {
+    "id": "copyright_text",
+    "type": "text",
+    "label": "Copyright text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "menu",
+    "name": "Link column",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [
+   "sections/footer-group.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-hero-carousel.liquid",
+  "type": "arb-hero-carousel",
+  "name": "Hero Carousel",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "min_height",
+    "type": "range",
+    "label": "Minimum height (desktop)"
+   },
+   {
+    "id": "show_scribble",
+    "type": "checkbox",
+    "label": "Show scribble decoration"
+   },
+   {
+    "id": "autoplay",
+    "type": "checkbox",
+    "label": "Auto rotate between slides"
+   },
+   {
+    "id": "cycle_speed",
+    "type": "range",
+    "label": "Change slides every"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "slide",
+    "name": "Slide",
+    "nsettings": 12
+   }
+  ],
+  "used_in": [
+   "templates/index.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-image-carousel.liquid",
+  "type": "arb-image-carousel",
+  "name": "Image Carousel",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "copy",
+    "type": "textarea",
+    "label": "Copy"
+   },
+   {
+    "id": "autoplay",
+    "type": "checkbox",
+    "label": "Auto-rotate slides"
+   },
+   {
+    "id": "autoplay_speed",
+    "type": "range",
+    "label": "Auto-rotate speed"
+   },
+   {
+    "id": "aria_label",
+    "type": "text",
+    "label": "Carousel aria-label"
+   },
+   {
+    "id": "controls_label",
+    "type": "text",
+    "label": "Controls aria-label"
+   },
+   {
+    "id": "previous_label",
+    "type": "text",
+    "label": "Previous label"
+   },
+   {
+    "id": "next_label",
+    "type": "text",
+    "label": "Next label"
+   },
+   {
+    "id": "slide_label",
+    "type": "text",
+    "label": "Slide label prefix"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "slide",
+    "name": "Slide",
+    "nsettings": 5
+   }
+  ],
+  "used_in": [
+   "templates/page.our-story.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-inspiration-hub-nav.liquid",
+  "type": "arb-inspiration-hub-nav",
+  "name": "Inspiration Hub Menu",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "card_cta_label",
+    "type": "text",
+    "label": "Default button label"
+   },
+   {
+    "id": "aria_label",
+    "type": "text",
+    "label": "Section accessibility label"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "card",
+    "name": "Nav card",
+    "nsettings": 7
+   }
+  ],
+  "used_in": [
+   "templates/page.support.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-main-product.liquid",
+  "type": "arb-main-product",
+  "name": "Main Product",
+  "presets": true,
+  "settings": [
+   {
+    "id": "configurator_eyebrow",
+    "type": "text",
+    "label": "Configurator eyebrow"
+   },
+   {
+    "id": "market_voltage_eyebrow",
+    "type": "text",
+    "label": "Market voltage eyebrow"
+   },
+   {
+    "id": "tagline",
+    "type": "text",
+    "label": "Short tagline (2 lines)"
+   },
+   {
+    "id": "fallback_vendor",
+    "type": "text",
+    "label": "Vendor (fallback)"
+   },
+   {
+    "id": "fallback_title",
+    "type": "text",
+    "label": "Title (fallback)"
+   },
+   {
+    "id": "fallback_price",
+    "type": "text",
+    "label": "Price (fallback)"
+   },
+   {
+    "id": "show_stock_indicator",
+    "type": "checkbox",
+    "label": "Show stock indicator"
+   },
+   {
+    "id": "low_inventory_threshold",
+    "type": "range",
+    "label": "Low-stock threshold"
+   },
+   {
+    "id": "show_dynamic_checkout",
+    "type": "checkbox",
+    "label": "Show dynamic checkout button"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "feature",
+    "name": "Feature item",
+    "nsettings": 3
+   }
+  ],
+  "used_in": [
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.bundle_setup_value",
+   "arbortech.configurator_family",
+   "arbortech.legacy_kentico_au_url",
+   "arbortech.legacy_kentico_ca_url",
+   "arbortech.legacy_kentico_de_url",
+   "arbortech.legacy_kentico_sku",
+   "arbortech.legacy_kentico_url",
+   "arbortech.legacy_kentico_us_url"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-our-story-text.liquid",
+  "type": "arb-our-story-text",
+  "name": "Story Text / Prose Column",
+  "presets": true,
+  "settings": [
+   {
+    "id": "layout",
+    "type": "select",
+    "label": "Layout"
+   },
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding top"
+   },
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "centered",
+    "type": "checkbox",
+    "label": "Center content"
+   },
+   {
+    "id": "remove_bottom_padding",
+    "type": "checkbox",
+    "label": "Remove bottom padding"
+   },
+   {
+    "id": "content",
+    "type": "html",
+    "label": "Content"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading accent (orange, line 2)"
+   },
+   {
+    "id": "primary_label",
+    "type": "text",
+    "label": "Primary button label"
+   },
+   {
+    "id": "primary_link",
+    "type": "url",
+    "label": "Primary button link"
+   },
+   {
+    "id": "secondary_label",
+    "type": "text",
+    "label": "Secondary button label"
+   },
+   {
+    "id": "secondary_link",
+    "type": "url",
+    "label": "Secondary button link"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "paragraph",
+    "name": "Paragraph",
+    "nsettings": 1
+   }
+  ],
+  "used_in": [
+   "templates/page.arbt-power-carve-ball-gouge.json",
+   "templates/page.arbt-power-carve-contour-sander.json",
+   "templates/page.arbt-power-carve-industrial-woodcarver.json",
+   "templates/page.arbt-power-carve-mg1000-mini-grinder.json",
+   "templates/page.arbt-power-carve-mini-carver.json",
+   "templates/page.arbt-power-carve-mini-turbo.json",
+   "templates/page.arbt-power-carve-power-carving-unit.json",
+   "templates/page.arbt-power-carve-power-chisel.json",
+   "templates/page.arbt-power-carve-precision-carving-system.json",
+   "templates/page.arbt-power-carve-spheroplane.json",
+   "templates/page.arbt-power-carve-turbo-scraper.json",
+   "templates/page.arbt-power-carve-turbo-shaft.json",
+   "templates/page.arbt-power-carve-turboplane.json",
+   "templates/page.brick-and-block-repair.json",
+   "templates/page.community-projects.json",
+   "templates/page.detail-and-texturing.json",
+   "templates/page.edging-and-trenches.json",
+   "templates/page.furniture-and-sculpting.json",
+   "templates/page.heritage-masonry-repairs.json",
+   "templates/page.investors.json",
+   "templates/page.our-story.json",
+   "templates/page.research-and-development.json",
+   "templates/page.shop-by-project.json",
+   "templates/page.spoon-and-bowl-carving.json",
+   "templates/page.staff-competition.json",
+   "templates/page.sustainability-and-values.json",
+   "templates/page.technical-documents.json",
+   "templates/page.timber-landscaping.json",
+   "templates/page.tuckpointing-and-repointing.json",
+   "templates/page.turf-and-grounds-care.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-our-story.liquid",
+  "type": "arb-our-story",
+  "name": "Our Story",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "show_intro",
+    "type": "checkbox",
+    "label": "Show intro"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading_line1",
+    "type": "text",
+    "label": "Heading line 1"
+   },
+   {
+    "id": "heading_line2",
+    "type": "text",
+    "label": "Heading line 2 (accent)"
+   },
+   {
+    "id": "intro_copy",
+    "type": "textarea",
+    "label": "Intro copy"
+   },
+   {
+    "id": "cta_label",
+    "type": "text",
+    "label": "Button label"
+   },
+   {
+    "id": "cta_link",
+    "type": "url",
+    "label": "Button link"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "milestone",
+    "name": "Milestone",
+    "nsettings": 7
+   }
+  ],
+  "used_in": [
+   "templates/index.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-page-next-nav.liquid",
+  "type": "arb-page-next-nav",
+  "name": "Page Next Nav",
+  "presets": true,
+  "settings": [
+   {
+    "id": "next_page",
+    "type": "select",
+    "label": "Next page"
+   },
+   {
+    "id": "custom_title",
+    "type": "text",
+    "label": "Custom title"
+   },
+   {
+    "id": "custom_link",
+    "type": "url",
+    "label": "Custom link"
+   },
+   {
+    "id": "theme",
+    "type": "select",
+    "label": "Theme"
+   },
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.investors.json",
+   "templates/page.our-story.json",
+   "templates/page.research-and-development.json",
+   "templates/page.sustainability-and-values.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-parallax-quote.liquid",
+  "type": "arb-parallax-quote",
+  "name": "Parallax Quote",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Background image"
+   },
+   {
+    "id": "default_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "show_quote_decoration",
+    "type": "checkbox",
+    "label": "Show dash and quotation mark"
+   },
+   {
+    "id": "quote",
+    "type": "textarea",
+    "label": "Quote"
+   },
+   {
+    "id": "paragraph",
+    "type": "textarea",
+    "label": "Supporting paragraph"
+   },
+   {
+    "id": "link_label",
+    "type": "text",
+    "label": "Button label"
+   },
+   {
+    "id": "link_url",
+    "type": "text",
+    "label": "Button link"
+   },
+   {
+    "id": "name",
+    "type": "text",
+    "label": "Attribution name"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Attribution title"
+   },
+   {
+    "id": "parallax_start",
+    "type": "range",
+    "label": "Parallax start offset"
+   },
+   {
+    "id": "parallax_end",
+    "type": "range",
+    "label": "Parallax end offset"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/index.json",
+   "templates/page.arbt-power-carve-ball-gouge.json",
+   "templates/page.arbt-power-carve-contour-sander.json",
+   "templates/page.arbt-power-carve-industrial-woodcarver.json",
+   "templates/page.arbt-power-carve-mg1000-mini-grinder.json",
+   "templates/page.arbt-power-carve-mini-carver.json",
+   "templates/page.arbt-power-carve-mini-turbo.json",
+   "templates/page.arbt-power-carve-power-carving-unit.json",
+   "templates/page.arbt-power-carve-power-chisel.json",
+   "templates/page.arbt-power-carve-precision-carving-system.json",
+   "templates/page.arbt-power-carve-spheroplane.json",
+   "templates/page.arbt-power-carve-turbo-scraper.json",
+   "templates/page.arbt-power-carve-turbo-shaft.json",
+   "templates/page.arbt-power-carve-turboplane.json",
+   "templates/page.brick-and-block-repair.json",
+   "templates/page.detail-and-texturing.json",
+   "templates/page.edging-and-trenches.json",
+   "templates/page.furniture-and-sculpting.json",
+   "templates/page.heritage-masonry-repairs.json",
+   "templates/page.landscaping.json",
+   "templates/page.masonry.json",
+   "templates/page.our-story.json",
+   "templates/page.research-and-development.json",
+   "templates/page.spoon-and-bowl-carving.json",
+   "templates/page.sustainability-and-values.json",
+   "templates/page.timber-landscaping.json",
+   "templates/page.tuckpointing-and-repointing.json",
+   "templates/page.turf-and-grounds-care.json",
+   "templates/page.who-we-are.json",
+   "templates/page.woodworking.json",
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.quote",
+   "arbortech.quote_eyebrow",
+   "arbortech.quote_image",
+   "arbortech.quote_name",
+   "arbortech.quote_paragraph",
+   "arbortech.quote_title"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-product-artists.liquid",
+  "type": "arb-product-artists",
+  "name": "Product Artists",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "button_label",
+    "type": "text",
+    "label": "Button label"
+   },
+   {
+    "id": "card_limit",
+    "type": "range",
+    "label": "Maximum artists"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.related_artist_profiles"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-product-overview-video.liquid",
+  "type": "arb-product-overview-video",
+  "name": "Product Overview Video",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "embed_title",
+    "type": "text",
+    "label": "Embed title"
+   },
+   {
+    "id": "aria_label",
+    "type": "text",
+    "label": "Section aria-label"
+   },
+   {
+    "id": "play_label",
+    "type": "text",
+    "label": "Play button aria-label"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.overview_video_poster",
+   "arbortech.overview_video_poster_alt",
+   "arbortech.overview_video_poster_alt_au",
+   "arbortech.overview_video_poster_alt_ca",
+   "arbortech.overview_video_poster_alt_de",
+   "arbortech.overview_video_poster_alt_us",
+   "arbortech.overview_video_poster_au",
+   "arbortech.overview_video_poster_ca"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-product-story-panels.liquid",
+  "type": "arb-product-story-panels",
+  "name": "Product Story",
+  "presets": true,
+  "settings": [
+   {
+    "id": "content_source",
+    "type": "select",
+    "label": "Content source"
+   },
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "center_header",
+    "type": "checkbox",
+    "label": "Center header"
+   },
+   {
+    "id": "intro",
+    "type": "textarea",
+    "label": "Intro"
+   },
+   {
+    "id": "accessibility_label",
+    "type": "text",
+    "label": "Accessibility label"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "panel",
+    "name": "Story panel",
+    "nsettings": 8
+   }
+  ],
+  "used_in": [
+   "templates/page.arbt-power-carve-ball-gouge.json",
+   "templates/page.arbt-power-carve-contour-sander.json",
+   "templates/page.arbt-power-carve-industrial-woodcarver.json",
+   "templates/page.arbt-power-carve-mg1000-mini-grinder.json",
+   "templates/page.arbt-power-carve-mini-carver.json",
+   "templates/page.arbt-power-carve-mini-turbo.json",
+   "templates/page.arbt-power-carve-power-carving-unit.json",
+   "templates/page.arbt-power-carve-power-chisel.json",
+   "templates/page.arbt-power-carve-precision-carving-system.json",
+   "templates/page.arbt-power-carve-spheroplane.json",
+   "templates/page.arbt-power-carve-turbo-scraper.json",
+   "templates/page.arbt-power-carve-turbo-shaft.json",
+   "templates/page.arbt-power-carve-turboplane.json",
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.product_story_sections",
+   "arbortech.product_story_sections_au",
+   "arbortech.product_story_sections_ca",
+   "arbortech.product_story_sections_de",
+   "arbortech.product_story_sections_us",
+   "arbt.story_panels",
+   "arbt.story_panels_au",
+   "arbt.story_panels_ca"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-product-tabs.liquid",
+  "type": "arb-product-tabs",
+  "name": "Product Tabs",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Accessibility label"
+   },
+   {
+    "id": "included_label",
+    "type": "text",
+    "label": "Included tab label"
+   },
+   {
+    "id": "empty_included_text",
+    "type": "text",
+    "label": "Empty included text"
+   },
+   {
+    "id": "specifications_label",
+    "type": "text",
+    "label": "Specifications tab label"
+   },
+   {
+    "id": "empty_specifications_text",
+    "type": "text",
+    "label": "Empty specifications text"
+   },
+   {
+    "id": "support_label",
+    "type": "text",
+    "label": "Support tab label"
+   },
+   {
+    "id": "support_document_limit",
+    "type": "range",
+    "label": "Support document limit"
+   },
+   {
+    "id": "empty_support_text",
+    "type": "text",
+    "label": "Empty support text"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-projects-grid.liquid",
+  "type": "arb-projects-grid",
+  "name": "Projects Grid",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "display_mode",
+    "type": "select",
+    "label": "Display mode"
+   },
+   {
+    "id": "card_limit",
+    "type": "range",
+    "label": "Preview cards to show"
+   },
+   {
+    "id": "randomize",
+    "type": "checkbox",
+    "label": "Randomize preview selection"
+   },
+   {
+    "id": "show_filters",
+    "type": "checkbox",
+    "label": "Show tool filters"
+   },
+   {
+    "id": "project_filter",
+    "type": "select",
+    "label": "Project filter"
+   },
+   {
+    "id": "aria_label",
+    "type": "text",
+    "label": "Section accessibility label"
+   },
+   {
+    "id": "filter_aria_label",
+    "type": "text",
+    "label": "Filter accessibility label"
+   },
+   {
+    "id": "all_filter_label",
+    "type": "text",
+    "label": "All filter label"
+   },
+   {
+    "id": "card_play_label",
+    "type": "text",
+    "label": "Card accessibility label"
+   },
+   {
+    "id": "close_label",
+    "type": "text",
+    "label": "Close button label"
+   },
+   {
+    "id": "empty_message",
+    "type": "text",
+    "label": "Empty state message"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.artist.json",
+   "templates/page.inspiration.json",
+   "templates/page.landscaping.json",
+   "templates/page.masonry.json",
+   "templates/page.projects.json",
+   "templates/page.staff-competition.json",
+   "templates/page.woodworking.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": [
+   "project_resource"
+  ]
+ },
+ {
+  "file": "arb-related-projects.liquid",
+  "type": "arb-related-projects",
+  "name": "Related Projects",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "card_limit",
+    "type": "range",
+    "label": "Cards to show"
+   },
+   {
+    "id": "card_play_label",
+    "type": "text",
+    "label": "Card accessibility label"
+   },
+   {
+    "id": "close_label",
+    "type": "text",
+    "label": "Close button label"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.related_projects"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-section-header.liquid",
+  "type": "arb-section-header",
+  "name": "Section Header",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding top"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading accent (orange line)"
+   },
+   {
+    "id": "body",
+    "type": "textarea",
+    "label": "Body"
+   },
+   {
+    "id": "cta_label",
+    "type": "text",
+    "label": "Button label"
+   },
+   {
+    "id": "cta_link",
+    "type": "url",
+    "label": "Button link"
+   },
+   {
+    "id": "heading_tag",
+    "type": "select",
+    "label": "Heading level"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.artist.json",
+   "templates/page.community-projects.json",
+   "templates/page.inspiration.json",
+   "templates/page.investors.json",
+   "templates/page.landscaping.json",
+   "templates/page.masonry.json",
+   "templates/page.research-and-development.json",
+   "templates/page.woodworking.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-shop-by-showcase.liquid",
+  "type": "arb-shop-by-showcase",
+  "name": "Shop By Showcase",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "showcase_type",
+    "type": "select",
+    "label": "Showcase type"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading accent"
+   },
+   {
+    "id": "body",
+    "type": "textarea",
+    "label": "Body text"
+   },
+   {
+    "id": "cta_label",
+    "type": "text",
+    "label": "Button label"
+   },
+   {
+    "id": "cta_link",
+    "type": "url",
+    "label": "Button link"
+   },
+   {
+    "id": "card_eyebrow",
+    "type": "text",
+    "label": "Card eyebrow fallback"
+   },
+   {
+    "id": "card_cta_label",
+    "type": "text",
+    "label": "Card button label"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "card",
+    "name": "Card",
+    "nsettings": 7
+   },
+   {
+    "type": "application",
+    "name": "Application card (legacy)",
+    "nsettings": 7
+   },
+   {
+    "type": "project",
+    "name": "Project card (legacy)",
+    "nsettings": 7
+   },
+   {
+    "type": "accessory",
+    "name": "Accessory card (legacy)",
+    "nsettings": 7
+   }
+  ],
+  "used_in": [
+   "templates/index.json",
+   "templates/page.brick-and-block-repair.json",
+   "templates/page.detail-and-texturing.json",
+   "templates/page.edging-and-trenches.json",
+   "templates/page.furniture-and-sculpting.json",
+   "templates/page.heritage-masonry-repairs.json",
+   "templates/page.landscaping.json",
+   "templates/page.masonry.json",
+   "templates/page.shop-by-project.json",
+   "templates/page.spoon-and-bowl-carving.json",
+   "templates/page.timber-landscaping.json",
+   "templates/page.tuckpointing-and-repointing.json",
+   "templates/page.turf-and-grounds-care.json",
+   "templates/page.woodworking.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.accessories_body",
+   "arbortech.accessories_eyebrow",
+   "arbortech.accessories_heading",
+   "arbortech.accessories_heading_accent",
+   "arbortech.accessories_link",
+   "arbortech.accessories_link_label",
+   "arbortech.accessory_card_copy",
+   "arbortech.accessory_card_eyebrow"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-simple-hero-banner.liquid",
+  "type": "arb-simple-hero-banner",
+  "name": "Page & Collection Hero",
+  "presets": true,
+  "settings": [
+   {
+    "id": "content_source",
+    "type": "select",
+    "label": "Content source"
+   },
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "image_mode",
+    "type": "select",
+    "label": "Image display"
+   },
+   {
+    "id": "use_collection_image",
+    "type": "checkbox",
+    "label": "Use collection image"
+   },
+   {
+    "id": "show_collection_description",
+    "type": "checkbox",
+    "label": "Show collection description"
+   },
+   {
+    "id": "background_image",
+    "type": "image_picker",
+    "label": "Fallback background image"
+   },
+   {
+    "id": "fallback_asset",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "background_position",
+    "type": "text",
+    "label": "Background position"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Page title"
+   },
+   {
+    "id": "aria_label",
+    "type": "text",
+    "label": "Section accessibility label"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/collection.arbt-accessory-hub.json",
+   "templates/collection.arbt-masonry-trade.json",
+   "templates/collection.arbt-outdoor-grounds-care.json",
+   "templates/collection.arbt-power-carving.json",
+   "templates/collection.json",
+   "templates/page.arbt-power-carve-ball-gouge.json",
+   "templates/page.arbt-power-carve-contour-sander.json",
+   "templates/page.arbt-power-carve-industrial-woodcarver.json",
+   "templates/page.arbt-power-carve-mg1000-mini-grinder.json",
+   "templates/page.arbt-power-carve-mini-carver.json",
+   "templates/page.arbt-power-carve-mini-turbo.json",
+   "templates/page.arbt-power-carve-power-carving-unit.json",
+   "templates/page.arbt-power-carve-power-chisel.json",
+   "templates/page.arbt-power-carve-precision-carving-system.json",
+   "templates/page.arbt-power-carve-spheroplane.json",
+   "templates/page.arbt-power-carve-turbo-scraper.json",
+   "templates/page.arbt-power-carve-turbo-shaft.json",
+   "templates/page.arbt-power-carve-turboplane.json",
+   "templates/page.arbt-power-carve.json",
+   "templates/page.arbt-tool-resource.json",
+   "templates/page.artists.json",
+   "templates/page.community-projects.json",
+   "templates/page.contact.json",
+   "templates/page.events.json",
+   "templates/page.find-a-retailer.json",
+   "templates/page.inspiration.json",
+   "templates/page.investors.json",
+   "templates/page.landscaping.json",
+   "templates/page.masonry.json",
+   "templates/page.our-story.json",
+   "templates/page.powered-by-dewalt.json",
+   "templates/page.projects.json",
+   "templates/page.research-and-development.json",
+   "templates/page.resource-hub.json",
+   "templates/page.shop-by-project.json",
+   "templates/page.staff-competition.json",
+   "templates/page.support.json",
+   "templates/page.sustainability-and-values.json",
+   "templates/page.technical-documents.json",
+   "templates/page.who-we-are.json",
+   "templates/page.woodworking.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-split-feature-callout.liquid",
+  "type": "arb-split-feature-callout",
+  "name": "Split Feature Callout",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "default_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "image_alt",
+    "type": "text",
+    "label": "Image alt text"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "body",
+    "type": "textarea",
+    "label": "Body text"
+   },
+   {
+    "id": "prompt",
+    "type": "text",
+    "label": "Prompt text"
+   },
+   {
+    "id": "prompt_link_text",
+    "type": "text",
+    "label": "Prompt link text"
+   },
+   {
+    "id": "prompt_link",
+    "type": "url",
+    "label": "Prompt link"
+   },
+   {
+    "id": "note",
+    "type": "textarea",
+    "label": "Footnote"
+   },
+   {
+    "id": "reverse",
+    "type": "checkbox",
+    "label": "Reverse layout (image on right)"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.primary_vertical",
+   "arbortech.vertical_landscaping",
+   "arbortech.vertical_masonry",
+   "arbortech.vertical_woodworking"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-spotlight-case-study.liquid",
+  "type": "arb-spotlight-case-study",
+  "name": "Story banner",
+  "presets": true,
+  "settings": [
+   {
+    "id": "content_source",
+    "type": "select",
+    "label": "Content source"
+   },
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "list_heading",
+    "type": "text",
+    "label": "Accessible heading"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "default_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "location",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "body",
+    "type": "textarea",
+    "label": "Body text"
+   },
+   {
+    "id": "button_label",
+    "type": "text",
+    "label": "Button label"
+   },
+   {
+    "id": "button_link",
+    "type": "url",
+    "label": "Button link"
+   },
+   {
+    "id": "reverse",
+    "type": "checkbox",
+    "label": "Reverse layout (image on left)"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "story",
+    "name": "Story",
+    "nsettings": 8
+   }
+  ],
+  "used_in": [
+   "templates/page.artists.json",
+   "templates/page.brick-and-block-repair.json",
+   "templates/page.detail-and-texturing.json",
+   "templates/page.edging-and-trenches.json",
+   "templates/page.furniture-and-sculpting.json",
+   "templates/page.heritage-masonry-repairs.json",
+   "templates/page.inspiration.json",
+   "templates/page.landscaping.json",
+   "templates/page.masonry.json",
+   "templates/page.research-and-development.json",
+   "templates/page.spoon-and-bowl-carving.json",
+   "templates/page.sustainability-and-values.json",
+   "templates/page.timber-landscaping.json",
+   "templates/page.tuckpointing-and-repointing.json",
+   "templates/page.turf-and-grounds-care.json",
+   "templates/page.woodworking.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-testimonials.liquid",
+  "type": "arb-testimonials",
+  "name": "Testimonials Slider",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "script_text",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading accent (orange)"
+   },
+   {
+    "id": "rating",
+    "type": "text",
+    "label": "Rating"
+   },
+   {
+    "id": "reviews_note",
+    "type": "text",
+    "label": "Reviews note"
+   },
+   {
+    "id": "body",
+    "type": "textarea",
+    "label": "Body text"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.testimonials",
+   "arbortech.testimonials_body",
+   "arbortech.testimonials_eyebrow",
+   "arbortech.testimonials_heading",
+   "arbortech.testimonials_heading_accent",
+   "arbortech.testimonials_rating",
+   "arbortech.testimonials_reviews_note"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-testing-image-audit.liquid",
+  "type": "arb-testing-image-audit",
+  "name": "Testing: Image Audit",
+  "presets": true,
+  "settings": [
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.testing-images.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-triage-trio.liquid",
+  "type": "arb-triage-trio",
+  "name": "Triage Trio",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "square_cards",
+    "type": "checkbox",
+    "label": "Use square cards"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "End of band (add bottom spacing)"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "card",
+    "name": "Card",
+    "nsettings": 11
+   }
+  ],
+  "used_in": [
+   "templates/index.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-vertical-hero.liquid",
+  "type": "arb-vertical-hero",
+  "name": "Vertical Hero",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "show_image",
+    "type": "checkbox",
+    "label": "Show side image"
+   },
+   {
+    "id": "heading_tag",
+    "type": "select",
+    "label": "Heading tag"
+   },
+   {
+    "id": "layout",
+    "type": "select",
+    "label": "Layout"
+   },
+   {
+    "id": "light_text",
+    "type": "checkbox",
+    "label": "Light text on banner"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading (line 1)"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading accent (orange, line 2)"
+   },
+   {
+    "id": "body",
+    "type": "textarea",
+    "label": "Body text"
+   },
+   {
+    "id": "primary_label",
+    "type": "text",
+    "label": "Primary button label"
+   },
+   {
+    "id": "primary_link",
+    "type": "url",
+    "label": "Primary button link"
+   },
+   {
+    "id": "secondary_label",
+    "type": "text",
+    "label": "Secondary button label"
+   },
+   {
+    "id": "secondary_link",
+    "type": "url",
+    "label": "Secondary button link"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Hero image"
+   },
+   {
+    "id": "default_image",
+    "type": "text",
+    "label": "Fallback image (theme asset filename)"
+   },
+   {
+    "id": "image_alt",
+    "type": "text",
+    "label": "Image alt text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.brick-and-block-repair.json",
+   "templates/page.detail-and-texturing.json",
+   "templates/page.edging-and-trenches.json",
+   "templates/page.furniture-and-sculpting.json",
+   "templates/page.heritage-masonry-repairs.json",
+   "templates/page.spoon-and-bowl-carving.json",
+   "templates/page.timber-landscaping.json",
+   "templates/page.tuckpointing-and-repointing.json",
+   "templates/page.turf-and-grounds-care.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arb-video-player.liquid",
+  "type": "arb-video-player",
+  "name": "Video Player",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "section_anchor_id",
+    "type": "text",
+    "label": "Section HTML id"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "copy",
+    "type": "textarea",
+    "label": "Copy"
+   },
+   {
+    "id": "video_url",
+    "type": "text",
+    "label": "Video URL"
+   },
+   {
+    "id": "poster",
+    "type": "image_picker",
+    "label": "Poster image"
+   },
+   {
+    "id": "poster_default_image",
+    "type": "text",
+    "label": "Poster asset filename"
+   },
+   {
+    "id": "poster_external_url",
+    "type": "text",
+    "label": "Poster external URL"
+   },
+   {
+    "id": "poster_alt",
+    "type": "text",
+    "label": "Poster alt text"
+   },
+   {
+    "id": "embed_title",
+    "type": "text",
+    "label": "Embed title"
+   },
+   {
+    "id": "aria_label",
+    "type": "text",
+    "label": "Section aria-label"
+   },
+   {
+    "id": "play_label",
+    "type": "text",
+    "label": "Play button aria-label"
+   },
+   {
+    "id": "close_label",
+    "type": "text",
+    "label": "Close label"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.arbt-power-carve-industrial-woodcarver.json",
+   "templates/page.our-story.json",
+   "templates/page.spoon-and-bowl-carving.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arbt-accessory-hub.liquid",
+  "type": "arbt-accessory-hub",
+  "name": "Accessory Hub",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "text",
+    "type": "textarea",
+    "label": "Intro text"
+   },
+   {
+    "id": "group_order",
+    "type": "text",
+    "label": "Group order"
+   },
+   {
+    "id": "products_per_row_mobile",
+    "type": "select",
+    "label": "Products per row (mobile)"
+   },
+   {
+    "id": "products_per_row_desktop",
+    "type": "range",
+    "label": "Products per row (desktop)"
+   },
+   {
+    "id": "compat_heading",
+    "type": "text",
+    "label": "Compatibility guidance label"
+   },
+   {
+    "id": "compat_text",
+    "type": "textarea",
+    "label": "Compatibility guidance text"
+   },
+   {
+    "id": "empty_text",
+    "type": "text",
+    "label": "Empty state text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "compat_link",
+    "name": "Compatibility link",
+    "nsettings": 3
+   }
+  ],
+  "used_in": [
+   "templates/collection.arbt-accessory-hub.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arbt-blade-compat.liquid",
+  "type": "arbt-blade-compat",
+  "name": "ARBT Blade Compatibility",
+  "presets": true,
+  "settings": [
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "intro",
+    "type": "textarea",
+    "label": "Intro text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/product.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.compatible_with_filter"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arbt-page-story-blocks.liquid",
+  "type": "arbt-page-story-blocks",
+  "name": "Page Story Blocks",
+  "presets": true,
+  "settings": [],
+  "blocks": [],
+  "used_in": [
+   "templates/page.artist.json",
+   "templates/page.powered-by-dewalt.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.story_blocks"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arbt-retailer-locator.liquid",
+  "type": "arbt-retailer-locator",
+  "name": "Retailer locator",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "aria_label",
+    "type": "text",
+    "label": "Section accessibility label"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "intro",
+    "name": "Range intro",
+    "nsettings": 3
+   },
+   {
+    "type": "region",
+    "name": "Region",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [
+   "templates/page.find-a-retailer.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arbt-technical-resources.liquid",
+  "type": "arbt-technical-resources",
+  "name": "Technical Documents",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "heading_accent",
+    "type": "text",
+    "label": "Heading accent"
+   },
+   {
+    "id": "text",
+    "type": "textarea",
+    "label": "Intro text"
+   },
+   {
+    "id": "show_filters",
+    "type": "checkbox",
+    "label": "Show category filters"
+   },
+   {
+    "id": "include_page_links",
+    "type": "checkbox",
+    "label": "Include legacy page links"
+   },
+   {
+    "id": "group_order",
+    "type": "text",
+    "label": "Category order"
+   },
+   {
+    "id": "empty_text",
+    "type": "text",
+    "label": "Empty state text"
+   },
+   {
+    "id": "band_end",
+    "type": "checkbox",
+    "label": "Band end spacing"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.resource-hub.json",
+   "templates/page.technical-documents.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": [
+   "technical_document"
+  ]
+ },
+ {
+  "file": "arbt-test-accessories.liquid",
+  "type": "arbt-test-accessories",
+  "name": "ARBT Test Accessories",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "text",
+    "type": "textarea",
+    "label": "Intro text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.arbt-testing-accessories.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.related_accessories"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arbt-tool-resource-detail.liquid",
+  "type": "arbt-tool-resource-detail",
+  "name": "Tool Resource Detail",
+  "presets": true,
+  "settings": [
+   {
+    "id": "tabs_eyebrow",
+    "type": "text",
+    "label": "Tabs eyebrow"
+   },
+   {
+    "id": "videos_eyebrow",
+    "type": "text",
+    "label": "Videos eyebrow"
+   },
+   {
+    "id": "empty_documents_text",
+    "type": "text",
+    "label": "Empty documents text"
+   },
+   {
+    "id": "faq_heading",
+    "type": "text",
+    "label": "FAQ heading"
+   },
+   {
+    "id": "faq_heading_accent",
+    "type": "text",
+    "label": "FAQ heading accent (orange)"
+   },
+   {
+    "id": "faq_body",
+    "type": "textarea",
+    "label": "FAQ body copy"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.arbt-tool-resource.json"
+  ],
+  "custom": true,
+  "metafield_hits": [
+   "arbortech.tool_resource_blocks"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arbt-tool-resources-grid.liquid",
+  "type": "arbt-tool-resources-grid",
+  "name": "Tool Resources Grid",
+  "presets": true,
+  "settings": [
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "intro",
+    "type": "textarea",
+    "label": "Intro copy"
+   },
+   {
+    "id": "aria_label",
+    "type": "text",
+    "label": "Section accessibility label"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "tool",
+    "name": "Tool card",
+    "nsettings": 4
+   }
+  ],
+  "used_in": [
+   "templates/page.arbt-power-carve.json",
+   "templates/page.arbt-tool-resources.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "arbt-widerruf-form.liquid",
+  "type": "arbt-widerruf-form",
+  "name": "ARBT Widerruf Form",
+  "presets": true,
+  "settings": [
+   {
+    "id": "webhook_url",
+    "type": "text",
+    "label": "Mechanic webhook URL"
+   },
+   {
+    "id": "section_spacing",
+    "type": "select",
+    "label": "Padding Top"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.arbt-widerruf.json"
+  ],
+  "custom": true,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "before-after-image.liquid",
+  "type": "before-after-image",
+  "name": "Before/after image",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "before_image",
+    "type": "image_picker",
+    "label": "Before image"
+   },
+   {
+    "id": "before_image_mobile",
+    "type": "image_picker",
+    "label": "Before image (mobile)"
+   },
+   {
+    "id": "after_image",
+    "type": "image_picker",
+    "label": "After image"
+   },
+   {
+    "id": "after_image_mobile",
+    "type": "image_picker",
+    "label": "After image (mobile)"
+   },
+   {
+    "id": "expand_image",
+    "type": "checkbox",
+    "label": "Expand image"
+   },
+   {
+    "id": "text_position",
+    "type": "select",
+    "label": "Text position"
+   },
+   {
+    "id": "before_after_text_position",
+    "type": "select",
+    "label": "Before/after text position"
+   },
+   {
+    "id": "before_text",
+    "type": "text",
+    "label": "Before text"
+   },
+   {
+    "id": "after_text",
+    "type": "text",
+    "label": "After text"
+   },
+   {
+    "id": "drag_initial_position",
+    "type": "range",
+    "label": "Drag initial position"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "before_text_color",
+    "type": "color",
+    "label": "Before text"
+   },
+   {
+    "id": "after_text_color",
+    "type": "color",
+    "label": "After text"
+   },
+   {
+    "id": "drag_cursor_background",
+    "type": "color",
+    "label": "Drag cursor background"
+   },
+   {
+    "id": "drag_cursor_color",
+    "type": "color",
+    "label": "Drag cursor color"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "blog-posts.liquid",
+  "type": "blog-posts",
+  "name": "Blog posts",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "show_excerpt",
+    "type": "checkbox",
+    "label": "Show excerpt"
+   },
+   {
+    "id": "show_date",
+    "type": "checkbox",
+    "label": "Show date"
+   },
+   {
+    "id": "show_author",
+    "type": "checkbox",
+    "label": "Show author"
+   },
+   {
+    "id": "show_comments_count",
+    "type": "checkbox",
+    "label": "Show comments count"
+   },
+   {
+    "id": "show_category",
+    "type": "checkbox",
+    "label": "Show category"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "link_url",
+    "type": "url",
+    "label": "Link URL"
+   },
+   {
+    "id": "link_text",
+    "type": "text",
+    "label": "Link text"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "blog",
+    "name": "Blog",
+    "nsettings": 3
+   },
+   {
+    "type": "article",
+    "name": "Blog post",
+    "nsettings": 3
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "cart-drawer.liquid",
+  "type": "cart-drawer",
+  "name": "Cart drawer",
+  "presets": false,
+  "settings": [
+   {
+    "id": "show_cart_note",
+    "type": "checkbox",
+    "label": "Show cart note"
+   },
+   {
+    "id": "show_shipping_text",
+    "type": "checkbox",
+    "label": "Show shipping text"
+   },
+   {
+    "id": "allow_discount_application",
+    "type": "checkbox",
+    "label": "Allow discount application"
+   },
+   {
+    "id": "show_view_cart_button",
+    "type": "checkbox",
+    "label": "Show view cart button"
+   },
+   {
+    "id": "show_checkout_button",
+    "type": "checkbox",
+    "label": "Show checkout button"
+   },
+   {
+    "id": "vat_eyebrow",
+    "type": "text",
+    "label": "VAT field eyebrow"
+   },
+   {
+    "id": "recommendations_title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "products",
+    "type": "product_list",
+    "label": "Recommendations"
+   },
+   {
+    "id": "product_card_background",
+    "type": "color",
+    "label": "Product card background"
+   },
+   {
+    "id": "product_card_text_color",
+    "type": "color",
+    "label": "Product card text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "sections/overlay-group.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "collection-banner.liquid",
+  "type": "collection-banner",
+  "name": "Collection banner",
+  "presets": false,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "allow_transparent_header",
+    "type": "checkbox",
+    "label": "Allow transparent header"
+   },
+   {
+    "id": "enable_parallax",
+    "type": "checkbox",
+    "label": "Enable parallax effect"
+   },
+   {
+    "id": "show_collection_title",
+    "type": "checkbox",
+    "label": "Show collection title"
+   },
+   {
+    "id": "show_collection_description",
+    "type": "checkbox",
+    "label": "Show collection description"
+   },
+   {
+    "id": "show_collection_image",
+    "type": "checkbox",
+    "label": "Show collection image"
+   },
+   {
+    "id": "collection_title_size",
+    "type": "select",
+    "label": "Collection title size"
+   },
+   {
+    "id": "image_size",
+    "type": "select",
+    "label": "Image size"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "mobile_image",
+    "type": "image_picker",
+    "label": "Mobile image"
+   },
+   {
+    "id": "mobile_text_position",
+    "type": "select",
+    "label": "Mobile content position"
+   },
+   {
+    "id": "desktop_text_position",
+    "type": "select",
+    "label": "Desktop content position"
+   },
+   {
+    "id": "featured_product",
+    "type": "product",
+    "label": "Product"
+   },
+   {
+    "id": "featured_product_heading",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "overlay_color",
+    "type": "color",
+    "label": "Overlay"
+   },
+   {
+    "id": "overlay_opacity",
+    "type": "range",
+    "label": "Overlay opacity"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "collection-list.liquid",
+  "type": "collection-list",
+  "name": "Collection list",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "stack_collections",
+    "type": "checkbox",
+    "label": "Stack collections"
+   },
+   {
+    "id": "collections_per_row_mobile",
+    "type": "select",
+    "label": "Collections per row (mobile)"
+   },
+   {
+    "id": "collections_per_row",
+    "type": "range",
+    "label": "Collections per row (desktop)"
+   },
+   {
+    "id": "show_progress_bar",
+    "type": "checkbox",
+    "label": "Show carousel progress bar"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "link_url",
+    "type": "url",
+    "label": "Link URL"
+   },
+   {
+    "id": "link_text",
+    "type": "text",
+    "label": "Link text"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "collection",
+    "name": "Collection",
+    "nsettings": 11
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "comparison-table.liquid",
+  "type": "comparison-table",
+  "name": "Comparison table",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "button_text",
+    "type": "text",
+    "label": "Button text"
+   },
+   {
+    "id": "button_url",
+    "type": "url",
+    "label": "Button URL"
+   },
+   {
+    "id": "text_position",
+    "type": "select",
+    "label": "Text position"
+   },
+   {
+    "id": "max_rows",
+    "type": "range",
+    "label": "Rows revealed by default"
+   },
+   {
+    "id": "view_all_text",
+    "type": "text",
+    "label": "View all text"
+   },
+   {
+    "id": "view_less_text",
+    "type": "text",
+    "label": "View less text"
+   },
+   {
+    "id": "view_product",
+    "type": "text",
+    "label": "View product button text"
+   },
+   {
+    "id": "show_product_info",
+    "type": "checkbox",
+    "label": "Show product info"
+   },
+   {
+    "id": "show_product_image",
+    "type": "checkbox",
+    "label": "Show product image"
+   },
+   {
+    "id": "show_product_swatch",
+    "type": "checkbox",
+    "label": "Show product swatch"
+   },
+   {
+    "id": "viewing_product",
+    "type": "text",
+    "label": "Currently viewing product label"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   },
+   {
+    "id": "chart_background",
+    "type": "color",
+    "label": "Chart background"
+   },
+   {
+    "id": "chart_text_color",
+    "type": "color",
+    "label": "Chart text"
+   },
+   {
+    "id": "chart_true_false_color",
+    "type": "color",
+    "label": "True/false color"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "headings",
+    "name": "Headings column",
+    "nsettings": 21
+   },
+   {
+    "type": "values",
+    "name": "Values column",
+    "nsettings": 24
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "contact.liquid",
+  "type": "contact",
+  "name": "Contact",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "show_contact_details",
+    "type": "checkbox",
+    "label": "Show contact details"
+   },
+   {
+    "id": "company_name",
+    "type": "text",
+    "label": "Company name"
+   },
+   {
+    "id": "address",
+    "type": "textarea",
+    "label": "Address"
+   },
+   {
+    "id": "email",
+    "type": "text",
+    "label": "Email"
+   },
+   {
+    "id": "phone",
+    "type": "text",
+    "label": "Phone"
+   },
+   {
+    "id": "business_hours",
+    "type": "textarea",
+    "label": "Business hours"
+   },
+   {
+    "id": "text_position",
+    "type": "select",
+    "label": "Text position"
+   },
+   {
+    "id": "contact_form_size",
+    "type": "select",
+    "label": "Contact form size"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "contact_background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "contact_text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "text",
+    "name": "Text field",
+    "nsettings": 3
+   },
+   {
+    "type": "dropdown",
+    "name": "Dropdown",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [
+   "templates/page.contact.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "custom-html.liquid",
+  "type": "custom-html",
+  "name": "Custom HTML",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "remove_vertical_spacing",
+    "type": "checkbox",
+    "label": "Remove vertical spacing"
+   },
+   {
+    "id": "remove_horizontal_spacing",
+    "type": "checkbox",
+    "label": "Remove horizontal spacing"
+   },
+   {
+    "id": "html",
+    "type": "html",
+    "label": "HTML"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "custom-liquid.liquid",
+  "type": "custom-liquid",
+  "name": "Custom Liquid",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "remove_vertical_spacing",
+    "type": "checkbox",
+    "label": "Remove vertical spacing"
+   },
+   {
+    "id": "remove_horizontal_spacing",
+    "type": "checkbox",
+    "label": "Remove horizontal spacing"
+   },
+   {
+    "id": "liquid",
+    "type": "liquid",
+    "label": "Liquid"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "faq.liquid",
+  "type": "faq",
+  "name": "FAQ",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "team_avatar",
+    "type": "image_picker",
+    "label": "Team avatar"
+   },
+   {
+    "id": "team_avatar_width",
+    "type": "range",
+    "label": "Team avatar width"
+   },
+   {
+    "id": "support_hours",
+    "type": "text",
+    "label": "Support operating hours"
+   },
+   {
+    "id": "answer_time",
+    "type": "text",
+    "label": "Average answer time"
+   },
+   {
+    "id": "button_text",
+    "type": "text",
+    "label": "Button text"
+   },
+   {
+    "id": "button_url",
+    "type": "url",
+    "label": "Button link"
+   },
+   {
+    "id": "text_position",
+    "type": "select",
+    "label": "Text position"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   },
+   {
+    "id": "accordion_background",
+    "type": "color",
+    "label": "Accordion background"
+   },
+   {
+    "id": "accordion_text_color",
+    "type": "color",
+    "label": "Accordion text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "item",
+    "name": "Item",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "feature-chart.liquid",
+  "type": "feature-chart",
+  "name": "Feature chart",
+  "presets": false,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "button_text",
+    "type": "text",
+    "label": "Button text"
+   },
+   {
+    "id": "button_url",
+    "type": "url",
+    "label": "Button URL"
+   },
+   {
+    "id": "text_position",
+    "type": "select",
+    "label": "Text position"
+   },
+   {
+    "id": "max_rows",
+    "type": "range",
+    "label": "Rows revealed by default"
+   },
+   {
+    "id": "view_all_text",
+    "type": "text",
+    "label": "View all text"
+   },
+   {
+    "id": "view_less_text",
+    "type": "text",
+    "label": "View less text"
+   },
+   {
+    "id": "view_product",
+    "type": "text",
+    "label": "View product button text"
+   },
+   {
+    "id": "viewing_product",
+    "type": "text",
+    "label": "Currently viewing product label"
+   },
+   {
+    "id": "show_product_swatch",
+    "type": "checkbox",
+    "label": "Show product swatch"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   },
+   {
+    "id": "chart_background",
+    "type": "color",
+    "label": "Chart background"
+   },
+   {
+    "id": "chart_text_color",
+    "type": "color",
+    "label": "Chart text"
+   },
+   {
+    "id": "chart_true_false_color",
+    "type": "color",
+    "label": "True/false color"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "headings",
+    "name": "Headings column",
+    "nsettings": 21
+   },
+   {
+    "type": "values",
+    "name": "Values column",
+    "nsettings": 24
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "featured-collection.liquid",
+  "type": "featured-collection",
+  "name": "Featured collection",
+  "presets": true,
+  "settings": [
+   {
+    "id": "collection",
+    "type": "collection",
+    "label": "Collection"
+   },
+   {
+    "id": "products",
+    "type": "product_list",
+    "label": "Products"
+   },
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "stack_products",
+    "type": "checkbox",
+    "label": "Stack products"
+   },
+   {
+    "id": "show_progress_bar",
+    "type": "checkbox",
+    "label": "Show carousel progress bar"
+   },
+   {
+    "id": "products_count",
+    "type": "range",
+    "label": "Products to show"
+   },
+   {
+    "id": "products_per_row_mobile",
+    "type": "select",
+    "label": "Products per row (mobile)"
+   },
+   {
+    "id": "products_per_row_desktop",
+    "type": "range",
+    "label": "Products per row (desktop)"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "link_url",
+    "type": "url",
+    "label": "Link URL"
+   },
+   {
+    "id": "link_text",
+    "type": "text",
+    "label": "Link text"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "product_card_background",
+    "type": "color",
+    "label": "Product card background"
+   },
+   {
+    "id": "product_card_text_color",
+    "type": "color",
+    "label": "Product card text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "featured-product.liquid",
+  "type": "featured-product",
+  "name": "Featured product",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "product",
+    "type": "product",
+    "label": "Product"
+   },
+   {
+    "id": "desktop_media_width",
+    "type": "range",
+    "label": "Desktop media size"
+   },
+   {
+    "id": "desktop_media_layout",
+    "type": "select",
+    "label": "Desktop media layout"
+   },
+   {
+    "id": "mobile_media_size",
+    "type": "select",
+    "label": "Mobile media size"
+   },
+   {
+    "id": "mobile_carousel_control",
+    "type": "select",
+    "label": "Mobile carousel control"
+   },
+   {
+    "id": "enable_video_autoplay",
+    "type": "checkbox",
+    "label": "Enable video autoplay"
+   },
+   {
+    "id": "enable_video_looping",
+    "type": "checkbox",
+    "label": "Enable video looping"
+   },
+   {
+    "id": "enable_image_zoom",
+    "type": "checkbox",
+    "label": "Enable"
+   },
+   {
+    "id": "max_image_zoom_level",
+    "type": "range",
+    "label": "Max zoom level"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "input_background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "input_text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "@app",
+    "name": null,
+    "nsettings": 0
+   },
+   {
+    "type": "vendor",
+    "name": "Vendor",
+    "nsettings": 0
+   },
+   {
+    "type": "title",
+    "name": "Title",
+    "nsettings": 1
+   },
+   {
+    "type": "sku",
+    "name": "SKU",
+    "nsettings": 0
+   },
+   {
+    "type": "badges",
+    "name": "Badges",
+    "nsettings": 1
+   },
+   {
+    "type": "price",
+    "name": "Price",
+    "nsettings": 1
+   },
+   {
+    "type": "payment_terms",
+    "name": "Payment installments",
+    "nsettings": 1
+   },
+   {
+    "type": "rating",
+    "name": "Rating",
+    "nsettings": 2
+   },
+   {
+    "type": "separator",
+    "name": "Separator",
+    "nsettings": 0
+   },
+   {
+    "type": "description",
+    "name": "Description",
+    "nsettings": 4
+   },
+   {
+    "type": "variant_picker",
+    "name": "Variant picker",
+    "nsettings": 6
+   },
+   {
+    "type": "product_variations",
+    "name": "Product variations",
+    "nsettings": 5
+   },
+   {
+    "type": "line_item_property",
+    "name": "Line item property",
+    "nsettings": 7
+   },
+   {
+    "type": "quantity_selector",
+    "name": "Quantity selector",
+    "nsettings": 1
+   },
+   {
+    "type": "volume_pricing",
+    "name": "Volume pricing table",
+    "nsettings": 1
+   },
+   {
+    "type": "inventory",
+    "name": "Inventory",
+    "nsettings": 1
+   },
+   {
+    "type": "buy_buttons",
+    "name": "Buy buttons",
+    "nsettings": 6
+   },
+   {
+    "type": "pickup_availability",
+    "name": "Pickup availability",
+    "nsettings": 1
+   },
+   {
+    "type": "text",
+    "name": "Text",
+    "nsettings": 1
+   },
+   {
+    "type": "collapsible_text",
+    "name": "Collapsible text",
+    "nsettings": 6
+   },
+   {
+    "type": "image",
+    "name": "Image",
+    "nsettings": 3
+   },
+   {
+    "type": "button",
+    "name": "Button",
+    "nsettings": 8
+   },
+   {
+    "type": "liquid",
+    "name": "Custom Liquid",
+    "nsettings": 1
+   },
+   {
+    "type": "associated_products",
+    "name": "Complementary products",
+    "nsettings": 7
+   },
+   {
+    "type": "offer",
+    "name": "Offer",
+    "nsettings": 9
+   },
+   {
+    "type": "share_buttons",
+    "name": "Share buttons",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "footer.liquid",
+  "type": "footer",
+  "name": "Footer",
+  "presets": false,
+  "settings": [
+   {
+    "id": "show_social_media",
+    "type": "checkbox",
+    "label": "Show social media"
+   },
+   {
+    "id": "show_payment_icons",
+    "type": "checkbox",
+    "label": "Show payment icons"
+   },
+   {
+    "id": "show_powered_by_shopify",
+    "type": "checkbox",
+    "label": "Show \"Powered by Shopify\""
+   },
+   {
+    "id": "show_policy_links",
+    "type": "checkbox",
+    "label": "Show policy links"
+   },
+   {
+    "id": "show_country_selector",
+    "type": "checkbox",
+    "label": "Show country/region selector"
+   },
+   {
+    "id": "show_country_flag",
+    "type": "checkbox",
+    "label": "Show country flag"
+   },
+   {
+    "id": "show_country_name",
+    "type": "checkbox",
+    "label": "Show country name"
+   },
+   {
+    "id": "show_locale_selector",
+    "type": "checkbox",
+    "label": "Show language selector"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "@app",
+    "name": null,
+    "nsettings": 0
+   },
+   {
+    "type": "text",
+    "name": "Text",
+    "nsettings": 3
+   },
+   {
+    "type": "links",
+    "name": "Links",
+    "nsettings": 3
+   },
+   {
+    "type": "newsletter",
+    "name": "Newsletter",
+    "nsettings": 21
+   }
+  ],
+  "used_in": [
+   "sections/footer-group.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "header.liquid",
+  "type": "header",
+  "name": "Header",
+  "presets": false,
+  "settings": [
+   {
+    "id": "enable_sticky",
+    "type": "checkbox",
+    "label": "Enable sticky header"
+   },
+   {
+    "id": "hide_on_scroll",
+    "type": "checkbox",
+    "label": "Hide on scroll"
+   },
+   {
+    "id": "logo",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "logo_max_width",
+    "type": "range",
+    "label": "Image width"
+   },
+   {
+    "id": "logo_mobile_max_width",
+    "type": "range",
+    "label": "Mobile image width"
+   },
+   {
+    "id": "menu",
+    "type": "link_list",
+    "label": "Menu"
+   },
+   {
+    "id": "sidebar_menu",
+    "type": "link_list",
+    "label": "Drawer menu"
+   },
+   {
+    "id": "secondary_menu",
+    "type": "link_list",
+    "label": "Secondary menu"
+   },
+   {
+    "id": "customer_account_menu",
+    "type": "link_list",
+    "label": "Customer account menu"
+   },
+   {
+    "id": "menu_open_trigger",
+    "type": "select",
+    "label": "Open dropdown items on..."
+   },
+   {
+    "id": "opening_from",
+    "type": "select",
+    "label": "Opening from"
+   },
+   {
+    "id": "layout",
+    "type": "select",
+    "label": "Layout"
+   },
+   {
+    "id": "show_social_media",
+    "type": "checkbox",
+    "label": "Show social media"
+   },
+   {
+    "id": "show_country_selector",
+    "type": "checkbox",
+    "label": "Show locale selector"
+   },
+   {
+    "id": "show_country_flag",
+    "type": "checkbox",
+    "label": "Show country flag"
+   },
+   {
+    "id": "show_country_name",
+    "type": "checkbox",
+    "label": "Show region name"
+   },
+   {
+    "id": "transparent_header_text_color",
+    "type": "color",
+    "label": "Text color"
+   },
+   {
+    "id": "transparent_logo",
+    "type": "image_picker",
+    "label": "Logo image"
+   },
+   {
+    "id": "reduce_padding",
+    "type": "checkbox",
+    "label": "Reduce padding"
+   },
+   {
+    "id": "background_opacity",
+    "type": "range",
+    "label": "Background opacity"
+   },
+   {
+    "id": "background_blur_radius",
+    "type": "range",
+    "label": "Background blur radius"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "mega_menu",
+    "name": "Mega menu",
+    "nsettings": 27
+   }
+  ],
+  "used_in": [
+   "sections/header-group.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "hot-spots.liquid",
+  "type": "hot-spots",
+  "name": "Hot spots",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "mobile_image",
+    "type": "image_picker",
+    "label": "Mobile image"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "button_text",
+    "type": "text",
+    "label": "Button text"
+   },
+   {
+    "id": "button_url",
+    "type": "url",
+    "label": "Button URL"
+   },
+   {
+    "id": "desktop_text_position",
+    "type": "select",
+    "label": "Desktop content position"
+   },
+   {
+    "id": "image_background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "image_background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "overlay_color",
+    "type": "color",
+    "label": "Overlay"
+   },
+   {
+    "id": "overlay_opacity",
+    "type": "range",
+    "label": "Overlay opacity"
+   },
+   {
+    "id": "overlay_text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "overlay_button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "overlay_button_text_color",
+    "type": "color",
+    "label": "Button text color"
+   },
+   {
+    "id": "hot_spot_dot_background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "hot_spot_dot_text_color",
+    "type": "color",
+    "label": "Icon color"
+   },
+   {
+    "id": "hot_spot_content_background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "hot_spot_content_text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "hot_spot_content_opacity",
+    "type": "range",
+    "label": "Opacity"
+   },
+   {
+    "id": "hot_spot_content_blur_radius",
+    "type": "range",
+    "label": "Blur radius"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "item",
+    "name": "Hot spot",
+    "nsettings": 8
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "image-link-blocks.liquid",
+  "type": "image-link-blocks",
+  "name": "Image link blocks",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "block_size",
+    "type": "select",
+    "label": "Block size"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "link_url",
+    "type": "url",
+    "label": "Link URL"
+   },
+   {
+    "id": "link_text",
+    "type": "text",
+    "label": "Link text"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "item",
+    "name": "Link block",
+    "nsettings": 9
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "image-with-text-overlay.liquid",
+  "type": "image-with-text-overlay",
+  "name": "Image with text overlay",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "allow_transparent_header",
+    "type": "checkbox",
+    "label": "Allow transparent header"
+   },
+   {
+    "id": "enable_parallax",
+    "type": "checkbox",
+    "label": "Enable parallax effect"
+   },
+   {
+    "id": "image_size",
+    "type": "select",
+    "label": "Image size"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "mobile_image",
+    "type": "image_picker",
+    "label": "Mobile image"
+   },
+   {
+    "id": "mobile_text_position",
+    "type": "select",
+    "label": "Mobile content position"
+   },
+   {
+    "id": "desktop_text_position",
+    "type": "select",
+    "label": "Desktop content position"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "overlay_color",
+    "type": "color",
+    "label": "Overlay"
+   },
+   {
+    "id": "overlay_opacity",
+    "type": "range",
+    "label": "Overlay opacity"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "subheading",
+    "name": "Subheading",
+    "nsettings": 1
+   },
+   {
+    "type": "heading",
+    "name": "Heading",
+    "nsettings": 2
+   },
+   {
+    "type": "richtext",
+    "name": "Paragraph",
+    "nsettings": 1
+   },
+   {
+    "type": "liquid",
+    "name": "Liquid",
+    "nsettings": 1
+   },
+   {
+    "type": "button",
+    "name": "Button",
+    "nsettings": 6
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "images-with-text-scrolling.liquid",
+  "type": "images-with-text-scrolling",
+  "name": "Images and text scrolling",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "stack_on_mobile",
+    "type": "checkbox",
+    "label": "Stack on mobile"
+   },
+   {
+    "id": "show_counter",
+    "type": "checkbox",
+    "label": "Show counter"
+   },
+   {
+    "id": "desktop_image_effect",
+    "type": "select",
+    "label": "Desktop image transition"
+   },
+   {
+    "id": "image_position",
+    "type": "select",
+    "label": "Image position"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "item",
+    "name": "Item",
+    "nsettings": 6
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "impact-text.liquid",
+  "type": "impact-text",
+  "name": "Impact text",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "stack_mobile",
+    "type": "checkbox",
+    "label": "Stack on mobile"
+   },
+   {
+    "id": "text_alignment",
+    "type": "select",
+    "label": "Text alignment"
+   },
+   {
+    "id": "impact_text_style",
+    "type": "select",
+    "label": "Impact text style"
+   },
+   {
+    "id": "text_divider",
+    "type": "select",
+    "label": "Multiple texts divider"
+   },
+   {
+    "id": "impact_text_size_ratio",
+    "type": "range",
+    "label": "Impact text size ratio"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "heading_text_color",
+    "type": "color",
+    "label": "Impact text"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Impact text gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "item",
+    "name": "Item",
+    "nsettings": 9
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "logo-list.liquid",
+  "type": "logo-list",
+  "name": "Logo list",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "stack_mobile",
+    "type": "checkbox",
+    "label": "Stack on mobile"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "text_alignment",
+    "type": "select",
+    "label": "Text alignment"
+   },
+   {
+    "id": "items_per_row",
+    "type": "range",
+    "label": "Items per row (desktop)"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "logo_item_background",
+    "type": "color",
+    "label": "Logo background"
+   },
+   {
+    "id": "logo_item_border",
+    "type": "color",
+    "label": "Logo border"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "logo",
+    "name": "Logo",
+    "nsettings": 3
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-article.liquid",
+  "type": "main-article",
+  "name": "Blog post",
+  "presets": false,
+  "settings": [
+   {
+    "id": "allow_transparent_header",
+    "type": "checkbox",
+    "label": "Allow transparent header"
+   },
+   {
+    "id": "layout",
+    "type": "select",
+    "label": "Layout"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "show_author",
+    "type": "checkbox",
+    "label": "Show author"
+   },
+   {
+    "id": "show_date",
+    "type": "checkbox",
+    "label": "Show date"
+   },
+   {
+    "id": "show_comments_count",
+    "type": "checkbox",
+    "label": "Show comments count"
+   },
+   {
+    "id": "show_share_buttons",
+    "type": "checkbox",
+    "label": "Show share buttons"
+   },
+   {
+    "id": "banner_background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "banner_text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "overlay_color",
+    "type": "color",
+    "label": "Overlay"
+   },
+   {
+    "id": "overlay_opacity",
+    "type": "range",
+    "label": "Overlay opacity"
+   },
+   {
+    "id": "show_featured_product",
+    "type": "checkbox",
+    "label": "Show featured product sidebar"
+   },
+   {
+    "id": "featured_product",
+    "type": "product",
+    "label": "Featured product"
+   },
+   {
+    "id": "featured_product_handle",
+    "type": "text",
+    "label": "Featured product handle (fallback)"
+   },
+   {
+    "id": "featured_product_url",
+    "type": "url",
+    "label": "Featured product link"
+   },
+   {
+    "id": "featured_product_image",
+    "type": "image_picker",
+    "label": "Featured product image override"
+   },
+   {
+    "id": "featured_product_eyebrow",
+    "type": "text",
+    "label": "Featured product eyebrow"
+   },
+   {
+    "id": "featured_product_text",
+    "type": "textarea",
+    "label": "Featured product text"
+   },
+   {
+    "id": "featured_product_button_label",
+    "type": "text",
+    "label": "Featured product button label"
+   },
+   {
+    "id": "content_width",
+    "type": "select",
+    "label": "Content width"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "navigation",
+    "name": "Up next",
+    "nsettings": 0
+   },
+   {
+    "type": "comments",
+    "name": "Comments",
+    "nsettings": 3
+   }
+  ],
+  "used_in": [
+   "templates/article.json"
+  ],
+  "custom": false,
+  "metafield_hits": [
+   "arbortech.featured_product",
+   "arbortech.featured_product_url",
+   "arbortech.story_blocks"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-blog.liquid",
+  "type": "main-blog",
+  "name": "Blog",
+  "presets": false,
+  "settings": [
+   {
+    "id": "allow_transparent_header",
+    "type": "checkbox",
+    "label": "Allow transparent header"
+   },
+   {
+    "id": "eyebrow",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "show_newsletter_form",
+    "type": "checkbox",
+    "label": "Show newsletter form"
+   },
+   {
+    "id": "show_tags",
+    "type": "checkbox",
+    "label": "Show tags"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   },
+   {
+    "id": "feature_first_article",
+    "type": "checkbox",
+    "label": "Feature first blog post"
+   },
+   {
+    "id": "feature_article_background",
+    "type": "color",
+    "label": "Featured article background"
+   },
+   {
+    "id": "feature_article_text_color",
+    "type": "color",
+    "label": "Featured article text"
+   },
+   {
+    "id": "show_excerpt",
+    "type": "checkbox",
+    "label": "Show excerpt"
+   },
+   {
+    "id": "show_date",
+    "type": "checkbox",
+    "label": "Show date"
+   },
+   {
+    "id": "show_author",
+    "type": "checkbox",
+    "label": "Show author"
+   },
+   {
+    "id": "show_comments_count",
+    "type": "checkbox",
+    "label": "Show comments count"
+   },
+   {
+    "id": "show_category",
+    "type": "checkbox",
+    "label": "Show category"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "newsletter",
+    "name": "Newsletter",
+    "nsettings": 9
+   }
+  ],
+  "used_in": [
+   "templates/blog.json"
+  ],
+  "custom": false,
+  "metafield_hits": [
+   "banner.background_color",
+   "banner.text_color"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-cart.liquid",
+  "type": "main-cart",
+  "name": "Cart",
+  "presets": false,
+  "settings": [
+   {
+    "id": "allow_discount_application",
+    "type": "checkbox",
+    "label": "Allow discount application"
+   },
+   {
+    "id": "show_shipping_estimator",
+    "type": "checkbox",
+    "label": "Show shipping estimator"
+   },
+   {
+    "id": "show_payment_icons",
+    "type": "checkbox",
+    "label": "Show payment icons"
+   },
+   {
+    "id": "vat_eyebrow",
+    "type": "text",
+    "label": "VAT field eyebrow"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "@app",
+    "name": null,
+    "nsettings": 0
+   },
+   {
+    "type": "totals",
+    "name": "Totals",
+    "nsettings": 2
+   },
+   {
+    "type": "cart_note",
+    "name": "Cart note",
+    "nsettings": 1
+   },
+   {
+    "type": "text",
+    "name": "Text",
+    "nsettings": 1
+   },
+   {
+    "type": "checkout_button",
+    "name": "Checkout button",
+    "nsettings": 0
+   },
+   {
+    "type": "accelerated_buttons",
+    "name": "Accelerated buttons",
+    "nsettings": 1
+   },
+   {
+    "type": "offer",
+    "name": "Offer",
+    "nsettings": 9
+   }
+  ],
+  "used_in": [
+   "templates/cart.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-collection.liquid",
+  "type": "main-collection",
+  "name": "Collection page",
+  "presets": false,
+  "settings": [
+   {
+    "id": "show_collection_title",
+    "type": "checkbox",
+    "label": "Show collection title"
+   },
+   {
+    "id": "show_collection_description",
+    "type": "checkbox",
+    "label": "Show collection description"
+   },
+   {
+    "id": "products_per_page",
+    "type": "range",
+    "label": "Products per page"
+   },
+   {
+    "id": "products_per_row_mobile",
+    "type": "select",
+    "label": "Products per row (mobile)"
+   },
+   {
+    "id": "products_per_row_desktop",
+    "type": "range",
+    "label": "Products per row (desktop)"
+   },
+   {
+    "id": "filter_layout",
+    "type": "select",
+    "label": "Desktop layout"
+   },
+   {
+    "id": "show_sort_by",
+    "type": "checkbox",
+    "label": "Show sort by"
+   },
+   {
+    "id": "show_filters",
+    "type": "checkbox",
+    "label": "Show filters"
+   },
+   {
+    "id": "show_filter_group_name",
+    "type": "checkbox",
+    "label": "Show group name"
+   },
+   {
+    "id": "show_filter_values_count",
+    "type": "checkbox",
+    "label": "Show filter values count"
+   },
+   {
+    "id": "open_first_filter_group",
+    "type": "checkbox",
+    "label": "Open first group by default"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "promotion_image",
+    "name": "Promotion image",
+    "nsettings": 15
+   },
+   {
+    "type": "promotion_video",
+    "name": "Promotion video",
+    "nsettings": 15
+   }
+  ],
+  "used_in": [
+   "templates/collection.arbt-masonry-trade.json",
+   "templates/collection.arbt-outdoor-grounds-care.json",
+   "templates/collection.arbt-power-carving.json",
+   "templates/collection.json"
+  ],
+  "custom": false,
+  "metafield_hits": [
+   "arbortech.bundle_components"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-customers-account.liquid",
+  "type": "main-customers-account",
+  "name": "Customer account",
+  "presets": false,
+  "settings": [],
+  "blocks": [
+   {
+    "type": "@app",
+    "name": null,
+    "nsettings": 0
+   },
+   {
+    "type": "liquid",
+    "name": "Liquid",
+    "nsettings": 1
+   },
+   {
+    "type": "orders",
+    "name": "Order list",
+    "nsettings": 0
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-customers-activate-account.liquid",
+  "type": "main-customers-activate-account",
+  "name": "Customer activate account",
+  "presets": false,
+  "settings": [],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-customers-addresses.liquid",
+  "type": "main-customers-addresses",
+  "name": "Customer addresses",
+  "presets": false,
+  "settings": [],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-customers-login.liquid",
+  "type": "main-customers-login",
+  "name": "Customer login",
+  "presets": false,
+  "settings": [
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "@app",
+    "name": null,
+    "nsettings": 0
+   },
+   {
+    "type": "fields",
+    "name": "Fields",
+    "nsettings": 1
+   },
+   {
+    "type": "liquid",
+    "name": "Liquid",
+    "nsettings": 1
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-customers-order.liquid",
+  "type": "main-customers-order",
+  "name": "Customer order",
+  "presets": false,
+  "settings": [],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-customers-register.liquid",
+  "type": "main-customers-register",
+  "name": "Customer register",
+  "presets": false,
+  "settings": [
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "@app",
+    "name": null,
+    "nsettings": 0
+   },
+   {
+    "type": "fields",
+    "name": "Fields",
+    "nsettings": 1
+   },
+   {
+    "type": "liquid",
+    "name": "Liquid",
+    "nsettings": 1
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-customers-reset-password.liquid",
+  "type": "main-customers-reset-password",
+  "name": "Customer reset password",
+  "presets": false,
+  "settings": [],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-gift-card.liquid",
+  "type": "main-gift-card",
+  "name": "Gift card",
+  "presets": false,
+  "settings": [
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Gift card image"
+   },
+   {
+    "id": "show_qr_code",
+    "type": "checkbox",
+    "label": "Show QR code"
+   },
+   {
+    "id": "amount_background",
+    "type": "color",
+    "label": "Amount box background"
+   },
+   {
+    "id": "amount_text_color",
+    "type": "color",
+    "label": "Amount text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-list-collections.liquid",
+  "type": "main-list-collections",
+  "name": "List collections",
+  "presets": false,
+  "settings": [
+   {
+    "id": "collections",
+    "type": "collection_list",
+    "label": "Selected collections"
+   },
+   {
+    "id": "collections_per_row_mobile",
+    "type": "select",
+    "label": "Collections per row (mobile)"
+   },
+   {
+    "id": "collections_per_row",
+    "type": "range",
+    "label": "Collections per row (desktop)"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "overlay_color",
+    "type": "color",
+    "label": "Overlay"
+   },
+   {
+    "id": "overlay_opacity",
+    "type": "range",
+    "label": "Overlay opacity"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/list-collections.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-not-found.liquid",
+  "type": "main-not-found",
+  "name": "404",
+  "presets": false,
+  "settings": [],
+  "blocks": [],
+  "used_in": [
+   "templates/404.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-page.liquid",
+  "type": "main-page",
+  "name": "Page",
+  "presets": false,
+  "settings": [
+   {
+    "id": "content_width",
+    "type": "select",
+    "label": "Content width"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/page.arbt-widerruf.json",
+   "templates/page.contact.json",
+   "templates/page.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-password.liquid",
+  "type": "main-password",
+  "name": "Password",
+  "presets": false,
+  "settings": [
+   {
+    "id": "background_image",
+    "type": "image_picker",
+    "label": "Background image"
+   },
+   {
+    "id": "content_position",
+    "type": "select",
+    "label": "Content position"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "logo",
+    "name": "Logo",
+    "nsettings": 2
+   },
+   {
+    "type": "content",
+    "name": "Content",
+    "nsettings": 9
+   }
+  ],
+  "used_in": [
+   "templates/password.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-product.liquid",
+  "type": "main-product",
+  "name": "Product page",
+  "presets": false,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "show_fixed_add_to_cart",
+    "type": "checkbox",
+    "label": "Show add to cart on scroll"
+   },
+   {
+    "id": "desktop_media_width",
+    "type": "range",
+    "label": "Desktop media size"
+   },
+   {
+    "id": "desktop_media_layout",
+    "type": "select",
+    "label": "Desktop media layout"
+   },
+   {
+    "id": "mobile_media_size",
+    "type": "select",
+    "label": "Mobile media size"
+   },
+   {
+    "id": "mobile_carousel_control",
+    "type": "select",
+    "label": "Mobile carousel control"
+   },
+   {
+    "id": "enable_video_autoplay",
+    "type": "checkbox",
+    "label": "Enable video autoplay"
+   },
+   {
+    "id": "enable_video_looping",
+    "type": "checkbox",
+    "label": "Enable video looping"
+   },
+   {
+    "id": "enable_image_zoom",
+    "type": "checkbox",
+    "label": "Enable"
+   },
+   {
+    "id": "max_image_zoom_level",
+    "type": "range",
+    "label": "Max zoom level"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "input_background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "input_text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "@app",
+    "name": null,
+    "nsettings": 0
+   },
+   {
+    "type": "vendor",
+    "name": "Vendor",
+    "nsettings": 0
+   },
+   {
+    "type": "title",
+    "name": "Title",
+    "nsettings": 1
+   },
+   {
+    "type": "sku",
+    "name": "SKU",
+    "nsettings": 0
+   },
+   {
+    "type": "badges",
+    "name": "Badges",
+    "nsettings": 1
+   },
+   {
+    "type": "price",
+    "name": "Price",
+    "nsettings": 1
+   },
+   {
+    "type": "payment_terms",
+    "name": "Payment installments",
+    "nsettings": 1
+   },
+   {
+    "type": "rating",
+    "name": "Rating",
+    "nsettings": 2
+   },
+   {
+    "type": "separator",
+    "name": "Separator",
+    "nsettings": 0
+   },
+   {
+    "type": "description",
+    "name": "Description",
+    "nsettings": 4
+   },
+   {
+    "type": "variant_picker",
+    "name": "Variant picker",
+    "nsettings": 6
+   },
+   {
+    "type": "product_variations",
+    "name": "Product variations",
+    "nsettings": 5
+   },
+   {
+    "type": "line_item_property",
+    "name": "Line item property",
+    "nsettings": 7
+   },
+   {
+    "type": "quantity_selector",
+    "name": "Quantity selector",
+    "nsettings": 1
+   },
+   {
+    "type": "volume_pricing",
+    "name": "Volume pricing table",
+    "nsettings": 1
+   },
+   {
+    "type": "inventory",
+    "name": "Inventory",
+    "nsettings": 1
+   },
+   {
+    "type": "buy_buttons",
+    "name": "Buy buttons",
+    "nsettings": 6
+   },
+   {
+    "type": "pickup_availability",
+    "name": "Pickup availability",
+    "nsettings": 1
+   },
+   {
+    "type": "text",
+    "name": "Text",
+    "nsettings": 1
+   },
+   {
+    "type": "collapsible_text",
+    "name": "Collapsible text",
+    "nsettings": 6
+   },
+   {
+    "type": "image",
+    "name": "Image",
+    "nsettings": 3
+   },
+   {
+    "type": "button",
+    "name": "Button",
+    "nsettings": 8
+   },
+   {
+    "type": "liquid",
+    "name": "Custom Liquid",
+    "nsettings": 1
+   },
+   {
+    "type": "associated_products",
+    "name": "Complementary products",
+    "nsettings": 7
+   },
+   {
+    "type": "offer",
+    "name": "Offer",
+    "nsettings": 9
+   },
+   {
+    "type": "share_buttons",
+    "name": "Share buttons",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "main-search.liquid",
+  "type": "main-search",
+  "name": "Search",
+  "presets": false,
+  "settings": [
+   {
+    "id": "products_per_page",
+    "type": "range",
+    "label": "Products per page"
+   },
+   {
+    "id": "products_per_row_mobile",
+    "type": "select",
+    "label": "Products per row (mobile)"
+   },
+   {
+    "id": "products_per_row_desktop",
+    "type": "range",
+    "label": "Products per row (desktop)"
+   },
+   {
+    "id": "filter_layout",
+    "type": "select",
+    "label": "Desktop layout"
+   },
+   {
+    "id": "show_sort_by",
+    "type": "checkbox",
+    "label": "Show sort by"
+   },
+   {
+    "id": "show_filters",
+    "type": "checkbox",
+    "label": "Show filters"
+   },
+   {
+    "id": "show_filter_group_name",
+    "type": "checkbox",
+    "label": "Show group name"
+   },
+   {
+    "id": "show_filter_values_count",
+    "type": "checkbox",
+    "label": "Show filter values count"
+   },
+   {
+    "id": "open_first_filter_group",
+    "type": "checkbox",
+    "label": "Open first group by default"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/search.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "media-grid.liquid",
+  "type": "media-grid",
+  "name": "Media grid",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "reduce_width",
+    "type": "checkbox",
+    "label": "Reduce width on large screens"
+   },
+   {
+    "id": "text_alignment",
+    "type": "text_alignment",
+    "label": "Text alignment"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "desktop_row_height",
+    "type": "range",
+    "label": "Desktop row height"
+   },
+   {
+    "id": "mobile_row_height",
+    "type": "range",
+    "label": "Mobile row height"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "image",
+    "name": "Image",
+    "nsettings": 20
+   },
+   {
+    "type": "video",
+    "name": "Video",
+    "nsettings": 23
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "media-with-text.liquid",
+  "type": "media-with-text",
+  "name": "Media with text",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "alternate_media_position",
+    "type": "checkbox",
+    "label": "Alternate media position"
+   },
+   {
+    "id": "spacing",
+    "type": "select",
+    "label": "Spacing"
+   },
+   {
+    "id": "text_alignment",
+    "type": "text_alignment",
+    "label": "Text alignment"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "image",
+    "name": "Image",
+    "nsettings": 19
+   },
+   {
+    "type": "video",
+    "name": "Video",
+    "nsettings": 22
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "multi-column.liquid",
+  "type": "multi-column",
+  "name": "Multi-column",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "stack_on_mobile",
+    "type": "checkbox",
+    "label": "Stack on mobile"
+   },
+   {
+    "id": "gap",
+    "type": "select",
+    "label": "Gap spacing"
+   },
+   {
+    "id": "text_alignment",
+    "type": "select",
+    "label": "Text alignment"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "item",
+    "name": "Item",
+    "nsettings": 10
+   },
+   {
+    "type": "spacer",
+    "name": "Spacer",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "multiple-images-with-text.liquid",
+  "type": "multiple-images-with-text",
+  "name": "Multiple images with text",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "images_layout",
+    "type": "select",
+    "label": "Images layout"
+   },
+   {
+    "id": "collage_images_alignment",
+    "type": "select",
+    "label": "Collage images alignment"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "item",
+    "name": "Item",
+    "nsettings": 7
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "newsletter-popup.liquid",
+  "type": "newsletter-popup",
+  "name": "Newsletter popup",
+  "presets": false,
+  "settings": [
+   {
+    "id": "apparition_delay",
+    "type": "range",
+    "label": "Delay until the popup appears"
+   },
+   {
+    "id": "show_only_on_index",
+    "type": "checkbox",
+    "label": "Show only on home page"
+   },
+   {
+    "id": "show_only_for_visitors",
+    "type": "checkbox",
+    "label": "Disable for account holders"
+   },
+   {
+    "id": "show_only_once",
+    "type": "checkbox",
+    "label": "Show once to visitors"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "button_text",
+    "type": "text",
+    "label": "Button"
+   },
+   {
+    "id": "subtext",
+    "type": "inline_richtext",
+    "label": "Subtext"
+   },
+   {
+    "id": "success_heading",
+    "type": "text",
+    "label": "Confirmation heading"
+   },
+   {
+    "id": "success_message",
+    "type": "textarea",
+    "label": "Confirmation message"
+   },
+   {
+    "id": "interests_label",
+    "type": "text",
+    "label": "Topic label"
+   },
+   {
+    "id": "interests_placeholder",
+    "type": "text",
+    "label": "Topic placeholder"
+   },
+   {
+    "id": "topic_1_label",
+    "type": "text",
+    "label": "Topic 1 label"
+   },
+   {
+    "id": "topic_1_tag",
+    "type": "text",
+    "label": "Topic 1 customer tag"
+   },
+   {
+    "id": "topic_2_label",
+    "type": "text",
+    "label": "Topic 2 label"
+   },
+   {
+    "id": "topic_2_tag",
+    "type": "text",
+    "label": "Topic 2 customer tag"
+   },
+   {
+    "id": "topic_3_label",
+    "type": "text",
+    "label": "Topic 3 label"
+   },
+   {
+    "id": "topic_3_tag",
+    "type": "text",
+    "label": "Topic 3 customer tag"
+   },
+   {
+    "id": "topic_4_label",
+    "type": "text",
+    "label": "Topic 4 label"
+   },
+   {
+    "id": "topic_4_tag",
+    "type": "text",
+    "label": "Topic 4 customer tag"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "sections/overlay-group.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "newsletter.liquid",
+  "type": "newsletter",
+  "name": "Newsletter",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "show_icon",
+    "type": "checkbox",
+    "label": "Show icon"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "button_text",
+    "type": "text",
+    "label": "Button"
+   },
+   {
+    "id": "subtext",
+    "type": "text",
+    "label": "Subtext"
+   },
+   {
+    "id": "success_heading",
+    "type": "text",
+    "label": "Confirmation heading"
+   },
+   {
+    "id": "success_message",
+    "type": "textarea",
+    "label": "Confirmation message"
+   },
+   {
+    "id": "interests_label",
+    "type": "text",
+    "label": "Topic label"
+   },
+   {
+    "id": "interests_placeholder",
+    "type": "text",
+    "label": "Topic placeholder"
+   },
+   {
+    "id": "topic_1_label",
+    "type": "text",
+    "label": "Topic 1 label"
+   },
+   {
+    "id": "topic_1_tag",
+    "type": "text",
+    "label": "Topic 1 customer tag"
+   },
+   {
+    "id": "topic_2_label",
+    "type": "text",
+    "label": "Topic 2 label"
+   },
+   {
+    "id": "topic_2_tag",
+    "type": "text",
+    "label": "Topic 2 customer tag"
+   },
+   {
+    "id": "topic_3_label",
+    "type": "text",
+    "label": "Topic 3 label"
+   },
+   {
+    "id": "topic_3_tag",
+    "type": "text",
+    "label": "Topic 3 customer tag"
+   },
+   {
+    "id": "topic_4_label",
+    "type": "text",
+    "label": "Topic 4 label"
+   },
+   {
+    "id": "topic_4_tag",
+    "type": "text",
+    "label": "Topic 4 customer tag"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text color"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "press.liquid",
+  "type": "press",
+  "name": "Press",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "content_size",
+    "type": "select",
+    "label": "Content size"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "logo_item_background",
+    "type": "color",
+    "label": "Logo background"
+   },
+   {
+    "id": "logo_item_border",
+    "type": "color",
+    "label": "Logo border"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "quote",
+    "name": "Quote",
+    "nsettings": 6
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "privacy-banner.liquid",
+  "type": "privacy-banner",
+  "name": "Privacy banner",
+  "presets": false,
+  "settings": [
+   {
+    "id": "privacy_bar_title",
+    "type": "text",
+    "label": "Title"
+   },
+   {
+    "id": "privacy_bar_content",
+    "type": "richtext",
+    "label": "Content"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "sections/overlay-group.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "recently-viewed-products.liquid",
+  "type": "recently-viewed-products",
+  "name": "Recently viewed products",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "products_count",
+    "type": "range",
+    "label": "Products count"
+   },
+   {
+    "id": "stack_products",
+    "type": "checkbox",
+    "label": "Stack products"
+   },
+   {
+    "id": "show_progress_bar",
+    "type": "checkbox",
+    "label": "Show carousel progress bar"
+   },
+   {
+    "id": "products_per_row_mobile",
+    "type": "select",
+    "label": "Products per row (mobile)"
+   },
+   {
+    "id": "products_per_row_desktop",
+    "type": "range",
+    "label": "Products per row (desktop)"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "product_card_background",
+    "type": "color",
+    "label": "Product card background"
+   },
+   {
+    "id": "product_card_text_color",
+    "type": "color",
+    "label": "Product card text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "related-products.liquid",
+  "type": "related-products",
+  "name": "Related products",
+  "presets": true,
+  "settings": [
+   {
+    "id": "products",
+    "type": "product_list",
+    "label": "Manual recommendations"
+   },
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "stack_products",
+    "type": "checkbox",
+    "label": "Stack products"
+   },
+   {
+    "id": "show_progress_bar",
+    "type": "checkbox",
+    "label": "Show carousel progress bar"
+   },
+   {
+    "id": "products_per_row_mobile",
+    "type": "select",
+    "label": "Products per row (mobile)"
+   },
+   {
+    "id": "products_per_row_desktop",
+    "type": "range",
+    "label": "Products per row (desktop)"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Eyebrow"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "product_card_background",
+    "type": "color",
+    "label": "Product card background"
+   },
+   {
+    "id": "product_card_text_color",
+    "type": "color",
+    "label": "Product card text"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "templates/product.json"
+  ],
+  "custom": false,
+  "metafield_hits": [
+   "arbortech.configurator_family",
+   "arbortech.related_accessories",
+   "arbortech.vertical_landscaping",
+   "arbortech.vertical_masonry",
+   "arbortech.vertical_woodworking"
+  ],
+  "metaobject_hits": []
+ },
+ {
+  "file": "revealed-image-on-scroll.liquid",
+  "type": "revealed-image-on-scroll",
+  "name": "Revealed image on scroll",
+  "presets": true,
+  "settings": [
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "mobile_image",
+    "type": "image_picker",
+    "label": "Mobile image"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "text_color_inside",
+    "type": "color",
+    "label": "Text (inside image)"
+   },
+   {
+    "id": "text_color_outside",
+    "type": "color",
+    "label": "Text (outside image)"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "rich-text.liquid",
+  "type": "rich-text",
+  "name": "Rich text",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "content_width",
+    "type": "select",
+    "label": "Content width"
+   },
+   {
+    "id": "text_position",
+    "type": "select",
+    "label": "Text position"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "subheading",
+    "name": "Subheading",
+    "nsettings": 1
+   },
+   {
+    "type": "heading",
+    "name": "Heading",
+    "nsettings": 4
+   },
+   {
+    "type": "richtext",
+    "name": "Paragraph",
+    "nsettings": 1
+   },
+   {
+    "type": "page",
+    "name": "Page",
+    "nsettings": 1
+   },
+   {
+    "type": "liquid",
+    "name": "Liquid",
+    "nsettings": 1
+   },
+   {
+    "type": "image",
+    "name": "Image",
+    "nsettings": 4
+   },
+   {
+    "type": "button",
+    "name": "Button",
+    "nsettings": 6
+   },
+   {
+    "type": "icon",
+    "name": "Icon",
+    "nsettings": 6
+   },
+   {
+    "type": "divider",
+    "name": "Column divider",
+    "nsettings": 1
+   }
+  ],
+  "used_in": [
+   "templates/page.events.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "scrolling-text.liquid",
+  "type": "scrolling-text",
+  "name": "Scrolling text",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "text",
+    "type": "text",
+    "label": "Text"
+   },
+   {
+    "id": "text_size",
+    "type": "select",
+    "label": "Text size"
+   },
+   {
+    "id": "text_style",
+    "type": "select",
+    "label": "Text style"
+   },
+   {
+    "id": "scrolling_mode",
+    "type": "select",
+    "label": "Scrolling mode"
+   },
+   {
+    "id": "scrolling_speed",
+    "type": "range",
+    "label": "Automatic scrolling speed"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "text_gradient",
+    "type": "color_background",
+    "label": "Text gradient"
+   }
+  ],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "search-drawer.liquid",
+  "type": "search-drawer",
+  "name": "Search drawer",
+  "presets": false,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "show_article_category",
+    "type": "checkbox",
+    "label": "Show blog post category"
+   },
+   {
+    "id": "search_menu",
+    "type": "link_list",
+    "label": "Menu"
+   },
+   {
+    "id": "search_menu_show_title",
+    "type": "checkbox",
+    "label": "Show menu title"
+   }
+  ],
+  "blocks": [],
+  "used_in": [
+   "sections/overlay-group.json"
+  ],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "shop-the-look.liquid",
+  "type": "shop-the-look",
+  "name": "Shop the look",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "stack_mobile",
+    "type": "checkbox",
+    "label": "Stack on mobile"
+   },
+   {
+    "id": "image",
+    "type": "image_picker",
+    "label": "Image"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "product_card_background",
+    "type": "color",
+    "label": "Product card background (desktop)"
+   },
+   {
+    "id": "product_card_text_color",
+    "type": "color",
+    "label": "Product card text (desktop)"
+   },
+   {
+    "id": "product_card_mobile_background",
+    "type": "color",
+    "label": "Product card background (mobile)"
+   },
+   {
+    "id": "product_card_mobile_text_color",
+    "type": "color",
+    "label": "Product card text (mobile)"
+   },
+   {
+    "id": "background_dots",
+    "type": "color",
+    "label": "Dots background"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "product",
+    "name": "Product",
+    "nsettings": 3
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "slideshow.liquid",
+  "type": "slideshow",
+  "name": "Slideshow",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "allow_transparent_header",
+    "type": "checkbox",
+    "label": "Allow transparent header"
+   },
+   {
+    "id": "show_initial_transition",
+    "type": "checkbox",
+    "label": "Show initial transition"
+   },
+   {
+    "id": "image_size",
+    "type": "select",
+    "label": "Media size"
+   },
+   {
+    "id": "controls_type",
+    "type": "select",
+    "label": "Controls"
+   },
+   {
+    "id": "transition_type",
+    "type": "select",
+    "label": "Transition type"
+   },
+   {
+    "id": "autoplay",
+    "type": "checkbox",
+    "label": "Auto rotate between slides"
+   },
+   {
+    "id": "cycle_speed",
+    "type": "range",
+    "label": "Change slides every"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "image",
+    "name": "Image",
+    "nsettings": 20
+   },
+   {
+    "type": "video",
+    "name": "Video",
+    "nsettings": 21
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "specification-table.liquid",
+  "type": "specification-table",
+  "name": "Specification table",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "button_text",
+    "type": "text",
+    "label": "Button text"
+   },
+   {
+    "id": "button_url",
+    "type": "url",
+    "label": "Button URL"
+   },
+   {
+    "id": "text_position",
+    "type": "select",
+    "label": "Text position"
+   },
+   {
+    "id": "max_rows",
+    "type": "range",
+    "label": "Rows revealed by default"
+   },
+   {
+    "id": "view_all_text",
+    "type": "text",
+    "label": "View all text"
+   },
+   {
+    "id": "view_less_text",
+    "type": "text",
+    "label": "View less text"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "button_background",
+    "type": "color",
+    "label": "Button background"
+   },
+   {
+    "id": "button_text_color",
+    "type": "color",
+    "label": "Button text"
+   },
+   {
+    "id": "chart_background",
+    "type": "color",
+    "label": "Chart background"
+   },
+   {
+    "id": "chart_text_color",
+    "type": "color",
+    "label": "Chart text"
+   },
+   {
+    "id": "chart_true_false_color",
+    "type": "color",
+    "label": "True/false color"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "row",
+    "name": "Row",
+    "nsettings": 3
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "tabs.liquid",
+  "type": "tabs",
+  "name": "Tabs",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "content_size",
+    "type": "select",
+    "label": "Content size"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "text_alignment",
+    "type": "text_alignment",
+    "label": "Desktop text alignment"
+   },
+   {
+    "id": "first_tab_open",
+    "type": "checkbox",
+    "label": "Open first tab on mobile"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "tab",
+    "name": "Rich-text content",
+    "nsettings": 3
+   },
+   {
+    "type": "liquid",
+    "name": "Liquid code",
+    "nsettings": 2
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "testimonials.liquid",
+  "type": "testimonials",
+  "name": "Testimonials",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "stack_testimonials",
+    "type": "checkbox",
+    "label": "Stack testimonials"
+   },
+   {
+    "id": "subheading",
+    "type": "text",
+    "label": "Subheading"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "content",
+    "type": "richtext",
+    "label": "Content"
+   },
+   {
+    "id": "link_url",
+    "type": "url",
+    "label": "Link URL"
+   },
+   {
+    "id": "link_text",
+    "type": "text",
+    "label": "Link text"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "heading_color",
+    "type": "color",
+    "label": "Heading color"
+   },
+   {
+    "id": "heading_gradient",
+    "type": "color_background",
+    "label": "Heading gradient"
+   },
+   {
+    "id": "testimonial_card_background",
+    "type": "color",
+    "label": "Testimonial card background"
+   },
+   {
+    "id": "testimonial_card_text_color",
+    "type": "color",
+    "label": "Testimonial card text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "testimonial",
+    "name": "Testimonial",
+    "nsettings": 7
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "text-with-icons.liquid",
+  "type": "text-with-icons",
+  "name": "Text with icons",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "stack_on_mobile",
+    "type": "checkbox",
+    "label": "Stack on mobile"
+   },
+   {
+    "id": "title",
+    "type": "text",
+    "label": "Heading"
+   },
+   {
+    "id": "heading_tag",
+    "type": "select",
+    "label": "Heading size"
+   },
+   {
+    "id": "text_alignment",
+    "type": "select",
+    "label": "Text alignment (desktop)"
+   },
+   {
+    "id": "icon_spacing",
+    "type": "select",
+    "label": "Icon spacing"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "item",
+    "name": "Text with icon",
+    "nsettings": 9
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "timeline.liquid",
+  "type": "timeline",
+  "name": "Timeline",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "background",
+    "type": "color",
+    "label": "Background"
+   },
+   {
+    "id": "background_gradient",
+    "type": "color_background",
+    "label": "Background gradient"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "slide",
+    "name": "Slide",
+    "nsettings": 5
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "variant-added.liquid",
+  "type": "variant-added",
+  "name": "Variant added",
+  "presets": false,
+  "settings": [],
+  "blocks": [],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ },
+ {
+  "file": "video.liquid",
+  "type": "video",
+  "name": "Video",
+  "presets": true,
+  "settings": [
+   {
+    "id": "full_width",
+    "type": "checkbox",
+    "label": "Full width"
+   },
+   {
+    "id": "allow_transparent_header",
+    "type": "checkbox",
+    "label": "Allow transparent header"
+   },
+   {
+    "id": "autoplay",
+    "type": "checkbox",
+    "label": "Autoplay"
+   },
+   {
+    "id": "video_size",
+    "type": "select",
+    "label": "Video size"
+   },
+   {
+    "id": "video",
+    "type": "video",
+    "label": "Video"
+   },
+   {
+    "id": "mobile_video",
+    "type": "video",
+    "label": "Mobile video"
+   },
+   {
+    "id": "external_video_url",
+    "type": "video_url",
+    "label": "Video URL"
+   },
+   {
+    "id": "poster",
+    "type": "image_picker",
+    "label": "Poster image"
+   },
+   {
+    "id": "text_color",
+    "type": "color",
+    "label": "Text"
+   },
+   {
+    "id": "overlay_color",
+    "type": "color",
+    "label": "Overlay"
+   },
+   {
+    "id": "overlay_opacity",
+    "type": "range",
+    "label": "Overlay opacity"
+   }
+  ],
+  "blocks": [
+   {
+    "type": "play",
+    "name": "Play button",
+    "nsettings": 1
+   },
+   {
+    "type": "subheading",
+    "name": "Subheading",
+    "nsettings": 1
+   },
+   {
+    "type": "heading",
+    "name": "Heading",
+    "nsettings": 2
+   },
+   {
+    "type": "richtext",
+    "name": "Paragraph",
+    "nsettings": 1
+   },
+   {
+    "type": "button",
+    "name": "Button",
+    "nsettings": 6
+   }
+  ],
+  "used_in": [],
+  "custom": false,
+  "metafield_hits": [],
+  "metaobject_hits": []
+ }
+]

@@ -1,0 +1,87 @@
+{
+  "collections": {
+    "nodes": [
+      {
+        "title": "Woodworking",
+        "handle": "power-carving",
+        "productsCount": {
+          "count": 20
+        }
+      },
+      {
+        "title": "Woodworking - Power Tools",
+        "handle": "power-carving-power-tools",
+        "productsCount": {
+          "count": 8
+        }
+      },
+      {
+        "title": "Woodworking - Attachments & Accessories",
+        "handle": "power-carving-attachments-accessories",
+        "productsCount": {
+          "count": 13
+        }
+      },
+      {
+        "title": "Masonry / Trade",
+        "handle": "masonry-trade",
+        "productsCount": {
+          "count": 33
+        }
+      },
+      {
+        "title": "Masonry / Trade - Power Tools",
+        "handle": "masonry-trade-power-tools",
+        "productsCount": {
+          "count": 8
+        }
+      },
+      {
+        "title": "Masonry / Trade - Attachments & Accessories",
+        "handle": "masonry-trade-attachments-accessories",
+        "productsCount": {
+          "count": 25
+        }
+      },
+      {
+        "title": "Spare Parts & Consumables",
+        "handle": "spare-parts-consumables",
+        "productsCount": {
+          "count": 61
+        }
+      },
+      {
+        "title": "Power Tools",
+        "handle": "power-tools",
+        "productsCount": {
+          "count": 14
+        }
+      },
+      {
+        "title": "Spare Parts, Blades & Accessories",
+        "handle": "spare-parts-accessories",
+        "productsCount": {
+          "count": 60
+        }
+      },
+      {
+        "title": "Outdoor Grounds Care",
+        "handle": "outdoor-grounds-care",
+        "productsCount": {
+          "count": 12
+        }
+      }
+    ]
+  },
+  "blogs": {
+    "nodes": [
+      {
+        "title": "News",
+        "handle": "news",
+        "articlesCount": {
+          "count": 65
+        }
+      }
+    ]
+  }
+}

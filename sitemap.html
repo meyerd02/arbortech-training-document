@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbortech – Site Map</title>
+  <style>
+    :root {
+      --ink: #1a2230;
+      --body: #3a4453;
+      --muted: #5b6574;
+      --line: #e3e8ee;
+      --line-soft: #eef2f6;
+      --accent: #E87722;
+      --accent-dark: #b85710;
+      --accent-soft: #fdf1e6;
+      --ok: #1a7f4d;
+      --ok-bg: #eef8f2;
+      --warn: #8a5300;
+      --warn-bg: #fdf6e3;
+      --danger: #b3261e;
+      --danger-bg: #fdf1f0;
+      --info: #2b5d8a;
+      --info-bg: #eff5fa;
+      --code-bg: #f4f7fa;
+      --ink-code: #0f172a;
+      --radius: 3px;
+      --z-progress: 20;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--body);
+      line-height: 1.65;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    /* ── Screenshots ── */
+    figure.screenshot { margin: 1.4rem 0 1.9rem; }
+    figure.screenshot img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 1px 5px rgba(26,34,48,.09); }
+    figure.screenshot figcaption { font-size: .85rem; color: var(--muted); margin-top: .55rem; line-height: 1.5; }
+    figure.screenshot figcaption strong { color: var(--ink); }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    .page-header {
+      background: var(--ink);
+      color: #fff;
+      padding: 3.25rem 1.5rem 2.9rem;
+      border-bottom: 3px solid var(--accent);
+    }
+    .page-header .inner { max-width: 62em; margin: 0 auto; }
+    .page-header .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      background: var(--accent);
+      color: var(--ink);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      padding: 0.45em 0.8em;
+      margin-bottom: 1.25rem;
+    }
+    .page-header .kicker svg { flex: none; }
+    .page-header h1 {
+      margin: 0;
+      font-size: 2.05rem;
+      font-weight: 700;
+      letter-spacing: -0.022em;
+      line-height: 1.14;
+      text-wrap: balance;
+    }
+    .page-header h1 .brand { color: var(--accent); }
+    .page-header p.sub {
+      margin: 1rem 0 0;
+      max-width: 46em;
+      font-size: 1.02rem;
+      color: #cdd6e2;
+      line-height: 1.55;
+      text-wrap: pretty;
+    }
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .page-layout {
+      display: flex;
+      gap: 3.5em;
+      justify-content: flex-start;
+      align-items: flex-start;
+      max-width: 66em;
+      margin: 0 auto;
+      padding: 3em 3em 5em;
+    }
+    .sidebar {
+      width: 15em;
+      flex-shrink: 0;
+      position: sticky;
+      top: 2em;
+      max-height: calc(100vh - 4em);
+      overflow-y: auto;
+      padding-right: 0.4em;
+    }
+    .toc-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.7em;
+      padding-left: 0.6em;
+    }
+    .toc-list { display: flex; flex-direction: column; gap: 0.15em; }
+    .toc-link {
+      color: #66748a;
+      padding: 0.4em 0.6em;
+      font-size: 0.85em;
+      text-decoration: none;
+      transition: background 0.18s ease-out, color 0.18s ease-out;
+      line-height: 1.35;
+      border-radius: var(--radius);
+      border-left: 0;
+    }
+    .toc-link:hover { background: var(--line-soft); color: var(--ink); }
+    .toc-link.is-active { background: var(--accent-soft); color: var(--ink); font-weight: 600; }
+    .toc-link[data-depth="2"] { padding-left: 1.5em; font-size: 0.8em; }
+
+    .article { flex: 1; min-width: 0; max-width: 46em; }
+
+    .article h2 {
+      color: var(--ink);
+      letter-spacing: -0.014em;
+      margin: 2.4em 0 0.7em;
+      font-size: 1.66em;
+      font-weight: 700;
+      line-height: 1.24;
+      padding-top: 0.45em;
+      border-top: 1px solid var(--line);
+      text-wrap: balance;
+      scroll-margin-top: 1.5em;
+    }
+    .article h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.1em;
+      height: 2.1em;
+      margin-right: 0.45em;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      border-radius: var(--radius);
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      vertical-align: -0.28em;
+      font-size: 0.82em;
+    }
+    .article h3 {
+      color: var(--ink);
+      margin: 1.9em 0 0.55em;
+      font-size: 1.16em;
+      font-weight: 650;
+      letter-spacing: -0.008em;
+      text-wrap: balance;
+    }
+    .article h4 { color: var(--ink); margin: 1.4em 0 0.3em; font-size: 1em; font-weight: 650; }
+    .article p { margin: 0 0 1.15em; font-size: 0.94em; line-height: 1.62; text-wrap: pretty; }
+    .article ul, .article ol { padding-left: 1.5em; margin: 0 0 1.3em; }
+    .article li { margin: 0.42em 0; font-size: 0.94em; }
+    .article li > ul, .article li > ol { margin-top: 0.4em; margin-bottom: 0.4em; }
+    .article strong { color: var(--ink); font-weight: 650; }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #eef2f7;
+      border-radius: 0.25em;
+      padding: 0.12em 0.42em 0.22em;
+      font-size: 0.86em;
+      white-space: nowrap;
+      color: var(--ink-code);
+    }
+
+    /* ── Callouts ───────────────────────────────────────────── */
+    .callout {
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin: 0 0 1.4em;
+      font-size: 0.93em;
+      line-height: 1.55;
+      border: 1px solid;
+      border-top: 2px solid;
+    }
+    .callout .callout-title {
+      display: flex;
+      align-items: center;
+      gap: 0.55em;
+      font-weight: 700;
+      font-size: 0.86em;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5em;
+    }
+    .callout .callout-title svg { flex: none; }
+    .callout p { margin: 0.35em 0; font-size: 0.95em; }
+    .callout p:first-of-type { margin-top: 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout ul { margin: 0.5em 0 0.15em; }
+    .callout li { font-size: 0.93em; }
+
+    .callout.ok    { background: var(--ok-bg);    border-color: #d3eadd; }
+    .callout.ok    .callout-title { color: var(--ok); }
+    .callout.warn  { background: var(--warn-bg);  border-color: #f0e0b4; }
+    .callout.warn  .callout-title { color: var(--warn); }
+    .callout.danger{ background: var(--danger-bg);border-color: #f0cdca; }
+    .callout.danger .callout-title{ color: var(--danger); }
+    .callout.info  { background: var(--info-bg);  border-color: #cfdeec; }
+    .callout.info  .callout-title { color: var(--info); }
+
+    /* ── Tables ─────────────────────────────────────────────── */
+    .article table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 1.4em;
+      font-size: 0.87em;
+      line-height: 1.5;
+    }
+    .article th {
+      text-align: left;
+      background: var(--line-soft);
+      color: var(--ink);
+      font-weight: 650;
+      padding: 0.65em 0.85em;
+      border-bottom: 2px solid var(--line);
+      font-size: 0.92em;
+    }
+    .article td {
+      padding: 0.6em 0.85em;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+    }
+    .article tr:last-child td { border-bottom: 0; }
+    .article tbody tr:nth-child(even) { background: #fbfcfd; }
+
+    /* ── Checklist ──────────────────────────────────────────── */
+    .checklist { list-style: none; padding-left: 0.2em; margin: 0 0 1.3em; }
+    .checklist li {
+      position: relative;
+      padding-left: 2em;
+      margin: 0.6em 0;
+    }
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.18em;
+      width: 1.05em;
+      height: 1.05em;
+      border: 1.6px solid var(--accent);
+      border-radius: 2px;
+      background: #fff;
+    }
+
+    .kbd {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid #d4dbe4;
+      border-bottom-width: 2px;
+      border-radius: 0.3em;
+      padding: 0.08em 0.5em;
+      font-size: 0.85em;
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      color: var(--ink);
+    }
+
+    /* ── Scroll progress (subtle, state-only) ───────────────── */
+    #progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background: var(--accent);
+      z-index: var(--z-progress);
+      pointer-events: none;
+    }
+
+    @media print {
+      .sidebar, #progress { display: none; }
+      .page-layout { padding: 0.5em; }
+      .article { max-width: 100%; }
+      .page-header { padding: 1.2em 1.5em; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .page-header h1 { font-size: 1.6rem; }
+      .callout, .article th, .article h2 .num, .checklist li::before, .toc-title {
+        -webkit-print-color-adjust: exact; print-color-adjust: exact;
+      }
+      .article h2 { page-break-before: always; }
+      .callout, table, tr, li { break-inside: avoid; }
+    }
+
+    @media screen and (max-width: 800px) {
+      .page-layout { flex-direction: column; padding: 1.6em; gap: 1.5em; }
+      .sidebar { width: 100%; position: relative; top: 0; max-height: none; }
+      .article { max-width: 100%; }
+      .page-header h1 { font-size: 1.6rem; }
+    }
+
+
+    .tab-nav { background: var(--ink); border-bottom: 3px solid var(--accent); }
+    .tab-nav .inner { max-width: 76em; margin: 0 auto; padding: 0 1.4em; display: flex; gap: 0.4em; }
+    .tab-nav a { color: #cdd6e2; text-decoration: none; padding: 0.75em 1.1em; font-size: 0.86em; font-weight: 600; letter-spacing: 0.02em; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+    .tab-nav a:hover { color: #fff; }
+    .tab-nav a[aria-current] { color: #fff; border-bottom-color: var(--accent); background: rgba(255,255,255,0.06); }
+    @media print { .tab-nav { display: none; } }
+  
+    .tab-nav { background: var(--ink); border-bottom: 3px solid var(--accent); }
+    .tab-nav .inner { max-width: 76em; margin: 0 auto; padding: 0 1.4em; display: flex; gap: 0.4em; }
+    .tab-nav a { color: #cdd6e2; text-decoration: none; padding: 0.75em 1.1em; font-size: 0.86em; font-weight: 600; letter-spacing: 0.02em; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+    .tab-nav a:hover { color: #fff; }
+    .tab-nav a[aria-current] { color: #fff; border-bottom-color: var(--accent); background: rgba(255,255,255,0.06); }
+    @media print { .tab-nav { display: none; } }
+
+    .site-tree, .site-tree ul { list-style: none; padding-left: 1.1em; border-left: 2px solid var(--line); margin: 0.4em 0; }
+    .site-tree { border-left: 0; padding-left: 0; }
+    .site-tree li { margin: 0.34em 0; font-size: 0.92em; }
+    .site-tree code { color: var(--muted); font-size: 0.82em; }
+    .page-list { line-height: 2; }
+  </style>
+</head>
+<body>
+
+  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html">Module Guide</a></div></nav>
+
+  <header class="page-header">
+    <div class="inner">
+      <span class="kicker">Personalised CMS Manual · Site Map</span>
+      <h1><span class="brand">Arbortech</span> – What's On the Site, and Where It Lives</h1>
+    </div>
+  </header>
+
+  <div class="page-layout">
+
+    <div class="article">
+      <h2 id="how-to-read">How to read this page</h2>
+      <p>This is the structural map of <strong>arbortechtools.com</strong> – what exists, where it lives in the navigation, and which admin screen each thing is edited from. Every URL below is the Australian (root) address; the same page exists automatically under each market prefix (<code>/en-us</code>, <code>/en-ca</code>, <code>/en-uk</code>, <code>/de-de</code>, <code>/en-de</code>).</p>
+      <table>
+        <thead><tr><th>Content kind</th><th>Where you edit it</th></tr></thead>
+        <tbody>
+          <tr><td>Pages</td><td><strong>Online Store → Pages</strong> (Manual §3.1–3.2)</td></tr>
+          <tr><td>Products</td><td><strong>Products</strong> (Manual §2)</td></tr>
+          <tr><td>Collections</td><td><strong>Products → Collections</strong> (Manual §2.4)</td></tr>
+          <tr><td>Blog posts</td><td><strong>Online Store → Blog posts</strong> (Manual §3.3)</td></tr>
+          <tr><td>The navigation itself</td><td><strong>Online Store → Navigation</strong> (Manual §4)</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="nav-structure">1. The storefront, as the main menu presents it</h2>
+      <p>This mirrors the live <strong>main menu</strong> – the mega-nav your customers use. Indentation = menu nesting.</p>
+      <ul class="site-tree"><li><a href="https://arbortechtools.com/collections/all">Shop All</a> <code>/collections/all</code></li><li><a href="https://arbortechtools.com/collections/power-carving">Woodworking</a> <code>/collections/power-carving</code><ul><li><a href="https://arbortechtools.com/collections/power-carving-power-tools">Woodworking Tools</a> <code>/collections/power-carving-power-tools</code><ul><li><a href="https://arbortechtools.com/collections/power-carving/products/mini-grinder-mg1000">Mini Grinder MG1000</a> <code>/collections/power-carving/products/mini-grinder-mg1000</code></li><li><a href="https://arbortechtools.com/products/power-carving-unit">Power Carving Unit</a> <code>/products/power-carving-unit</code></li><li><a href="https://arbortechtools.com/products/power-chisel">Power Chisel</a> <code>/products/power-chisel</code></li></ul></li><li><a href="https://arbortechtools.com/collections/power-carving-attachments-accessories">Accessories</a> <code>/collections/power-carving-attachments-accessories</code><ul><li><a href="https://arbortechtools.com/collections/power-carving-attachments-accessories">Power Carving Attachments</a> <code>/collections/power-carving-attachments-accessories</code></li><li><a href="https://arbortechtools.com/products/turboplane">TURBOPlane</a> <code>/products/turboplane</code></li><li><a href="https://arbortechtools.com/products/ball-gouge">Ball Gouge</a> <code>/products/ball-gouge</code></li><li><a href="https://arbortechtools.com/products/contour-sander">Contour Sander</a> <code>/products/contour-sander</code></li><li><a href="https://arbortechtools.com/products/100mm-sanding-discs">100mm Sanding Discs</a> <code>/products/100mm-sanding-discs</code></li></ul></li><li><a href="https://arbortechtools.com/pages/shop-by-project">Shop by Project</a> <code>/pages/shop-by-project</code><ul><li><a href="https://arbortechtools.com/pages/spoon-and-bowl-carving">Spoon &amp; Bowl Carving</a> <code>/pages/spoon-and-bowl-carving</code></li><li><a href="https://arbortechtools.com/pages/furniture-and-sculpting">Furniture &amp; Sculpting</a> <code>/pages/furniture-and-sculpting</code></li><li><a href="https://arbortechtools.com/pages/detail-and-texturing">Detail &amp; Texturing</a> <code>/pages/detail-and-texturing</code></li></ul></li></ul></li><li><a href="https://arbortechtools.com/collections/masonry-trade">Masonry</a> <code>/collections/masonry-trade</code><ul><li><a href="https://arbortechtools.com/collections/masonry-trade-power-tools">Masonry Tools</a> <code>/collections/masonry-trade-power-tools</code><ul><li><a href="https://arbortechtools.com/collections/masonry-trade/products/mini-grinder-mg1000">Mini Grinder MG1000</a> <code>/collections/masonry-trade/products/mini-grinder-mg1000</code></li><li><a href="https://arbortechtools.com/products/mini-grinder-trade">Mini Grinder Trade</a> <code>/products/mini-grinder-trade</code></li><li><a href="https://arbortechtools.com/products/allsaw-200x">Allsaw AS200X</a> <code>/products/allsaw-200x</code></li><li><a href="https://arbortechtools.com/products/allsaw-ba200x-cordless">ALLSAW BA200X</a> <code>/products/allsaw-ba200x-cordless</code></li></ul></li><li><a href="https://arbortechtools.com/collections/masonry-trade-attachments-accessories">Accessories</a> <code>/collections/masonry-trade-attachments-accessories</code><ul><li><a href="https://arbortechtools.com/collections/masonry-trade-attachments-accessories">Masonry Attachments</a> <code>/collections/masonry-trade-attachments-accessories</code></li><li><a href="https://arbortechtools.com/products/allsaw-200x-tuckpointing-blade">Tuckpointing Blade</a> <code>/products/allsaw-200x-tuckpointing-blade</code></li><li><a href="https://arbortechtools.com/products/allsaw-200x-general-purpose-blade">General Purpose Blade</a> <code>/products/allsaw-200x-general-purpose-blade</code></li><li><a href="https://arbortechtools.com/products/allsaw-200x-head-joint-blade">Head Joint Blade</a> <code>/products/allsaw-200x-head-joint-blade</code></li></ul></li><li><a href="https://arbortechtools.com/pages/shop-by-project">Shop by Project</a> <code>/pages/shop-by-project</code><ul><li><a href="https://arbortechtools.com/pages/tuckpointing-and-repointing">Tuckpointing &amp; Repointing</a> <code>/pages/tuckpointing-and-repointing</code></li><li><a href="https://arbortechtools.com/pages/brick-and-block-repair">Brick &amp; Block Repair</a> <code>/pages/brick-and-block-repair</code></li><li><a href="https://arbortechtools.com/pages/heritage-masonry-repairs">Heritage Masonry Repairs</a> <code>/pages/heritage-masonry-repairs</code></li></ul></li></ul></li><li><a href="https://arbortechtools.com/collections/outdoor-grounds-care">Landscaping</a> <code>/collections/outdoor-grounds-care</code><ul><li><a href="https://arbortechtools.com/collections/outdoor-grounds-care">Outdoor Tools</a> <code>/collections/outdoor-grounds-care</code><ul><li><a href="https://arbortechtools.com/collections/outdoor-grounds-care/products/mini-grinder-mg1000">Mini Grinder MG1000</a> <code>/collections/outdoor-grounds-care/products/mini-grinder-mg1000</code></li><li><a href="https://arbortechtools.com/products/allsaw-200x">Allsaw AS200X</a> <code>/products/allsaw-200x</code></li><li><a href="https://arbortechtools.com/products/allsaw-ba200x-cordless">ALLSAW BA200X</a> <code>/products/allsaw-ba200x-cordless</code></li></ul></li><li><a href="https://arbortechtools.com/collections/outdoor-grounds-care">Accessories</a> <code>/collections/outdoor-grounds-care</code><ul><li><a href="https://arbortechtools.com/products/allsaw-200x-turf-blade">Turf Blade</a> <code>/products/allsaw-200x-turf-blade</code></li><li><a href="https://arbortechtools.com/products/allsaw-200x-wood-blade">Wood Blade</a> <code>/products/allsaw-200x-wood-blade</code></li><li><a href="https://arbortechtools.com/products/allsaw-200x-xl-general-purpose-blades">General Purpose Blades</a> <code>/products/allsaw-200x-xl-general-purpose-blades</code></li><li><a href="https://arbortechtools.com/collections/spare-parts-consumables">Replacement Parts</a> <code>/collections/spare-parts-consumables</code></li></ul></li><li><a href="https://arbortechtools.com/pages/shop-by-project">Shop by Project</a> <code>/pages/shop-by-project</code><ul><li><a href="https://arbortechtools.com/pages/timber-landscaping">Timber Landscaping</a> <code>/pages/timber-landscaping</code></li><li><a href="https://arbortechtools.com/pages/turf-and-grounds-care">Turf &amp; Grounds Care</a> <code>/pages/turf-and-grounds-care</code></li><li><a href="https://arbortechtools.com/pages/edging-and-trenches">Edging &amp; Trenches</a> <code>/pages/edging-and-trenches</code></li></ul></li></ul></li><li><a href="https://arbortechtools.com/pages/inspiration">Inspiration</a> <code>/pages/inspiration</code><ul><li><a href="https://arbortechtools.com/pages/who-we-are">About Us</a> <code>/pages/who-we-are</code><ul><li><a href="https://arbortechtools.com/pages/our-story">Our Story</a> <code>/pages/our-story</code></li><li><a href="https://arbortechtools.com/pages/research-and-development">Research &amp; Development</a> <code>/pages/research-and-development</code></li><li><a href="https://arbortechtools.com/pages/sustainability-and-values">Sustainability &amp; Values</a> <code>/pages/sustainability-and-values</code></li><li><a href="https://arbortechtools.com/pages/investors">Investors</a> <code>/pages/investors</code></li></ul></li><li><a href="https://arbortechtools.com/pages/events">Events</a> <code>/pages/events</code><ul><li><a href="https://arbortechtools.com/pages/events">Events &amp; Shows</a> <code>/pages/events</code></li><li><a href="https://arbortechtools.com/pages/events">Workshops</a> <code>/pages/events</code></li><li><a href="https://arbortechtools.com/blogs/news">Product Updates</a> <code>/blogs/news</code></li></ul></li><li><a href="https://arbortechtools.com/pages/stories">Stories</a> <code>/pages/stories</code><ul><li><a href="https://arbortechtools.com/blogs/news">News &amp; Stories</a> <code>/blogs/news</code></li><li><a href="https://arbortechtools.com/pages/projects">Project Stories</a> <code>/pages/projects</code></li><li><a href="https://arbortechtools.com/pages/guides">Guides</a> <code>/pages/guides</code></li><li><a href="https://arbortechtools.com/pages/staff-competition">Staff Competitions</a> <code>/pages/staff-competition</code></li></ul></li></ul></li><li><a href="https://arbortechtools.com/pages/support">Support</a> <code>/pages/support</code></li></ul>
+      <div class="callout info"><div class="callout-title">Remember</div>
+      <p>This tree is <em>navigation</em>, not the full page list – a page can exist without being linked here (and is then invisible to customers). The full inventory is below.</p></div>
+
+      <h2 id="collections">2. Collections (10)</h2>
+      <table>
+        <thead><tr><th>Collection</th><th>URL</th><th>Products</th></tr></thead>
+        <tbody>
+          <tr><td>Woodworking</td><td><code>/collections/power-carving</code></td><td>20</td></tr>
+          <tr><td>Woodworking - Power Tools</td><td><code>/collections/power-carving-power-tools</code></td><td>8</td></tr>
+          <tr><td>Woodworking - Attachments &amp; Accessories</td><td><code>/collections/power-carving-attachments-accessories</code></td><td>13</td></tr>
+          <tr><td>Masonry / Trade</td><td><code>/collections/masonry-trade</code></td><td>33</td></tr>
+          <tr><td>Masonry / Trade - Power Tools</td><td><code>/collections/masonry-trade-power-tools</code></td><td>8</td></tr>
+          <tr><td>Masonry / Trade - Attachments &amp; Accessories</td><td><code>/collections/masonry-trade-attachments-accessories</code></td><td>25</td></tr>
+          <tr><td>Spare Parts &amp; Consumables</td><td><code>/collections/spare-parts-consumables</code></td><td>61</td></tr>
+          <tr><td>Power Tools</td><td><code>/collections/power-tools</code></td><td>14</td></tr>
+          <tr><td>Spare Parts, Blades &amp; Accessories</td><td><code>/collections/spare-parts-accessories</code></td><td>60</td></tr>
+          <tr><td>Outdoor Grounds Care</td><td><code>/collections/outdoor-grounds-care</code></td><td>12</td></tr>
+        </tbody>
+      </table>
+      <p>Plus <code>/collections/all</code> (Shop All – every active product). The vertical collections (Woodworking, Masonry&nbsp;/&nbsp;Trade, Outdoor Grounds Care) are <em>smart</em> collections driven by tags – products join them via tagging, not manual lists (Manual §2.4).</p>
+
+      <h2 id="blog">3. The News blog</h2>
+      <p><code>/blogs/news</code> – <strong>65 articles</strong>, including the designed story articles and their per-market copies (handles prefixed <code>story-au-</code>, <code>story-us-</code>, <code>story-uk-</code>, <code>story-ca-</code>, <code>story-de-</code>). See Manual §3.3 for what is and isn't editable on story articles.</p>
+
+      <h2 id="page-inventory">4. Full page inventory (134 pages)</h2>
+      <p>Everything under <strong>Online Store → Pages</strong>, grouped by what kind of page it is. The kind matters because it decides how editable the page is.</p>
+      <h3>Standard pages (32)</h3>
+      <p>Default template – the rich-text Content box renders. These are yours to edit freely (Manual §3.1).</p>
+      <p class="page-list"><a href="https://arbortechtools.com/pages/agb">AGB</a> · <a href="https://arbortechtools.com/pages/arbortechie-club">Arbortechie Club</a> · <a href="https://arbortechtools.com/pages/artist-spotlights">Artist Spotlights</a> · <a href="https://arbortechtools.com/pages/compare-masonry-systems">Compare Masonry Systems</a> · <a href="https://arbortechtools.com/pages/contractor-setups">Contractor Setups</a> · <a href="https://arbortechtools.com/pages/contractor-spotlights">Contractor Spotlights</a> · <a href="https://arbortechtools.com/pages/cookie-richtlinie">Cookie-Richtlinie</a> <em>(draft)</em> · <a href="https://arbortechtools.com/pages/cookies-policy">Cookies Policy</a> · <a href="https://arbortechtools.com/pages/datenschutz">Datenschutz</a> <em>(draft)</em> · <a href="https://arbortechtools.com/pages/impressum">Impressum</a> · <a href="https://arbortechtools.com/pages/maintenance-guides">Maintenance Guides</a> · <a href="https://arbortechtools.com/pages/outdoor-case-studies">Outdoor Case Studies</a> · <a href="https://arbortechtools.com/pages/power-carving-starter-kits">Power Carving Starter Kits</a> · <a href="https://arbortechtools.com/pages/privacy-policy">Privacy Policy</a> · <a href="https://arbortechtools.com/pages/testing">QA Testing Hub</a> · <a href="https://arbortechtools.com/pages/replacement-parts-finder">Replacement Parts Finder</a> · <a href="https://arbortechtools.com/pages/restoration-case-studies">Restoration Case Studies</a> · <a href="https://arbortechtools.com/pages/seasonal-maintenance">Seasonal Maintenance</a> · <a href="https://arbortechtools.com/pages/warranty">Service, Repair &amp; Warranty</a> · <a href="https://arbortechtools.com/pages/garantie">Service, Reparatur &amp; Garantie</a> · <a href="https://arbortechtools.com/pages/shipping-and-returns">Shipping and Returns</a> · <a href="https://arbortechtools.com/pages/terms-and-conditions">Terms and Conditions</a> · <a href="https://arbortechtools.com/pages/testing-catalog-audit">Testing: Catalogue &amp;amp; Market Availability</a> · <a href="https://arbortechtools.com/pages/testing-legacy-pages">Testing: Legacy Campaign Pages</a> · <a href="https://arbortechtools.com/pages/testing-technical-documents">Testing: Manuals &amp;amp; Documents</a> · <a href="https://arbortechtools.com/pages/testing-market-restrictions">Testing: Market Restrictions (Pending Decision)</a> · <a href="https://arbortechtools.com/pages/testing-content-migration">Testing: Old Articles &amp;amp; Guides</a> · <a href="https://arbortechtools.com/pages/testing-product-data">Testing: Product Descriptions &amp;amp; Specs</a> · <a href="https://arbortechtools.com/pages/testing-regional-pricing">Testing: Regional Pricing</a> · <a href="https://arbortechtools.com/pages/testing-vertical-content">Testing: Woodworking vs. Trade Content</a> · <a href="https://arbortechtools.com/pages/versand-und-zahlung">Versand und Zahlung</a> · <a href="https://arbortechtools.com/pages/data-sharing-opt-out">Your Privacy Choices</a></p>
+      <h3>One-off designed pages (24)</h3>
+      <p>Each has its own designed template (About, Support, Inspiration, Events, Stories, etc.). The Content box is usually secondary to theme sections – see Manual §3.1's warning.</p>
+      <p class="page-list"><a href="https://arbortechtools.com/pages/artists">Artists &amp; Makers</a> · <a href="https://arbortechtools.com/pages/bounce-back-pages">Bounce-back &amp; Hidden Pages</a> · <a href="https://arbortechtools.com/pages/community-projects">Community Projects</a> · <a href="https://arbortechtools.com/pages/competitions">Competitions</a> · <a href="https://arbortechtools.com/pages/contact">Contact</a> · <a href="https://arbortechtools.com/pages/events">Events and Shows</a> · <a href="https://arbortechtools.com/pages/find-a-retailer">Find a Retailer</a> · <a href="https://arbortechtools.com/pages/guides">How-to Guides</a> · <a href="https://arbortechtools.com/pages/inspiration">Inspiration</a> · <a href="https://arbortechtools.com/pages/investors">Investors</a> · <a href="https://arbortechtools.com/pages/our-story">Our Story</a> · <a href="https://arbortechtools.com/pages/powered-by-dewalt">Powered by DeWalt</a> · <a href="https://arbortechtools.com/pages/projects">Project Stories</a> · <a href="https://arbortechtools.com/pages/research-and-development">Research and Development</a> · <a href="https://arbortechtools.com/pages/resource-hub">Resource Hub</a> · <a href="https://arbortechtools.com/pages/staff-competition">Staff Competitions</a> · <a href="https://arbortechtools.com/pages/stories">Stories</a> · <a href="https://arbortechtools.com/pages/support">Support</a> · <a href="https://arbortechtools.com/pages/sustainability-and-values">Sustainability and Values</a> · <a href="https://arbortechtools.com/pages/technical-documents">Technical Documents</a> · <a href="https://arbortechtools.com/pages/testing-product-accessories">Testing: Product Accessories</a> · <a href="https://arbortechtools.com/pages/tool-resources">Tool Resources</a> · <a href="https://arbortechtools.com/pages/who-we-are">Who We Are</a> · <a href="https://arbortechtools.com/pages/widerruf">Widerruf</a></p>
+      <h3>Vertical landing pages (3)</h3>
+      <p>The three audience gateways (Woodworking / Masonry / Landscaping) – bespoke templates.</p>
+      <p class="page-list"><a href="https://arbortechtools.com/pages/landscaping">Landscaping</a> · <a href="https://arbortechtools.com/pages/masonry">Masonry</a> · <a href="https://arbortechtools.com/pages/woodworking">Woodworking</a></p>
+      <h3>Shop-by-project pages (10)</h3>
+      <p>Project-led shopping pages, one bespoke template each.</p>
+      <p class="page-list"><a href="https://arbortechtools.com/pages/brick-and-block-repair">Brick &amp; Block Repair</a> · <a href="https://arbortechtools.com/pages/detail-and-texturing">Detail &amp; Texturing</a> · <a href="https://arbortechtools.com/pages/edging-and-trenches">Edging &amp; Trenches</a> · <a href="https://arbortechtools.com/pages/furniture-and-sculpting">Furniture &amp; Sculpting</a> · <a href="https://arbortechtools.com/pages/heritage-masonry-repairs">Heritage Masonry Repairs</a> · <a href="https://arbortechtools.com/pages/shop-by-project">Shop by Project</a> · <a href="https://arbortechtools.com/pages/spoon-and-bowl-carving">Spoon &amp; Bowl Carving</a> · <a href="https://arbortechtools.com/pages/timber-landscaping">Timber Landscaping</a> · <a href="https://arbortechtools.com/pages/tuckpointing-and-repointing">Tuckpointing &amp; Repointing</a> · <a href="https://arbortechtools.com/pages/turf-and-grounds-care">Turf and Grounds Care</a></p>
+      <h3>Power-carving landing pages (14)</h3>
+      <p>Bespoke designed template per tool – layout lives in the theme, call us for changes.</p>
+      <p class="page-list"><a href="https://arbortechtools.com/pages/power-carve-like-a-pro-ball-gouge">Ball Gouge</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-contour-sander">Contour Sander</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-industrial-woodcarver">Industrial Woodcarver</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-mg1000-mini-grinder">MG1000 Mini Grinder</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-mini-carver">Mini Carver</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-mini-turbo">Mini Turbo</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro">Power Carve Like A Pro</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-power-carving-unit">Power Carving Unit</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-power-chisel">Power Chisel</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-precision-carving-system">Precision Carving System</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-spheroplane">SpheroPlane</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-turbo-scraper">TURBO Scraper</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-turbo-shaft">Turbo Shaft</a> · <a href="https://arbortechtools.com/pages/power-carve-like-a-pro-turboplane">TURBOPlane</a></p>
+      <h3>Tool resource pages (16)</h3>
+      <p>One per tool, on the <code>arbt-tool-resource</code> template – manuals, videos and FAQs pulled from structured data.</p>
+      <p class="page-list"><a href="https://arbortechtools.com/pages/tool-resources-allsaw">AllSaw</a> · <a href="https://arbortechtools.com/pages/tool-resources-ball-gouge">Ball Gouge</a> · <a href="https://arbortechtools.com/pages/tool-resources-contour-sander">Contour Sander</a> · <a href="https://arbortechtools.com/pages/tool-resources-industrial-woodcarver">Industrial Woodcarver</a> · <a href="https://arbortechtools.com/pages/tool-resources-mg1000-mini-grinder">MG1000 Mini Grinder</a> · <a href="https://arbortechtools.com/pages/tool-resources-mini-carver">Mini Carver</a> · <a href="https://arbortechtools.com/pages/tool-resources-mini-grinder-trade">Mini Grinder Trade</a> · <a href="https://arbortechtools.com/pages/tool-resources-mini-pro">Mini Pro</a> · <a href="https://arbortechtools.com/pages/tool-resources-mini-turbo">Mini TURBO</a> · <a href="https://arbortechtools.com/pages/tool-resources-power-carving-unit">Power Carving Unit</a> · <a href="https://arbortechtools.com/pages/tool-resources-power-chisel">Power Chisel</a> · <a href="https://arbortechtools.com/pages/tool-resources-precision-carving-system">Precision Carving System</a> · <a href="https://arbortechtools.com/pages/tool-resources-spheroplane">SpheroPlane</a> · <a href="https://arbortechtools.com/pages/tool-resources-turbo-scraper">TURBO Scraper</a> · <a href="https://arbortechtools.com/pages/tool-resources-turbo-shaft">TURBO Shaft</a> · <a href="https://arbortechtools.com/pages/tool-resources-turboplane">TURBOPlane</a></p>
+      <h3>Artist profile pages (35)</h3>
+      <p>One per artist, all on the <code>artist</code> template. The layout is driven by artist metafields (portrait, quote, tools, techniques) – text edits are a call-us item.</p>
+      <p class="page-list"><a href="https://arbortechtools.com/pages/artist-alan-martin">Alan Martin</a> · <a href="https://arbortechtools.com/pages/artist-andy-buck">Andy Buck</a> · <a href="https://arbortechtools.com/pages/artist-anne-briggs">Anne Briggs</a> · <a href="https://arbortechtools.com/pages/artist-barry">Barry Fitzpatrick</a> · <a href="https://arbortechtools.com/pages/artist-brendan-rawlings">Brendan Rawlings</a> · <a href="https://arbortechtools.com/pages/artist-carl-jacobson">Carl Jacobson</a> · <a href="https://arbortechtools.com/pages/artist-chris-mckenzie">Chris McKenzie</a> · <a href="https://arbortechtools.com/pages/artist-claes-larsson">Claes Larsson</a> · <a href="https://arbortechtools.com/pages/artist-ed-elliott">Ed Elliott</a> · <a href="https://arbortechtools.com/pages/artist-eric-nanson">Eric Nanson</a> · <a href="https://arbortechtools.com/pages/artist-eric-spencley">Eric Spencley</a> · <a href="https://arbortechtools.com/pages/artist-erich-perkins">Erich Perkins</a> · <a href="https://arbortechtools.com/pages/artist-jayson-weymouth">Jayson Weymouth</a> · <a href="https://arbortechtools.com/pages/artist-jimmy-diresta">Jimmy DiResta</a> · <a href="https://arbortechtools.com/pages/artist-john-malecki">John Malecki</a> · <a href="https://arbortechtools.com/pages/artist-kathrina-nellis">Kathrina Nellis</a> · <a href="https://arbortechtools.com/pages/artist-kevin-inkster">Kevin Inkster</a> · <a href="https://arbortechtools.com/pages/artist-lauren-wood">Lauren Wood</a> · <a href="https://arbortechtools.com/pages/artist-liz-bowtell">Liz Bowtell</a> · <a href="https://arbortechtools.com/pages/artist-michael-alm">Michael Alm</a> · <a href="https://arbortechtools.com/pages/artist-michelle-thevenot">Michelle Thevenot</a> · <a href="https://arbortechtools.com/pages/artist-mike-stinnett">Mike Stinnett</a> · <a href="https://arbortechtools.com/pages/artist-mykola-kulishov">Mykola Kulishov</a> · <a href="https://arbortechtools.com/pages/artist-nick-st-amand">Nick St Amand</a> · <a href="https://arbortechtools.com/pages/artist-paul-jackman">Paul Jackman</a> · <a href="https://arbortechtools.com/pages/artist-pene-turner">Pene Turner</a> · <a href="https://arbortechtools.com/pages/artist-rob-woods">Rob Woods</a> · <a href="https://arbortechtools.com/pages/artist-ryan-cochrane">Ryan Cochrane</a> · <a href="https://arbortechtools.com/pages/artist-sean-phillips">Sean Philips</a> · <a href="https://arbortechtools.com/pages/artist-shane-christensen">Shane Christensen</a> · <a href="https://arbortechtools.com/pages/artist-shayla-giroux">Shayla Giroux</a> · <a href="https://arbortechtools.com/pages/artist-sylvain-gautier">Sylvain Gautier</a> · <a href="https://arbortechtools.com/pages/artist-tim-sway">Tim Sway</a> · <a href="https://arbortechtools.com/pages/artist-tracey-cheuvront">Tracey Cheuvront</a> · <a href="https://arbortechtools.com/pages/artist-vince-austin">Vince Austin</a></p>
+
+      <h2 id="markets">5. Markets – the same site, five addresses</h2>
+      <table>
+        <thead><tr><th>Market</th><th>Prefix</th><th>Currency</th></tr></thead>
+        <tbody>
+          <tr><td>Australia (primary)</td><td><code>/</code></td><td>AUD</td></tr>
+          <tr><td>United States</td><td><code>/en-us</code></td><td>USD</td></tr>
+          <tr><td>Canada</td><td><code>/en-ca</code></td><td>CAD</td></tr>
+          <tr><td>United Kingdom</td><td><code>/en-uk</code></td><td>GBP</td></tr>
+          <tr><td>Germany</td><td><code>/de-de</code> (+ <code>/en-de</code>)</td><td>EUR</td></tr>
+        </tbody>
+      </table>
+      <p>You never create market copies of a page – Shopify serves every page at every prefix automatically. German <em>text</em> comes from Translate &amp; Adapt (Manual §10).</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

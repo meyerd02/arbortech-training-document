@@ -1,0 +1,364 @@
+{
+  "menus": {
+    "nodes": [
+      {
+        "handle": "main-menu",
+        "title": "Main menu",
+        "items": [
+          {
+            "title": "Shop All",
+            "url": "/collections/all",
+            "items": []
+          },
+          {
+            "title": "Woodworking",
+            "url": "/collections/power-carving",
+            "items": [
+              {
+                "title": "Woodworking Tools",
+                "url": "/collections/power-carving-power-tools",
+                "items": [
+                  {
+                    "title": "Mini Grinder MG1000",
+                    "url": "/collections/power-carving/products/mini-grinder-mg1000"
+                  },
+                  {
+                    "title": "Power Carving Unit",
+                    "url": "/products/power-carving-unit"
+                  },
+                  {
+                    "title": "Power Chisel",
+                    "url": "/products/power-chisel"
+                  }
+                ]
+              },
+              {
+                "title": "Accessories",
+                "url": "/collections/power-carving-attachments-accessories",
+                "items": [
+                  {
+                    "title": "Power Carving Attachments",
+                    "url": "/collections/power-carving-attachments-accessories"
+                  },
+                  {
+                    "title": "TURBOPlane",
+                    "url": "/products/turboplane"
+                  },
+                  {
+                    "title": "Ball Gouge",
+                    "url": "/products/ball-gouge"
+                  },
+                  {
+                    "title": "Contour Sander",
+                    "url": "/products/contour-sander"
+                  },
+                  {
+                    "title": "100mm Sanding Discs",
+                    "url": "/products/100mm-sanding-discs"
+                  }
+                ]
+              },
+              {
+                "title": "Shop by Project",
+                "url": "/pages/shop-by-project",
+                "items": [
+                  {
+                    "title": "Spoon & Bowl Carving",
+                    "url": "/pages/spoon-and-bowl-carving"
+                  },
+                  {
+                    "title": "Furniture & Sculpting",
+                    "url": "/pages/furniture-and-sculpting"
+                  },
+                  {
+                    "title": "Detail & Texturing",
+                    "url": "/pages/detail-and-texturing"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Masonry",
+            "url": "/collections/masonry-trade",
+            "items": [
+              {
+                "title": "Masonry Tools",
+                "url": "/collections/masonry-trade-power-tools",
+                "items": [
+                  {
+                    "title": "Mini Grinder MG1000",
+                    "url": "/collections/masonry-trade/products/mini-grinder-mg1000"
+                  },
+                  {
+                    "title": "Mini Grinder Trade",
+                    "url": "/products/mini-grinder-trade"
+                  },
+                  {
+                    "title": "Allsaw AS200X",
+                    "url": "/products/allsaw-200x"
+                  },
+                  {
+                    "title": "ALLSAW BA200X",
+                    "url": "/products/allsaw-ba200x-cordless"
+                  }
+                ]
+              },
+              {
+                "title": "Accessories",
+                "url": "/collections/masonry-trade-attachments-accessories",
+                "items": [
+                  {
+                    "title": "Masonry Attachments",
+                    "url": "/collections/masonry-trade-attachments-accessories"
+                  },
+                  {
+                    "title": "Tuckpointing Blade",
+                    "url": "/products/allsaw-200x-tuckpointing-blade"
+                  },
+                  {
+                    "title": "General Purpose Blade",
+                    "url": "/products/allsaw-200x-general-purpose-blade"
+                  },
+                  {
+                    "title": "Head Joint Blade",
+                    "url": "/products/allsaw-200x-head-joint-blade"
+                  }
+                ]
+              },
+              {
+                "title": "Shop by Project",
+                "url": "/pages/shop-by-project",
+                "items": [
+                  {
+                    "title": "Tuckpointing & Repointing",
+                    "url": "/pages/tuckpointing-and-repointing"
+                  },
+                  {
+                    "title": "Brick & Block Repair",
+                    "url": "/pages/brick-and-block-repair"
+                  },
+                  {
+                    "title": "Heritage Masonry Repairs",
+                    "url": "/pages/heritage-masonry-repairs"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Landscaping",
+            "url": "/collections/outdoor-grounds-care",
+            "items": [
+              {
+                "title": "Outdoor Tools",
+                "url": "/collections/outdoor-grounds-care",
+                "items": [
+                  {
+                    "title": "Mini Grinder MG1000",
+                    "url": "/collections/outdoor-grounds-care/products/mini-grinder-mg1000"
+                  },
+                  {
+                    "title": "Allsaw AS200X",
+                    "url": "/products/allsaw-200x"
+                  },
+                  {
+                    "title": "ALLSAW BA200X",
+                    "url": "/products/allsaw-ba200x-cordless"
+                  }
+                ]
+              },
+              {
+                "title": "Accessories",
+                "url": "/collections/outdoor-grounds-care",
+                "items": [
+                  {
+                    "title": "Turf Blade",
+                    "url": "/products/allsaw-200x-turf-blade"
+                  },
+                  {
+                    "title": "Wood Blade",
+                    "url": "/products/allsaw-200x-wood-blade"
+                  },
+                  {
+                    "title": "General Purpose Blades",
+                    "url": "/products/allsaw-200x-xl-general-purpose-blades"
+                  },
+                  {
+                    "title": "Replacement Parts",
+                    "url": "/collections/spare-parts-consumables"
+                  }
+                ]
+              },
+              {
+                "title": "Shop by Project",
+                "url": "/pages/shop-by-project",
+                "items": [
+                  {
+                    "title": "Timber Landscaping",
+                    "url": "/pages/timber-landscaping"
+                  },
+                  {
+                    "title": "Turf & Grounds Care",
+                    "url": "/pages/turf-and-grounds-care"
+                  },
+                  {
+                    "title": "Edging & Trenches",
+                    "url": "/pages/edging-and-trenches"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Inspiration",
+            "url": "/pages/inspiration",
+            "items": [
+              {
+                "title": "About Us",
+                "url": "/pages/who-we-are",
+                "items": [
+                  {
+                    "title": "Our Story",
+                    "url": "/pages/our-story"
+                  },
+                  {
+                    "title": "Research & Development",
+                    "url": "/pages/research-and-development"
+                  },
+                  {
+                    "title": "Sustainability & Values",
+                    "url": "/pages/sustainability-and-values"
+                  },
+                  {
+                    "title": "Investors",
+                    "url": "/pages/investors"
+                  }
+                ]
+              },
+              {
+                "title": "Events",
+                "url": "/pages/events",
+                "items": [
+                  {
+                    "title": "Events & Shows",
+                    "url": "/pages/events"
+                  },
+                  {
+                    "title": "Workshops",
+                    "url": "/pages/events"
+                  },
+                  {
+                    "title": "Product Updates",
+                    "url": "/blogs/news"
+                  }
+                ]
+              },
+              {
+                "title": "Stories",
+                "url": "/pages/stories",
+                "items": [
+                  {
+                    "title": "News & Stories",
+                    "url": "/blogs/news"
+                  },
+                  {
+                    "title": "Project Stories",
+                    "url": "/pages/projects"
+                  },
+                  {
+                    "title": "Guides",
+                    "url": "/pages/guides"
+                  },
+                  {
+                    "title": "Staff Competitions",
+                    "url": "/pages/staff-competition"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Support",
+            "url": "/pages/support",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "footer",
+        "title": "Footer menu",
+        "items": [
+          {
+            "title": "Search",
+            "url": "/search",
+            "items": []
+          },
+          {
+            "title": "Your Privacy Choices",
+            "url": "/pages/data-sharing-opt-out",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "customer-account-main-menu",
+        "title": "Customer account main menu",
+        "items": [
+          {
+            "title": "Orders",
+            "url": "https://shopify.com/69020188743/account/orders",
+            "items": []
+          },
+          {
+            "title": "Profile",
+            "url": "https://shopify.com/69020188743/account/profile",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "legal",
+        "title": "Legal menu",
+        "items": [
+          {
+            "title": "Terms & Conditions",
+            "url": "/policies/terms-of-service",
+            "items": []
+          },
+          {
+            "title": "Privacy Policy",
+            "url": "/policies/privacy-policy",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "legal-de",
+        "title": "Legal menu (German)",
+        "items": [
+          {
+            "title": "AGB",
+            "url": "/policies/terms-of-service",
+            "items": []
+          },
+          {
+            "title": "Datenschutzrichtlinie",
+            "url": "/policies/privacy-policy",
+            "items": []
+          },
+          {
+            "title": "Impressum",
+            "url": "/pages/impressum",
+            "items": []
+          },
+          {
+            "title": "Vertrag widerrufen",
+            "url": "/pages/widerruf",
+            "items": []
+          }
+        ]
+      }
+    ]
+  }
+}

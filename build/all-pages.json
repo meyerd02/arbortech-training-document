@@ -1,0 +1,806 @@
+[
+ {
+  "title": "Contact",
+  "handle": "contact",
+  "templateSuffix": "contact",
+  "isPublished": true
+ },
+ {
+  "title": "Your Privacy Choices",
+  "handle": "data-sharing-opt-out",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Power Carving Starter Kits",
+  "handle": "power-carving-starter-kits",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Spoon & Bowl Carving",
+  "handle": "spoon-and-bowl-carving",
+  "templateSuffix": "spoon-and-bowl-carving",
+  "isPublished": true
+ },
+ {
+  "title": "Furniture & Sculpting",
+  "handle": "furniture-and-sculpting",
+  "templateSuffix": "furniture-and-sculpting",
+  "isPublished": true
+ },
+ {
+  "title": "Detail & Texturing",
+  "handle": "detail-and-texturing",
+  "templateSuffix": "detail-and-texturing",
+  "isPublished": true
+ },
+ {
+  "title": "Artist Spotlights",
+  "handle": "artist-spotlights",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Community Projects",
+  "handle": "community-projects",
+  "templateSuffix": "community-projects",
+  "isPublished": true
+ },
+ {
+  "title": "Arbortechie Club",
+  "handle": "arbortechie-club",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Tuckpointing & Repointing",
+  "handle": "tuckpointing-and-repointing",
+  "templateSuffix": "tuckpointing-and-repointing",
+  "isPublished": true
+ },
+ {
+  "title": "Brick & Block Repair",
+  "handle": "brick-and-block-repair",
+  "templateSuffix": "brick-and-block-repair",
+  "isPublished": true
+ },
+ {
+  "title": "Heritage Masonry Repairs",
+  "handle": "heritage-masonry-repairs",
+  "templateSuffix": "heritage-masonry-repairs",
+  "isPublished": true
+ },
+ {
+  "title": "Restoration Case Studies",
+  "handle": "restoration-case-studies",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Contractor Spotlights",
+  "handle": "contractor-spotlights",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Compare Masonry Systems",
+  "handle": "compare-masonry-systems",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Timber Landscaping",
+  "handle": "timber-landscaping",
+  "templateSuffix": "timber-landscaping",
+  "isPublished": true
+ },
+ {
+  "title": "Turf and Grounds Care",
+  "handle": "turf-and-grounds-care",
+  "templateSuffix": "turf-and-grounds-care",
+  "isPublished": true
+ },
+ {
+  "title": "Edging & Trenches",
+  "handle": "edging-and-trenches",
+  "templateSuffix": "edging-and-trenches",
+  "isPublished": true
+ },
+ {
+  "title": "Outdoor Case Studies",
+  "handle": "outdoor-case-studies",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Contractor Setups",
+  "handle": "contractor-setups",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Seasonal Maintenance",
+  "handle": "seasonal-maintenance",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Maintenance Guides",
+  "handle": "maintenance-guides",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Replacement Parts Finder",
+  "handle": "replacement-parts-finder",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Our Story",
+  "handle": "our-story",
+  "templateSuffix": "our-story",
+  "isPublished": true
+ },
+ {
+  "title": "Resource Hub",
+  "handle": "resource-hub",
+  "templateSuffix": "resource-hub",
+  "isPublished": true
+ },
+ {
+  "title": "Technical Documents",
+  "handle": "technical-documents",
+  "templateSuffix": "technical-documents",
+  "isPublished": true
+ },
+ {
+  "title": "Find a Retailer",
+  "handle": "find-a-retailer",
+  "templateSuffix": "find-a-retailer",
+  "isPublished": true
+ },
+ {
+  "title": "Privacy Policy",
+  "handle": "privacy-policy",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Terms and Conditions",
+  "handle": "terms-and-conditions",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Shipping and Returns",
+  "handle": "shipping-and-returns",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Service, Repair & Warranty",
+  "handle": "warranty",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Cookies Policy",
+  "handle": "cookies-policy",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Powered by DeWalt",
+  "handle": "powered-by-dewalt",
+  "templateSuffix": "powered-by-dewalt",
+  "isPublished": true
+ },
+ {
+  "title": "Sustainability and Values",
+  "handle": "sustainability-and-values",
+  "templateSuffix": "sustainability-and-values",
+  "isPublished": true
+ },
+ {
+  "title": "Research and Development",
+  "handle": "research-and-development",
+  "templateSuffix": "research-and-development",
+  "isPublished": true
+ },
+ {
+  "title": "Inspiration",
+  "handle": "inspiration",
+  "templateSuffix": "inspiration",
+  "isPublished": true
+ },
+ {
+  "title": "Support",
+  "handle": "support",
+  "templateSuffix": "support",
+  "isPublished": true
+ },
+ {
+  "title": "Woodworking",
+  "handle": "woodworking",
+  "templateSuffix": "woodworking",
+  "isPublished": true
+ },
+ {
+  "title": "Masonry",
+  "handle": "masonry",
+  "templateSuffix": "masonry",
+  "isPublished": true
+ },
+ {
+  "title": "Landscaping",
+  "handle": "landscaping",
+  "templateSuffix": "landscaping",
+  "isPublished": true
+ },
+ {
+  "title": "Artists & Makers",
+  "handle": "artists",
+  "templateSuffix": "artists",
+  "isPublished": true
+ },
+ {
+  "title": "Barry Fitzpatrick",
+  "handle": "artist-barry",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Project Stories",
+  "handle": "projects",
+  "templateSuffix": "projects",
+  "isPublished": true
+ },
+ {
+  "title": "How-to Guides",
+  "handle": "guides",
+  "templateSuffix": "guides",
+  "isPublished": true
+ },
+ {
+  "title": "Competitions",
+  "handle": "competitions",
+  "templateSuffix": "competitions",
+  "isPublished": true
+ },
+ {
+  "title": "Liz Bowtell",
+  "handle": "artist-liz-bowtell",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Eric Nanson",
+  "handle": "artist-eric-nanson",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Alan Martin",
+  "handle": "artist-alan-martin",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Mykola Kulishov",
+  "handle": "artist-mykola-kulishov",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Sean Philips",
+  "handle": "artist-sean-phillips",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Chris McKenzie",
+  "handle": "artist-chris-mckenzie",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Michelle Thevenot",
+  "handle": "artist-michelle-thevenot",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "MG1000 Mini Grinder",
+  "handle": "power-carve-like-a-pro-mg1000-mini-grinder",
+  "templateSuffix": "arbt-power-carve-mg1000-mini-grinder",
+  "isPublished": true
+ },
+ {
+  "title": "TURBO Scraper",
+  "handle": "power-carve-like-a-pro-turbo-scraper",
+  "templateSuffix": "arbt-power-carve-turbo-scraper",
+  "isPublished": true
+ },
+ {
+  "title": "SpheroPlane",
+  "handle": "power-carve-like-a-pro-spheroplane",
+  "templateSuffix": "arbt-power-carve-spheroplane",
+  "isPublished": true
+ },
+ {
+  "title": "Andy Buck",
+  "handle": "artist-andy-buck",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Anne Briggs",
+  "handle": "artist-anne-briggs",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Carl Jacobson",
+  "handle": "artist-carl-jacobson",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Jayson Weymouth",
+  "handle": "artist-jayson-weymouth",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "John Malecki",
+  "handle": "artist-john-malecki",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Kathrina Nellis",
+  "handle": "artist-kathrina-nellis",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Lauren Wood",
+  "handle": "artist-lauren-wood",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Michael Alm",
+  "handle": "artist-michael-alm",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Mike Stinnett",
+  "handle": "artist-mike-stinnett",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Nick St Amand",
+  "handle": "artist-nick-st-amand",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Ryan Cochrane",
+  "handle": "artist-ryan-cochrane",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Shane Christensen",
+  "handle": "artist-shane-christensen",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Shayla Giroux",
+  "handle": "artist-shayla-giroux",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Tim Sway",
+  "handle": "artist-tim-sway",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Tracey Cheuvront",
+  "handle": "artist-tracey-cheuvront",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Vince Austin",
+  "handle": "artist-vince-austin",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Stories",
+  "handle": "stories",
+  "templateSuffix": "stories",
+  "isPublished": true
+ },
+ {
+  "title": "Investors",
+  "handle": "investors",
+  "templateSuffix": "investors",
+  "isPublished": true
+ },
+ {
+  "title": "Staff Competitions",
+  "handle": "staff-competition",
+  "templateSuffix": "staff-competition",
+  "isPublished": true
+ },
+ {
+  "title": "Bounce-back & Hidden Pages",
+  "handle": "bounce-back-pages",
+  "templateSuffix": "bounce-back-pages",
+  "isPublished": true
+ },
+ {
+  "title": "QA Testing Hub",
+  "handle": "testing",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Testing: Catalogue &amp; Market Availability",
+  "handle": "testing-catalog-audit",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Testing: Regional Pricing",
+  "handle": "testing-regional-pricing",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Testing: Product Descriptions &amp; Specs",
+  "handle": "testing-product-data",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Testing: Woodworking vs. Trade Content",
+  "handle": "testing-vertical-content",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Testing: Old Articles &amp; Guides",
+  "handle": "testing-content-migration",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Testing: Manuals &amp; Documents",
+  "handle": "testing-technical-documents",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Testing: Legacy Campaign Pages",
+  "handle": "testing-legacy-pages",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Testing: Market Restrictions (Pending Decision)",
+  "handle": "testing-market-restrictions",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Testing: Product Accessories",
+  "handle": "testing-product-accessories",
+  "templateSuffix": "arbt-testing-accessories",
+  "isPublished": true
+ },
+ {
+  "title": "Tool Resources",
+  "handle": "tool-resources",
+  "templateSuffix": "arbt-tool-resources",
+  "isPublished": true
+ },
+ {
+  "title": "MG1000 Mini Grinder",
+  "handle": "tool-resources-mg1000-mini-grinder",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "AllSaw",
+  "handle": "tool-resources-allsaw",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "TURBOPlane",
+  "handle": "tool-resources-turboplane",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "Power Carving Unit",
+  "handle": "tool-resources-power-carving-unit",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "Power Chisel",
+  "handle": "tool-resources-power-chisel",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "Mini Carver",
+  "handle": "tool-resources-mini-carver",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "Mini Grinder Trade",
+  "handle": "tool-resources-mini-grinder-trade",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "Ball Gouge",
+  "handle": "tool-resources-ball-gouge",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "TURBO Shaft",
+  "handle": "tool-resources-turbo-shaft",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "TURBO Scraper",
+  "handle": "tool-resources-turbo-scraper",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "SpheroPlane",
+  "handle": "tool-resources-spheroplane",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "Contour Sander",
+  "handle": "tool-resources-contour-sander",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "Industrial Woodcarver",
+  "handle": "tool-resources-industrial-woodcarver",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "Precision Carving System",
+  "handle": "tool-resources-precision-carving-system",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "Mini Pro",
+  "handle": "tool-resources-mini-pro",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "Mini TURBO",
+  "handle": "tool-resources-mini-turbo",
+  "templateSuffix": "arbt-tool-resource",
+  "isPublished": true
+ },
+ {
+  "title": "AGB",
+  "handle": "agb",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Widerruf",
+  "handle": "widerruf",
+  "templateSuffix": "arbt-widerruf",
+  "isPublished": true
+ },
+ {
+  "title": "Versand und Zahlung",
+  "handle": "versand-und-zahlung",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Impressum",
+  "handle": "impressum",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Service, Reparatur & Garantie",
+  "handle": "garantie",
+  "templateSuffix": null,
+  "isPublished": true
+ },
+ {
+  "title": "Datenschutz",
+  "handle": "datenschutz",
+  "templateSuffix": null,
+  "isPublished": false
+ },
+ {
+  "title": "Cookie-Richtlinie",
+  "handle": "cookie-richtlinie",
+  "templateSuffix": null,
+  "isPublished": false
+ },
+ {
+  "title": "Pene Turner",
+  "handle": "artist-pene-turner",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Brendan Rawlings",
+  "handle": "artist-brendan-rawlings",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Sylvain Gautier",
+  "handle": "artist-sylvain-gautier",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Rob Woods",
+  "handle": "artist-rob-woods",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Eric Spencley",
+  "handle": "artist-eric-spencley",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Kevin Inkster",
+  "handle": "artist-kevin-inkster",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Claes Larsson",
+  "handle": "artist-claes-larsson",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Jimmy DiResta",
+  "handle": "artist-jimmy-diresta",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Paul Jackman",
+  "handle": "artist-paul-jackman",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Ed Elliott",
+  "handle": "artist-ed-elliott",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Erich Perkins",
+  "handle": "artist-erich-perkins",
+  "templateSuffix": "artist",
+  "isPublished": true
+ },
+ {
+  "title": "Events and Shows",
+  "handle": "events",
+  "templateSuffix": "events",
+  "isPublished": true
+ },
+ {
+  "title": "Who We Are",
+  "handle": "who-we-are",
+  "templateSuffix": "who-we-are",
+  "isPublished": true
+ },
+ {
+  "title": "Power Carve Like A Pro",
+  "handle": "power-carve-like-a-pro",
+  "templateSuffix": "arbt-power-carve",
+  "isPublished": true
+ },
+ {
+  "title": "Ball Gouge",
+  "handle": "power-carve-like-a-pro-ball-gouge",
+  "templateSuffix": "arbt-power-carve-ball-gouge",
+  "isPublished": true
+ },
+ {
+  "title": "Contour Sander",
+  "handle": "power-carve-like-a-pro-contour-sander",
+  "templateSuffix": "arbt-power-carve-contour-sander",
+  "isPublished": true
+ },
+ {
+  "title": "Industrial Woodcarver",
+  "handle": "power-carve-like-a-pro-industrial-woodcarver",
+  "templateSuffix": "arbt-power-carve-industrial-woodcarver",
+  "isPublished": true
+ },
+ {
+  "title": "Mini Carver",
+  "handle": "power-carve-like-a-pro-mini-carver",
+  "templateSuffix": "arbt-power-carve-mini-carver",
+  "isPublished": true
+ },
+ {
+  "title": "Mini Turbo",
+  "handle": "power-carve-like-a-pro-mini-turbo",
+  "templateSuffix": "arbt-power-carve-mini-turbo",
+  "isPublished": true
+ },
+ {
+  "title": "Power Carving Unit",
+  "handle": "power-carve-like-a-pro-power-carving-unit",
+  "templateSuffix": "arbt-power-carve-power-carving-unit",
+  "isPublished": true
+ },
+ {
+  "title": "Power Chisel",
+  "handle": "power-carve-like-a-pro-power-chisel",
+  "templateSuffix": "arbt-power-carve-power-chisel",
+  "isPublished": true
+ },
+ {
+  "title": "Precision Carving System",
+  "handle": "power-carve-like-a-pro-precision-carving-system",
+  "templateSuffix": "arbt-power-carve-precision-carving-system",
+  "isPublished": true
+ },
+ {
+  "title": "Turbo Shaft",
+  "handle": "power-carve-like-a-pro-turbo-shaft",
+  "templateSuffix": "arbt-power-carve-turbo-shaft",
+  "isPublished": true
+ },
+ {
+  "title": "TURBOPlane",
+  "handle": "power-carve-like-a-pro-turboplane",
+  "templateSuffix": "arbt-power-carve-turboplane",
+  "isPublished": true
+ },
+ {
+  "title": "Shop by Project",
+  "handle": "shop-by-project",
+  "templateSuffix": "shop-by-project",
+  "isPublished": true
+ }
+]
