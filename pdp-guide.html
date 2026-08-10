@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbortech – Product Page (PDP) Guide</title>
+  <style>
+    :root {
+      --ink: #1a2230;
+      --body: #3a4453;
+      --muted: #5b6574;
+      --line: #e3e8ee;
+      --line-soft: #eef2f6;
+      --accent: #E87722;
+      --accent-dark: #b85710;
+      --accent-soft: #fdf1e6;
+      --ok: #1a7f4d;
+      --ok-bg: #eef8f2;
+      --warn: #8a5300;
+      --warn-bg: #fdf6e3;
+      --danger: #b3261e;
+      --danger-bg: #fdf1f0;
+      --info: #2b5d8a;
+      --info-bg: #eff5fa;
+      --code-bg: #f4f7fa;
+      --radius: 3px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--body);
+      line-height: 1.65;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+    .tab-nav { background: var(--ink); border-bottom: 3px solid var(--accent); }
+    .tab-nav .inner { max-width: 76em; margin: 0 auto; padding: 0 1.4em; display: flex; gap: 0.4em; }
+    .tab-nav a { color: #cdd6e2; text-decoration: none; padding: 0.75em 1.1em; font-size: 0.86em; font-weight: 600; letter-spacing: 0.02em; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+    .tab-nav a:hover { color: #fff; }
+    .tab-nav a[aria-current] { color: #fff; border-bottom-color: var(--accent); background: rgba(255,255,255,0.06); }
+    @media print { .tab-nav { display: none; } }
+
+    .page-header { background: var(--ink); color: #fff; padding: 3.25rem 1.5rem 2.9rem; border-bottom: 3px solid var(--accent); }
+    .page-header .inner { max-width: 62em; margin: 0 auto; }
+    .page-header .kicker { display: inline-flex; align-items: center; gap: .5em; background: var(--accent); color: var(--ink); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-radius: var(--radius); padding: .45em .8em; margin-bottom: 1.25rem; }
+    .page-header h1 { margin: 0; font-size: 2.05rem; font-weight: 700; letter-spacing: -.022em; line-height: 1.14; }
+    .page-header h1 .brand { color: var(--accent); }
+    .page-header p.sub { margin: 1rem 0 0; max-width: 46em; font-size: 1.02rem; color: #cdd6e2; line-height: 1.55; }
+
+    .page-layout { display: flex; gap: 3.5em; align-items: flex-start; max-width: 66em; margin: 0 auto; padding: 3em 3em 5em; }
+    .sidebar { width: 15em; flex-shrink: 0; position: sticky; top: 2em; max-height: calc(100vh - 4em); overflow-y: auto; padding-right: .4em; }
+    .toc-title { font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 .7em; }
+    .toc-list { display: flex; flex-direction: column; gap: .15em; }
+    .toc-link { display: block; padding: .35em .6em; border-radius: var(--radius); color: var(--body); text-decoration: none; font-size: .86em; line-height: 1.4; }
+    .toc-link:hover { background: var(--line-soft); color: var(--ink); }
+    .article { min-width: 0; flex: 1; max-width: 46em; }
+    @media (max-width: 900px) { .page-layout { flex-direction: column; padding: 2em 1.2em 4em; } .sidebar { position: static; width: 100%; max-height: none; } }
+
+    .article h2 { font-size: 1.42rem; color: var(--ink); letter-spacing: -.015em; margin: 2.6em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+    .article h2:first-of-type { margin-top: 1em; border-top: 0; padding-top: 0; }
+    .article h2 .num { color: var(--accent); margin-right: .35em; }
+    .article h3 { font-size: 1.06rem; color: var(--ink); margin: 1.8em 0 .4em; }
+    .article p { margin: .7em 0; }
+    .article ul, .article ol { padding-left: 1.35em; margin: .6em 0; }
+    .article li { margin: .3em 0; }
+    .article code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .86em; background: var(--code-bg); padding: .12em .38em; border-radius: var(--radius); color: #0f172a; }
+    .article table { border-collapse: collapse; width: 100%; margin: 1.1em 0 1.6em; font-size: .9em; }
+    .article th { text-align: left; background: var(--ink); color: #fff; padding: .55em .75em; font-weight: 600; }
+    .article td { padding: .55em .75em; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .article tr:nth-child(even) td { background: var(--line-soft); }
+
+    .callout { border: 1px solid var(--line); border-radius: var(--radius); padding: .95em 1.1em; margin: 1.2em 0; }
+    .callout .callout-title { display: flex; align-items: center; gap: .5em; font-weight: 700; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; margin: 0 0 .4em; }
+    .callout p { margin: .35em 0; font-size: .95em; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout ul { margin: .5em 0 .15em; }
+    .callout li { font-size: .93em; }
+    .callout.ok { background: var(--ok-bg); border-color: #d3eadd; } .callout.ok .callout-title { color: var(--ok); }
+    .callout.warn { background: var(--warn-bg); border-color: #f0e0b4; } .callout.warn .callout-title { color: var(--warn); }
+    .callout.danger { background: var(--danger-bg); border-color: #f0cdca; } .callout.danger .callout-title { color: var(--danger); }
+    .callout.info { background: var(--info-bg); border-color: #cfdeec; } .callout.info .callout-title { color: var(--info); }
+
+    figure.diagram { margin: 1.4rem 0 1.9rem; }
+    figure.diagram svg { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+    figure.diagram figcaption { font-size: .85rem; color: var(--muted); margin-top: .55rem; line-height: 1.5; }
+    figure.diagram figcaption strong { color: var(--ink); }
+    svg text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html">Module Guide</a><a href="pdp-guide.html" aria-current="page">PDP Guide</a><a href="supplying-content.html">Supplying Content</a></div></nav>
+
+  <header class="page-header">
+    <div class="inner">
+      <span class="kicker">Onboarding · Storefront</span>
+      <h1><span class="brand">Arbortech</span> – How the Product Page Works</h1>
+      <p class="sub">One product template powers every tool and accessory on the store. This guide explains what shoppers see on a product page (PDP), how the “Configure your order” area prices things, and which switches in Shopify admin control each behaviour — no code required.</p>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <p class="toc-title">On this page</p>
+      <nav class="toc-list">
+        <a class="toc-link" href="#anatomy">1. Anatomy of the page</a>
+        <a class="toc-link" href="#variants">2. Variants &amp; markets</a>
+        <a class="toc-link" href="#attachments">3. Attachments &amp; Accessories</a>
+        <a class="toc-link" href="#bundles">4. Bundle with</a>
+        <a class="toc-link" href="#summary">5. The order summary</a>
+        <a class="toc-link" href="#context">6. Context switching</a>
+        <a class="toc-link" href="#regional">7. Regional editing</a>
+        <a class="toc-link" href="#admin">8. What you control in admin</a>
+        <a class="toc-link" href="#special">9. Special cases</a>
+        <a class="toc-link" href="#guardrails">10. Guardrails</a>
+      </nav>
+    </aside>
+
+    <main class="article">
+
+      <h2 id="anatomy"><span class="num">1.</span> Anatomy of the page</h2>
+      <p>Every product uses the same template. The buy area (right of the gallery) assembles itself from the product’s data — sections that have nothing to show simply don’t render.</p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 720 470" role="img" aria-label="Annotated wireframe of the product page buy area">
+          <rect x="0" y="0" width="720" height="470" fill="#fff"/>
+          <!-- gallery -->
+          <rect x="24" y="24" width="300" height="300" rx="3" fill="var(--line-soft)" stroke="var(--line)"/>
+          <text x="174" y="180" text-anchor="middle" font-size="14" fill="var(--muted)">Gallery</text>
+          <circle cx="44" cy="44" r="12" fill="var(--accent)"/><text x="44" y="48.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">1</text>
+          <!-- breadcrumb -->
+          <rect x="348" y="24" width="348" height="22" rx="3" fill="var(--accent-soft)"/>
+          <text x="360" y="39" font-size="11" fill="var(--accent-dark)">Home / Woodworking / TURBOPlane</text>
+          <circle cx="684" cy="35" r="12" fill="var(--accent)"/><text x="684" y="39.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">2</text>
+          <!-- title/price -->
+          <text x="348" y="80" font-size="20" font-weight="700" fill="var(--ink)">POWER CARVING UNIT</text>
+          <text x="348" y="106" font-size="17" font-weight="700" fill="var(--accent)">$429.00 AUD</text>
+          <circle cx="684" cy="94" r="12" fill="var(--accent)"/><text x="684" y="98.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">3</text>
+          <!-- description -->
+          <rect x="348" y="122" width="348" height="46" rx="3" fill="var(--line-soft)"/>
+          <text x="360" y="141" font-size="11" fill="var(--muted)">Description — can differ per vertical / market</text>
+          <circle cx="684" cy="145" r="12" fill="var(--accent)"/><text x="684" y="149.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">4</text>
+          <!-- variant picker -->
+          <rect x="348" y="182" width="110" height="28" rx="14" fill="#fff" stroke="var(--accent)" stroke-width="2"/>
+          <text x="403" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">240V</text>
+          <rect x="466" y="182" width="110" height="28" rx="14" fill="#fff" stroke="var(--line)"/>
+          <text x="521" y="200" text-anchor="middle" font-size="11" fill="var(--muted)">110V</text>
+          <circle cx="684" cy="196" r="12" fill="var(--accent)"/><text x="684" y="200.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">5</text>
+          <!-- attachments -->
+          <rect x="348" y="226" width="348" height="64" rx="3" fill="#fff" stroke="var(--line)"/>
+          <text x="360" y="245" font-size="10" font-weight="700" letter-spacing="1" fill="var(--muted)">ATTACHMENTS &amp; ACCESSORIES</text>
+          <rect x="360" y="254" width="324" height="26" rx="3" fill="var(--line-soft)"/>
+          <text x="372" y="271" font-size="11" fill="var(--body)">☐  TURBOPlane   + $190.00   VIEW PRODUCT</text>
+          <circle cx="684" cy="238" r="12" fill="var(--accent)"/><text x="684" y="242.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">6</text>
+          <!-- bundles -->
+          <rect x="348" y="302" width="348" height="64" rx="3" fill="#fff" stroke="var(--line)"/>
+          <text x="360" y="321" font-size="10" font-weight="700" letter-spacing="1" fill="var(--muted)">BUNDLE WITH</text>
+          <rect x="360" y="330" width="158" height="28" rx="3" fill="var(--line-soft)"/>
+          <rect x="526" y="330" width="158" height="28" rx="3" fill="var(--line-soft)"/>
+          <text x="372" y="348" font-size="10" fill="var(--body)">☐ PCU + TURBOPlane…</text>
+          <text x="538" y="348" font-size="10" fill="var(--body)">☐ Mega Bundle…</text>
+          <circle cx="684" cy="314" r="12" fill="var(--accent)"/><text x="684" y="318.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">7</text>
+          <!-- summary -->
+          <rect x="348" y="378" width="348" height="46" rx="3" fill="var(--accent-soft)"/>
+          <text x="360" y="396" font-size="11" fill="var(--accent-dark)">Order summary — line items · discount · subtotal</text>
+          <circle cx="684" cy="401" r="12" fill="var(--accent)"/><text x="684" y="405.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">8</text>
+          <!-- ATC -->
+          <rect x="348" y="434" width="348" height="26" rx="3" fill="var(--accent)"/>
+          <text x="522" y="451" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">ADD TO CART</text>
+        </svg>
+        <figcaption><strong>The buy area, numbered.</strong> 1 Gallery (can swap per selection) · 2 Breadcrumb (follows the shopper’s journey) · 3 Title &amp; price · 4 Description lead · 5 Variant picker · 6 Attachments &amp; Accessories · 7 Bundle with · 8 Order summary, then Add to cart.</figcaption>
+      </figure>
+
+      <h2 id="variants"><span class="num">2.</span> Variants &amp; markets</h2>
+      <p>Products with more than one variant show pill-style pickers for each choice the shopper should make (e.g. <strong>Voltage</strong>). Some variant dimensions are <em>market-routed</em> and never shown: a shopper in Australia silently gets the AU/UK/EU stock unit, a US shopper the US/Canada one. Which markets see which values is data-driven (admin-editable “market option rules”), not code.</p>
+      <ul>
+        <li>Prices always render with their currency (<code>$429.00 AUD</code>) and follow the shopper’s market.</li>
+        <li>An accessory with no purchasable variant in the current market simply doesn’t appear.</li>
+        <li>Everything else that differs per region — availability, price, wording — is covered in <a href="#regional">§7 Regional editing</a>.</li>
+      </ul>
+
+      <h2 id="attachments"><span class="num">3.</span> Attachments &amp; Accessories</h2>
+      <p>Compatible add-ons for the tool being viewed. Each row is a full-width tick box — ticking adds it to the order as its <em>own</em> cart line at its own price.</p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 720 96" role="img" aria-label="Anatomy of one accessory row">
+          <rect x="0" y="0" width="720" height="96" fill="#fff"/>
+          <rect x="16" y="16" width="688" height="64" rx="3" fill="#fff" stroke="var(--accent)" stroke-width="2"/>
+          <rect x="34" y="38" width="20" height="20" rx="3" fill="var(--accent)"/>
+          <path d="M39 48 l4 4 l7 -8" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <text x="70" y="45" font-size="14" font-weight="700" fill="var(--ink)">Mini Grinder MG1000 Restoration Pack</text>
+          <text x="70" y="66" font-size="10" font-weight="700" letter-spacing="1" fill="var(--accent)">ADDED TO YOUR ORDER</text>
+          <text x="560" y="52" font-size="14" font-weight="700" fill="var(--ink)">+ $99.00 AUD</text>
+          <text x="622" y="70" font-size="9" font-weight="700" letter-spacing="1" fill="var(--muted)" text-decoration="underline">VIEW PRODUCT</text>
+        </svg>
+        <figcaption><strong>One accessory row, selected.</strong> Full-width so titles never crush. Checkbox + orange border + “Added to your order” = three clear signals it’s in the order. “View product” opens the accessory’s own page in a new tab without toggling the tick. Hovering a row shows an image-and-blurb preview; if the product has a photo of the tool <em>with</em> that accessory, the gallery scrolls to it on tick.</figcaption>
+      </figure>
+
+      <ul>
+        <li>Rows are <strong>vertical-aware</strong>: if the product has an accessory list for the shopper’s current context (say, masonry), that list is shown instead of the default (see <a href="#context">§6</a>).</li>
+        <li><strong>Spare parts never appear here</strong> — anything categorised <code>spares-consumables</code> is excluded from the PDP by design.</li>
+      </ul>
+
+      <h2 id="bundles"><span class="num">4.</span> Bundle with</h2>
+      <p>Ready-made packages, shown only on <strong>power tools</strong>. Tiles sit two-across and stack everything in rows:</p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 720 130" role="img" aria-label="Anatomy of one bundle tile">
+          <rect x="0" y="0" width="720" height="130" fill="#fff"/>
+          <rect x="16" y="14" width="400" height="102" rx="3" fill="#fff" stroke="var(--accent)" stroke-width="2"/>
+          <rect x="34" y="54" width="20" height="20" rx="3" fill="var(--accent)"/>
+          <path d="M39 64 l4 4 l7 -8" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <text x="70" y="40" font-size="14" font-weight="700" fill="var(--ink)">PCU + TURBOPlane Bundle</text>
+          <text x="70" y="62" font-size="12" font-weight="700" fill="var(--ink)">$590.50 AUD  <tspan fill="var(--muted)" text-decoration="line-through" font-weight="400">$619.00</tspan></text>
+          <text x="330" y="62" font-size="9" font-weight="700" letter-spacing="1" fill="var(--muted)" text-decoration="underline">VIEW BUNDLE</text>
+          <text x="70" y="82" font-size="12" font-weight="700" fill="var(--accent)">Save $28.50 AUD</text>
+          <text x="70" y="102" font-size="10" fill="var(--muted)">Includes this tool and replaces it in your cart</text>
+          <!-- annotations -->
+          <text x="440" y="40" font-size="11" fill="var(--body)">← Title on its own row</text>
+          <text x="440" y="62" font-size="11" fill="var(--body)">← Price + struck “total value”; View bundle</text>
+          <text x="440" y="82" font-size="11" fill="var(--body)">← The saving, from real price data</text>
+          <text x="440" y="102" font-size="11" fill="var(--body)">← Only on tool-inclusive bundles</text>
+        </svg>
+        <figcaption><strong>One bundle tile, selected.</strong> The struck price is the bundle’s “total value” (its compare-at price in admin); the saving is the difference. No discount is ever invented on the page — if admin holds no compare-at, no saving is shown.</figcaption>
+      </figure>
+
+      <h3>Two kinds of bundle — decided by data</h3>
+      <p>The page reads the bundle’s component list and compares it against the tool being viewed:</p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 720 220" role="img" aria-label="Accessory-only bundles add a line; tool-inclusive bundles replace the tool line">
+          <rect x="0" y="0" width="720" height="220" fill="#fff"/>
+          <!-- left: accessory-only -->
+          <text x="30" y="32" font-size="13" font-weight="700" fill="var(--ink)">Accessory-only bundle</text>
+          <text x="30" y="50" font-size="11" fill="var(--muted)">(no component matches the tool)</text>
+          <rect x="30" y="64" width="300" height="30" rx="3" fill="var(--line-soft)"/>
+          <text x="42" y="84" font-size="12" fill="var(--body)">Power Carving Unit — $429.00</text>
+          <rect x="30" y="102" width="300" height="30" rx="3" fill="var(--accent-soft)"/>
+          <text x="42" y="122" font-size="12" fill="var(--accent-dark)">+ Accessory bundle — its own price</text>
+          <text x="30" y="160" font-size="12" font-weight="700" fill="var(--ok)">Cart: 2 lines, side by side</text>
+          <!-- divider -->
+          <line x1="360" y1="24" x2="360" y2="196" stroke="var(--line)"/>
+          <!-- right: tool-inclusive -->
+          <text x="390" y="32" font-size="13" font-weight="700" fill="var(--ink)">Tool-inclusive bundle</text>
+          <text x="390" y="50" font-size="11" fill="var(--muted)">(a component IS this tool — e.g. PCU + TURBOPlane)</text>
+          <rect x="390" y="64" width="300" height="30" rx="3" fill="var(--line-soft)"/>
+          <text x="402" y="84" font-size="12" fill="var(--muted)" text-decoration="line-through">Power Carving Unit — $429.00</text>
+          <line x1="390" y1="79" x2="690" y2="79" stroke="var(--danger)" stroke-width="1.5" opacity="0.6"/>
+          <rect x="390" y="102" width="300" height="30" rx="3" fill="var(--accent-soft)"/>
+          <text x="402" y="122" font-size="12" fill="var(--accent-dark)">Bundle (tool included) — $590.50</text>
+          <text x="390" y="160" font-size="12" font-weight="700" fill="var(--ok)">Cart: 1 line — the bundle REPLACES the tool</text>
+          <text x="390" y="182" font-size="11" fill="var(--muted)">The shopper is never charged for the tool twice.</text>
+        </svg>
+        <figcaption><strong>Substitution.</strong> Ticking a tool-inclusive bundle swaps it in as the main item — the standalone tool line is dropped from the order and the top-of-page price becomes the bundle’s. Only one tool-inclusive bundle can be selected at a time. If a bundle already contains an accessory the shopper also ticked, that accessory isn’t charged again.</figcaption>
+      </figure>
+
+      <h2 id="summary"><span class="num">5.</span> The order summary</h2>
+      <p>The moment anything is ticked, a summary appears above <em>Add to cart</em>: each line at its listed value, one discount row, and the subtotal that will actually be charged. A worked example with real store data:</p>
+      <table>
+        <tr><th>Line</th><th style="text-align:right">Listed</th></tr>
+        <tr><td>PCU + TURBOPlane Bundle <em>(replaced the tool)</em></td><td style="text-align:right">$619.00</td></tr>
+        <tr><td>Ball Gouge <em>(accessory, ticked)</em></td><td style="text-align:right">$130.00</td></tr>
+        <tr><td style="color:var(--accent)"><strong>Discount</strong></td><td style="text-align:right;color:var(--accent)"><strong>−$28.50</strong></td></tr>
+        <tr><td><strong>Subtotal</strong></td><td style="text-align:right"><strong>$720.50</strong></td></tr>
+      </table>
+      <p>The top-of-page price shows the <strong>main item only</strong> ($590.50 here — the bundle that replaced the tool); the summary owns the full total. Untick everything and the page returns to the plain product price.</p>
+
+      <h2 id="context"><span class="num">6.</span> Context switching (verticals)</h2>
+      <p>The same product page adapts to the shopper’s journey. A TURBOPlane reached from the Woodworking range reads as a woodworking product; the identical URL reached from a masonry route can show masonry-specific copy, imagery and accessories.</p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 720 240" role="img" aria-label="How the page decides the active vertical and what changes">
+          <rect x="0" y="0" width="720" height="240" fill="#fff"/>
+          <text x="30" y="34" font-size="12" font-weight="700" fill="var(--ink)">How the vertical is decided</text>
+          <rect x="30" y="48" width="270" height="34" rx="3" fill="var(--accent-soft)"/>
+          <text x="45" y="70" font-size="11" fill="var(--accent-dark)">1. Collection route in the URL</text>
+          <text x="310" y="70" font-size="10" fill="var(--muted)">/collections/masonry-trade/products/…</text>
+          <rect x="30" y="92" width="270" height="34" rx="3" fill="var(--line-soft)"/>
+          <text x="45" y="114" font-size="11" fill="var(--body)">2. else: the product’s primary vertical</text>
+          <text x="310" y="114" font-size="10" fill="var(--muted)">set per product in admin</text>
+          <rect x="30" y="136" width="270" height="34" rx="3" fill="var(--line-soft)"/>
+          <text x="45" y="158" font-size="11" fill="var(--body)">3. explicit override: ?vertical=masonry</text>
+          <text x="310" y="158" font-size="10" fill="var(--muted)">beats both, for links &amp; campaigns</text>
+          <!-- arrow -->
+          <path d="M310 190 h60" stroke="var(--accent)" stroke-width="2" marker-end="url(#arr)"/>
+          <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--accent)"/></marker></defs>
+          <text x="30" y="196" font-size="12" font-weight="700" fill="var(--ink)">Active vertical</text>
+          <!-- affected -->
+          <text x="400" y="34" font-size="12" font-weight="700" fill="var(--ink)">What it changes</text>
+          <text x="400" y="60" font-size="11" fill="var(--body)">• Breadcrumb label &amp; link</text>
+          <text x="400" y="82" font-size="11" fill="var(--body)">• Description lead paragraph</text>
+          <text x="400" y="104" font-size="11" fill="var(--body)">• Gallery image set (when provided)</text>
+          <text x="400" y="126" font-size="11" fill="var(--body)">• Overview video</text>
+          <text x="400" y="148" font-size="11" fill="var(--body)">• “Clever bits” feature panels</text>
+          <text x="400" y="170" font-size="11" fill="var(--body)">• Compatible accessories (buy box + rail)</text>
+          <text x="400" y="196" font-size="11" fill="var(--muted)">Anything without vertical content falls back</text>
+          <text x="400" y="212" font-size="11" fill="var(--muted)">to the product’s defaults — nothing goes blank.</text>
+        </svg>
+        <figcaption><strong>Route first, product default second, explicit override on top.</strong> The page renders correctly with no JavaScript — the URL alone decides; the <code>?vertical=</code> override is the only client-side layer.</figcaption>
+      </figure>
+
+      <h2 id="regional"><span class="num">7.</span> Regional editing: price, availability &amp; wording per market</h2>
+      <p>There is <strong>one product record</strong>, shared by every market. You never “switch region” on the product form itself — the base form is the default for everyone. Regional differences are <em>layers</em> applied on top of that one record, and each kind of difference has its own home in admin:</p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 720 250" role="img" aria-label="One product record with four regional layers applied per market">
+          <rect x="0" y="0" width="720" height="250" fill="#fff"/>
+          <rect x="24" y="90" width="170" height="70" rx="3" fill="var(--ink)"/>
+          <text x="109" y="120" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">ONE product record</text>
+          <text x="109" y="140" text-anchor="middle" font-size="10" fill="#cdd6e2">title · description · images ·</text>
+          <text x="109" y="153" text-anchor="middle" font-size="10" fill="#cdd6e2">variants · stock</text>
+          <path d="M194 125 h40" stroke="var(--accent)" stroke-width="2" marker-end="url(#arr2)"/>
+          <defs><marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--accent)"/></marker></defs>
+          <text x="254" y="34" font-size="11" font-weight="700" fill="var(--ink)">Regional layers (each optional, per market)</text>
+          <rect x="254" y="46" width="330" height="38" rx="3" fill="var(--accent-soft)"/>
+          <text x="266" y="62" font-size="11" font-weight="700" fill="var(--accent-dark)">Availability — Markets / Catalogs toggles</text>
+          <text x="266" y="77" font-size="10" fill="var(--muted)">sell in AU + US only, hide from DE…</text>
+          <rect x="254" y="92" width="330" height="38" rx="3" fill="var(--accent-soft)"/>
+          <text x="266" y="108" font-size="11" font-weight="700" fill="var(--accent-dark)">Price — catalog price lists</text>
+          <text x="266" y="123" font-size="10" fill="var(--muted)">a different price for one market</text>
+          <rect x="254" y="138" width="330" height="38" rx="3" fill="var(--accent-soft)"/>
+          <text x="266" y="154" font-size="11" font-weight="700" fill="var(--accent-dark)">Wording — Translate &amp; Adapt app</text>
+          <text x="266" y="169" font-size="10" fill="var(--muted)">German translation, or reworded English for US / CA / UK</text>
+          <rect x="254" y="184" width="330" height="38" rx="3" fill="var(--accent-soft)"/>
+          <text x="266" y="200" font-size="11" font-weight="700" fill="var(--accent-dark)">Custom sections — per-market metafields</text>
+          <text x="266" y="215" font-size="10" fill="var(--muted)">story panels, description leads (…_us / _au / _ca / _de)</text>
+          <path d="M584 125 h40" stroke="var(--accent)" stroke-width="2" marker-end="url(#arr2)"/>
+          <rect x="624" y="90" width="80" height="70" rx="3" fill="var(--line-soft)" stroke="var(--line)"/>
+          <text x="664" y="118" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">What the</text>
+          <text x="664" y="133" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">shopper in</text>
+          <text x="664" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent)">/en-us sees</text>
+        </svg>
+        <figcaption><strong>Layers, not copies.</strong> Edit the base record and every market inherits it. Add a layer and only that market changes. Nothing is duplicated, so there is no “US version” of the product to keep in sync.</figcaption>
+      </figure>
+
+      <h3>“I want to…” — which tool answers it</h3>
+      <table>
+        <tr><th>Task (from the client walkthrough)</th><th>Where it lives</th></tr>
+        <tr><td>Stop selling a product in one market (e.g. hide from Germany)</td><td>On the product: the <strong>Markets / Catalogs</strong> card — untick that market. The product stays live everywhere else.</td></tr>
+        <tr><td>Change the price for one market only</td><td><strong>Settings → Markets → (market) → catalog price list.</strong> The product form’s price field is the base price for all markets.</td></tr>
+        <tr><td>Put a product “out of stock”</td><td>Stock is <strong>global</strong> — one shared pool, there is no per-market inventory. Set the quantity to 0 (out of stock everywhere) or use the catalog toggle above to withdraw it from one market.</td></tr>
+        <tr><td>Translate the page into German</td><td><strong>Translate &amp; Adapt</strong> app → language <em>German</em> → the product → fill the German columns. The theme picks it up automatically on <code>/de-de</code>.</td></tr>
+        <tr><td>Reword the description for the US (same language, different copy)</td><td><strong>Translate &amp; Adapt</strong> app → switch the selector from a language to a <em>market</em> (US / Canada / UK) → override just the fields you want. This is “adapt” — per-market English, no translation involved.</td></tr>
+        <tr><td>Regional story panels / description leads in the custom sections</td><td>Product <strong>metafields</strong> — the <code>…_us / _au / _ca / _de</code> variants (see <a href="#admin">§8</a>). These feed the bespoke Arbortech sections rather than Shopify’s standard fields.</td></tr>
+      </table>
+
+      <div class="callout info">
+        <p class="callout-title">Which wording wins when both are set</p>
+        <p>For content the custom sections render (like the description lead): a <strong>per-market metafield</strong> beats a <strong>Translate &amp; Adapt</strong> value, which beats the <strong>base content</strong>. If a regional edit doesn’t seem to show, check whether a market metafield is overriding it before re-editing in Translate &amp; Adapt.</p>
+      </div>
+
+      <div class="callout warn">
+        <p class="callout-title">Two things to know before regional edits</p>
+        <ul>
+          <li><strong>US pricing currently follows the AUD price.</strong> The USD price list can’t take effect until USD is enabled as a presentment currency — until then a US-only price change won’t behave as expected.</li>
+          <li><strong>Adapted copy goes stale silently.</strong> Once a market override exists, editing the base description does <em>not</em> update that market. After a base rewrite, skim Translate &amp; Adapt for markets still carrying old wording.</li>
+        </ul>
+      </div>
+
+      <h2 id="admin"><span class="num">8.</span> What you control in admin</h2>
+      <p>Everything above is driven by product data — mostly metafields on the product, editable in Shopify admin. The load-bearing ones:</p>
+      <table>
+        <tr><th>Setting (metafield)</th><th>What it does</th></tr>
+        <tr><td><code>arbortech.related_accessories</code></td><td>Default Attachments &amp; Accessories list for the tool.</td></tr>
+        <tr><td><code>arbortech.vertical_woodworking / _masonry / _landscaping</code></td><td>Per-vertical content pack: description lead, image order, video, and its own <code>accessories</code> list.</td></tr>
+        <tr><td><code>arbortech.primary_vertical</code></td><td>Fallback vertical when the shopper arrives without a journey.</td></tr>
+        <tr><td><code>arbt.related_bundles</code></td><td>Which bundle products appear under “Bundle with”.</td></tr>
+        <tr><td><code>arbortech.bundle_components</code> <em>(on the bundle)</em></td><td>The SKUs inside the bundle — this is how the page knows a bundle contains the tool.</td></tr>
+        <tr><td><code>arbortech.bundle_includes</code> <em>(on the bundle)</em></td><td>Accessory products the bundle contains — used to avoid double-charging.</td></tr>
+        <tr><td>Variant <strong>compare-at price</strong> <em>(on the bundle)</em></td><td>The “total value”. Compare-at above price = struck price + “Save $X”. No compare-at, no saving shown.</td></tr>
+        <tr><td><code>arbt.addon_media_map</code></td><td>Maps an accessory/bundle to a gallery photo of the tool <em>with</em> it — ticking scrolls the gallery there.</td></tr>
+        <tr><td><code>arbt.addon_category</code> <em>(on the accessory)</em></td><td><code>spares-consumables</code> keeps an item off the PDP entirely.</td></tr>
+        <tr><td><code>arbt.pre_order</code></td><td>Switches the buy button into pre-order messaging.</td></tr>
+      </table>
+
+      <div class="callout info">
+        <p class="callout-title">How bundle prices are set</p>
+        <p>Bundle <strong>price</strong> = what the shopper pays for the whole package. Bundle <strong>compare-at</strong> = the sum of the parts bought separately. The standing policy is the tool at full price plus <strong>15% off the accessories</strong> (the <code>bundle_discount_percent</code> setting on each bundle); where the legacy site sells the identical kit, its live price is used instead. A repricing helper (<code>tools/shopify/set-bundle-compare-at.mjs</code>) applies these rules and writes a report — never hand-type a bundle price below the price of its most expensive component.</p>
+      </div>
+
+      <h2 id="special"><span class="num">9.</span> Special cases</h2>
+      <ul>
+        <li><strong>MG1000 and ALLSAW AS200X</strong> use a bespoke <em>family configurator</em> (Tool Setup choices like Skin vs Battery Kit). Their setup choice owns the variant; everything in this guide still applies around it.</li>
+        <li><strong>MG1000 packs</strong> (Woodworking / Restoration) are discounted in the cart by an automatic merge — their PDP tiles deliberately show no “Save” badge; the saving appears at cart level.</li>
+        <li><strong>Bundles show only on power tools.</strong> An accessory’s own page never offers bundles, even if data exists.</li>
+        <li><strong>Sold-out bundles</strong> grey out but stay visible with a “Sold out” note — availability is computed from component stock.</li>
+      </ul>
+
+      <h2 id="guardrails"><span class="num">10.</span> Guardrails</h2>
+      <div class="callout warn">
+        <p class="callout-title">Before you change product data</p>
+        <ul>
+          <li><strong>Don’t price a bundle below its biggest component.</strong> Tool-inclusive bundles replace the tool in the cart — an under-priced bundle sells the tool at that price.</li>
+          <li><strong>Don’t set a compare-at below the price.</strong> It will simply never show; the page refuses to display negative savings.</li>
+          <li><strong>Don’t add spare parts to <code>related_accessories</code></strong> expecting them to appear — they’re filtered out by category everywhere on the PDP.</li>
+          <li><strong>Keep bundle component lists truthful.</strong> The substitution and no-double-charging logic trusts <code>bundle_components</code> / <code>bundle_includes</code>; a wrong list means wrong carts.</li>
+          <li><strong>Vertical content is optional but all-or-nothing per block</strong> — a vertical with its own accessory list fully replaces the default list in that context.</li>
+        </ul>
+      </div>
+
+      <p style="margin-top:2.5em;font-size:.85em;color:var(--muted)">Written 2026-08-06 against the live dev theme. Behaviours in §4–§5 were verified with real store data (Power Carving Unit, $429; PCU + TURBOPlane bundle, $590.50 / value $619.00).</p>
+    </main>
+  </div>
+</body>
+</html>

@@ -4,8 +4,9 @@
 import base64, json, re, html, os
 
 SCRATCH = os.path.dirname(os.path.abspath(__file__))  # data snapshots live beside this script
-REPO = '/Users/david/Documents/Code/arbortechtools.com'
-MANUAL = os.path.join(REPO, 'shopify-training/index.html')
+OUT = os.path.dirname(SCRATCH)  # pages sit one level up from build/ — works in this repo
+                                # (shopify-training/) and in the deploy repo (its root)
+MANUAL = os.path.join(OUT, 'index.html')
 
 index_src = open(MANUAL, encoding='utf-8').read()
 style = re.search(r'(<style>.*?</style>)', index_src, re.S).group(1)
@@ -20,7 +21,8 @@ TAB_CSS = """
 """
 
 def tab_nav(current):
-    tabs = [('index.html', 'CMS Manual'), ('modules.html', 'Module Guide')]
+    tabs = [('index.html', 'CMS Manual'), ('modules.html', 'Module Guide'),
+            ('pdp-guide.html', 'PDP Guide'), ('supplying-content.html', 'Supplying Content')]
     cur_attr = ' aria-current="page"'
     links = ''.join(
         f'<a href="{href}"{cur_attr if href == current else ""}>{label}</a>'
@@ -263,10 +265,10 @@ def page_shell(title, kicker, sub, body, current):
 </html>
 """
 
-open(os.path.join(REPO, 'shopify-training/sitemap.html'), 'w', encoding='utf-8').write(
+open(os.path.join(OUT, 'sitemap.html'), 'w', encoding='utf-8').write(
     page_shell('Arbortech – Site Map', 'Personalised CMS Manual · Site Map',
                '<span class="brand">Arbortech</span> – What\'s On the Site, and Where It Lives', sitemap_body, 'sitemap.html'))
-open(os.path.join(REPO, 'shopify-training/modules.html'), 'w', encoding='utf-8').write(
+open(os.path.join(OUT, 'modules.html'), 'w', encoding='utf-8').write(
     page_shell('Arbortech – Module Guide', 'Personalised CMS Manual · Module Usage Guide',
                '<span class="brand">Arbortech</span> – Theme Modules: What Each One Is For', modules_body, 'modules.html'))
 

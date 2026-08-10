@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbortech – Supplying Content</title>
+  <style>
+    :root {
+      --ink: #1a2230;
+      --body: #3a4453;
+      --muted: #5b6574;
+      --line: #e3e8ee;
+      --line-soft: #eef2f6;
+      --accent: #E87722;
+      --accent-dark: #b85710;
+      --accent-soft: #fdf1e6;
+      --ok: #1a7f4d;
+      --ok-bg: #eef8f2;
+      --warn: #8a5300;
+      --warn-bg: #fdf6e3;
+      --danger: #b3261e;
+      --danger-bg: #fdf1f0;
+      --info: #2b5d8a;
+      --info-bg: #eff5fa;
+      --code-bg: #f4f7fa;
+      --radius: 3px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--body);
+      line-height: 1.65;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+    .tab-nav { background: var(--ink); border-bottom: 3px solid var(--accent); }
+    .tab-nav .inner { max-width: 76em; margin: 0 auto; padding: 0 1.4em; display: flex; gap: 0.4em; }
+    .tab-nav a { color: #cdd6e2; text-decoration: none; padding: 0.75em 1.1em; font-size: 0.86em; font-weight: 600; letter-spacing: 0.02em; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+    .tab-nav a:hover { color: #fff; }
+    .tab-nav a[aria-current] { color: #fff; border-bottom-color: var(--accent); background: rgba(255,255,255,0.06); }
+    @media print { .tab-nav { display: none; } }
+
+    .page-header { background: var(--ink); color: #fff; padding: 3.25rem 1.5rem 2.9rem; border-bottom: 3px solid var(--accent); }
+    .page-header .inner { max-width: 62em; margin: 0 auto; }
+    .page-header .kicker { display: inline-flex; align-items: center; gap: .5em; background: var(--accent); color: var(--ink); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-radius: var(--radius); padding: .45em .8em; margin-bottom: 1.25rem; }
+    .page-header h1 { margin: 0; font-size: 2.05rem; font-weight: 700; letter-spacing: -.022em; line-height: 1.14; }
+    .page-header h1 .brand { color: var(--accent); }
+    .page-header p.sub { margin: 1rem 0 0; max-width: 46em; font-size: 1.02rem; color: #cdd6e2; line-height: 1.55; }
+
+    .page-layout { display: flex; gap: 3.5em; align-items: flex-start; max-width: 66em; margin: 0 auto; padding: 3em 3em 5em; }
+    .sidebar { width: 15em; flex-shrink: 0; position: sticky; top: 2em; max-height: calc(100vh - 4em); overflow-y: auto; padding-right: .4em; }
+    .toc-title { font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 .7em; }
+    .toc-list { display: flex; flex-direction: column; gap: .15em; }
+    .toc-link { display: block; padding: .35em .6em; border-radius: var(--radius); color: var(--body); text-decoration: none; font-size: .86em; line-height: 1.4; }
+    .toc-link:hover { background: var(--line-soft); color: var(--ink); }
+    .article { min-width: 0; flex: 1; max-width: 46em; }
+    @media (max-width: 900px) { .page-layout { flex-direction: column; padding: 2em 1.2em 4em; } .sidebar { position: static; width: 100%; max-height: none; } }
+
+    .article h2 { font-size: 1.42rem; color: var(--ink); letter-spacing: -.015em; margin: 2.6em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+    .article h2:first-of-type { margin-top: 1em; border-top: 0; padding-top: 0; }
+    .article h2 .num { color: var(--accent); margin-right: .35em; }
+    .article h3 { font-size: 1.06rem; color: var(--ink); margin: 1.8em 0 .4em; }
+    .article p { margin: .7em 0; }
+    .article ul, .article ol { padding-left: 1.35em; margin: .6em 0; }
+    .article li { margin: .3em 0; }
+    .article code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .86em; background: var(--code-bg); padding: .12em .38em; border-radius: var(--radius); color: #0f172a; }
+    .article table { border-collapse: collapse; width: 100%; margin: 1.1em 0 1.6em; font-size: .9em; }
+    .article th { text-align: left; background: var(--ink); color: #fff; padding: .55em .75em; font-weight: 600; }
+    .article td { padding: .55em .75em; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .article tr:nth-child(even) td { background: var(--line-soft); }
+
+    .callout { border: 1px solid var(--line); border-radius: var(--radius); padding: .95em 1.1em; margin: 1.2em 0; }
+    .callout .callout-title { display: flex; align-items: center; gap: .5em; font-weight: 700; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; margin: 0 0 .4em; }
+    .callout p { margin: .35em 0; font-size: .95em; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout ul { margin: .5em 0 .15em; }
+    .callout li { font-size: .93em; }
+    .callout.ok { background: var(--ok-bg); border-color: #d3eadd; } .callout.ok .callout-title { color: var(--ok); }
+    .callout.warn { background: var(--warn-bg); border-color: #f0e0b4; } .callout.warn .callout-title { color: var(--warn); }
+    .callout.danger { background: var(--danger-bg); border-color: #f0cdca; } .callout.danger .callout-title { color: var(--danger); }
+    .callout.info { background: var(--info-bg); border-color: #cfdeec; } .callout.info .callout-title { color: var(--info); }
+  </style>
+</head>
+<body>
+  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html">Module Guide</a><a href="pdp-guide.html">PDP Guide</a><a href="supplying-content.html" aria-current="page">Supplying Content</a></div></nav>
+
+  <header class="page-header">
+    <div class="inner">
+      <span class="kicker">Content Handover · Working Together</span>
+      <h1><span class="brand">Arbortech</span> – Content We Need From You</h1>
+      <p class="sub">A few parts of the store are built and waiting on words, images or a sign-off that only Arbortech can provide. This page lists each one: what we need, what format, and where it ends up — so you can send it through in one batch, or enter it yourself with the manual open.</p>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <p class="toc-title">On this page</p>
+      <nav class="toc-list">
+        <a class="toc-link" href="#how">1. How this works</a>
+        <a class="toc-link" href="#category-intros">2. Category page intros</a>
+        <a class="toc-link" href="#product-copy">3. Product copy by audience &amp; market</a>
+        <a class="toc-link" href="#media">4. Videos &amp; images</a>
+        <a class="toc-link" href="#german">5. German translations sign-off</a>
+        <a class="toc-link" href="#checklist">6. The list, at a glance</a>
+      </nav>
+    </aside>
+
+    <main class="article">
+
+      <h2 id="how"><span class="num">1.</span> How this works</h2>
+      <p>Everything on this page follows the same pattern. For each item you can either:</p>
+      <ul>
+        <li><strong>Send it to us</strong> — put the content in a shared document (Word or Google Doc is fine) and email it through. Label every piece with the product name or page it belongs to, and the audience or country if it applies to one. We'll load it in and switch on anything that needs switching on.</li>
+        <li><strong>Enter it yourself</strong> — each item below links to the section of the <a href="index.html">CMS Manual</a> that walks through the exact screen. If you enter content yourself, drop us a line afterwards so we can flip any display switches and check it renders everywhere it should.</li>
+      </ul>
+      <div class="callout info">
+        <p class="callout-title">Plain text travels best</p>
+        <p>When sending copy, plain unformatted text beats heavily-styled Word documents — the store applies its own styling. Bold, italics, links and lists are all fine to indicate; ornate fonts, colours and text boxes don't survive the trip.</p>
+      </div>
+
+      <h2 id="category-intros"><span class="num">2.</span> Category page intros</h2>
+      <p>Every shop category page (Woodworking, Masonry &amp; Trade, and so on) has space for a short introduction under its heading. <strong>The three main audience landing pages already have theirs</strong> — the copy you suggested in your July review is live under each hero image, and it's yours to reword any time. The remaining category pages have no intro yet; a sentence or two per page sets the scene for shoppers and helps Google understand the page.</p>
+      <!-- Source: ARB-52/ARB-53 client feedback (27 Jul) + Juicebox verification comments (6 Aug) — blurbs live on the three landing collections, show_collection_description enabled on those templates. -->
+      <h3>What to write (for the pages still without one)</h3>
+      <ul>
+        <li><strong>20–50 words per page</strong>, plain text, one short paragraph. No headings, no images.</li>
+        <li>Write for the audience of that page: the Woodworking pages speak to hobbyists and carvers; Masonry &amp; Trade and Landscaping speak to professional tradespeople.</li>
+        <li>Say what the range is and who it's for — not a slogan. Think "the first thing a helpful staff member would say". The three live intros are good models.</li>
+      </ul>
+      <h3>The pages</h3>
+      <table>
+        <tr><th>Category page</th><th>Address</th><th>Intro</th></tr>
+        <tr><td>Woodworking (Power Carving)</td><td><code>/collections/power-carving</code></td><td><strong>✓ Live</strong> ("Unleash your creativity…")</td></tr>
+        <tr><td>Masonry / Trade</td><td><code>/collections/masonry-trade</code></td><td><strong>✓ Live</strong> ("Cleverly engineered…")</td></tr>
+        <tr><td>Landscaping (Outdoor Grounds Care)</td><td><code>/collections/outdoor-grounds-care</code></td><td><strong>✓ Live</strong> ("Transform the way…")</td></tr>
+        <tr><td>Woodworking – Power Tools</td><td><code>/collections/power-carving-power-tools</code></td><td>None yet — optional</td></tr>
+        <tr><td>Woodworking – Attachments &amp; Accessories</td><td><code>/collections/power-carving-attachments-accessories</code></td><td>None yet — optional</td></tr>
+        <tr><td>Masonry / Trade – Power Tools</td><td><code>/collections/masonry-trade-power-tools</code></td><td>None yet — optional</td></tr>
+        <tr><td>Masonry / Trade – Attachments &amp; Accessories</td><td><code>/collections/masonry-trade-attachments-accessories</code></td><td>None yet — optional</td></tr>
+        <tr><td>Power Tools (all audiences)</td><td><code>/collections/power-tools</code></td><td>None yet — optional</td></tr>
+        <tr><td>Spare Parts &amp; Consumables</td><td><code>/collections/spare-parts-consumables</code></td><td>None yet — optional</td></tr>
+        <tr><td>Spare Parts, Blades &amp; Accessories</td><td><code>/collections/spare-parts-accessories</code></td><td>None yet — optional</td></tr>
+      </table>
+      <h3>Where it goes</h3>
+      <p>Each intro lives in that collection's <strong>Description</strong> field — Manual <a href="index.html#products">§2.4</a> shows the screen. To edit or add one yourself: <strong>Products → Collections</strong> → open the collection → type into Description → <strong>Save</strong>. The three landing pages display their intro already; for any other page, tell us once the copy is in and we'll switch the display on for that page.</p>
+
+      <h2 id="product-copy"><span class="num">3.</span> Product copy by audience &amp; market</h2>
+      <p>The same product can read differently depending on <strong>who's looking</strong> (a woodworker vs a masonry tradesperson — see the <a href="pdp-guide.html#context">PDP Guide §6</a>) and <strong>where they are</strong> (Australia, US, Canada, UK, Germany — <a href="pdp-guide.html#regional">PDP Guide §7</a>). Your July review asked for exactly this — per-audience image, description, bundles, video and features — and the plumbing for all of it is built; what's missing is the words. None of it is compulsory: anything without audience- or market-specific copy simply shows the product's default content.</p>
+      <!-- Source: the per-vertical PDP content request from the client's July feedback is tracked as ARB-189 (split out of ARB-50/ARB-97); client requirement doc linked on those tickets. -->
+      <table>
+        <tr><th>Content</th><th>Where shoppers see it</th><th>What to supply</th></tr>
+        <tr><td><strong>Description lead</strong> <em>per audience</em></td><td>The paragraph at the top of the product page when reached from that audience's range</td><td>One short paragraph per audience — only for products sold to more than one audience</td></tr>
+        <tr><td><strong>Description</strong> <em>per market</em></td><td>Replaces the whole description for one country</td><td>Only where the wording genuinely must differ by country (voltage, model availability). Skip otherwise</td></tr>
+        <tr><td><strong>Feature callouts ("clever bits")</strong> <em>per audience</em></td><td>The small engineering-feature panels on the product page</td><td>Per callout: a heading + 1–2 sentences, and which image if not the default</td></tr>
+        <tr><td><strong>Story panels</strong> <em>per market</em></td><td>The long image-and-text story sections further down the page</td><td>Per panel: heading, a paragraph, an image. Most products already have the base version — market versions only where needed</td></tr>
+      </table>
+
+      <h3>First priority: products with no description at all</h3>
+      <p>These bundle and kit products are live-ready but have <strong>no description of any kind</strong> — they're new combinations that never existed on the old site, so there's nothing for us to carry over. Each needs one paragraph (what's in it, who it's for) before it can go in front of customers:</p>
+      <!-- Source: docs/arb-43-vertical-content-audit.md (live-store audit 2026-07-20; no Jira ticket tracks these per-bundle). To refresh: node tools/shopify/export-content-state.mjs + the audit tool, then update this table. -->
+      <table>
+        <tr><th>Product</th><th>Audience</th></tr>
+        <tr><td>ALLSAW BA200X Cordless Base Kit</td><td>Landscaping</td></tr>
+        <tr><td>ALLSAW BA200X Cordless Turf + XL Blade Kit</td><td>Landscaping</td></tr>
+        <tr><td>ALLSAW BA200X Cordless Twin Turf Blade Kit</td><td>Landscaping</td></tr>
+        <tr><td>Power Carving Unit + Ball Gouge Bundle</td><td>Woodworking</td></tr>
+        <tr><td>Power Carving Unit + Contour Sander Bundle</td><td>Woodworking</td></tr>
+        <tr><td>Power Carving Unit + Industrial Woodcarver Bundle</td><td>Woodworking</td></tr>
+        <tr><td>Power Carving Unit + Mini TURBO Kit Bundle</td><td>Woodworking</td></tr>
+        <tr><td>Power Carving Unit + Precision Carving System Bundle</td><td>Woodworking</td></tr>
+        <tr><td>Power Carving Unit + TURBOPlane Bundle</td><td>Woodworking</td></tr>
+        <tr><td>Power Carving Unit + TURBO Shaft Bundle</td><td>Woodworking</td></tr>
+        <tr><td>Power Carving Mega Bundle</td><td>Woodworking</td></tr>
+      </table>
+
+      <h3>Two quick decisions</h3>
+      <ul>
+        <li><strong>Woodworking Pack</strong> — is it a woodworking product? (The name says yes; we've left it unclassified rather than guess.)</li>
+        <li><strong>Restoration Pack</strong> — which audience does it belong to? The name alone doesn't say.</li>
+      </ul>
+      <p>A one-line answer for each is all we need; the classification decides which shop ranges and filters the product appears in.</p>
+
+      <h3>How to send it</h3>
+      <p>One document is fine for the lot. For each entry give us: the <strong>product name</strong> (or SKU), the <strong>audience or country</strong> it applies to (or "default"), and the <strong>copy</strong>. To enter content yourself instead, these fields live in the product's metafields — Manual <a href="index.html#blind-spots">Blind Spots → Metafields</a> explains where to find them.</p>
+
+      <h2 id="media"><span class="num">4.</span> Videos &amp; images</h2>
+      <p>Two media slots on the product page are waiting on Arbortech assets. Both are optional per product — nothing looks broken without them — but they lift the products that have them.</p>
+      <h3>Overview video</h3>
+      <ul>
+        <li>Per product: a <strong>video link</strong> (a YouTube link is fine), an optional <strong>poster image</strong> (the still shown before play), and a short <strong>title</strong>.</li>
+        <li>A product can also carry a different video per audience or per country — same format, just say which one it's for.</li>
+      </ul>
+      <h3>Product &amp; audience imagery</h3>
+      <ul>
+        <li>New product photos: supply original files, named descriptively (<code>allsaw-ba200x-turf-kit-1.jpg</code>, not <code>IMG_0421.jpg</code>) — full sizing and naming guidance is in Manual <a href="index.html#media">§6</a>.</li>
+        <li>If a product should lead with different photos for different audiences (e.g. masonry shots first for tradespeople), list the image order per audience and we'll wire it up.</li>
+        <li>One specific from your July review: the <strong>Turf Blade Kit</strong> pictures should show the two different blade types. The product photos are yours to update any time (Manual §2.1, Media) — or send the shots through and we'll load them.</li>
+      </ul>
+      <h3>Event images &amp; links</h3>
+      <p>The events calendar currently holds three placeholder events that all share the events-page banner image and have nowhere to click through to. For each real event, supply an <strong>image</strong> and a <strong>link</strong> (registration page, venue, or news post). Events are edited directly in admin under <strong>Content → Metaobjects → Event</strong> — each event also has a region setting (so a German trade show only shows on the German store) and an end date for multi-day events.</p>
+      <!-- Source: ARB-188 — region + end-date fields shipped 6 Aug; placeholders scoped to AU; images/links still needed from Arbortech. -->
+
+      <h2 id="german"><span class="num">5.</span> German translations sign-off</h2>
+      <p>The German store (<code>/de-de</code>) now has a <strong>first-pass German translation across products, collections, pages, articles and menus</strong>. That first pass is machine-assisted: it reads well enough to test with, but it is not your voice until a German speaker has been over it. Translations are contractually Arbortech's responsibility — what we need from you is <strong>review and sign-off</strong>, and anything you change goes live immediately.</p>
+      <!-- Source: ARB-190 — 665 T&A entries registered 6 Aug, all machine-translated content flagged for native review; review worklist CSV in goals/arbortech-backend-handoff/shopify-review-worklists/. Legal pages deliberately excluded; Widerruf legal copy is 1:1 agenda item D7 on ARB-192 (was ARB-186). -->
+      <ul>
+        <li><strong>To review:</strong> open <strong>Apps → Translate &amp; Adapt</strong>, pick <strong>German</strong>, and work through the resource list — each field shows English on the left, German on the right. Manual <a href="index.html#translations">§10</a> covers the tool in detail. We'll also send a <strong>review worklist</strong> (a spreadsheet of every machine-translated entry) so you can tick items off rather than hunt for them.</li>
+        <li><strong>To correct:</strong> edit the German column directly and Save — it goes live immediately.</li>
+        <li><strong>To sign off:</strong> reply to us listing what you've reviewed and approved, so we can mark it done and stop chasing it.</li>
+        <li><strong>If your translators need access:</strong> Manual <a href="index.html#users">§11.3</a> has a ready-made recipe for a translation-only login that can't touch anything else.</li>
+      </ul>
+      <div class="callout warn">
+        <p class="callout-title">The legal pages are deliberately NOT machine-translated</p>
+        <p>Impressum, AGB, Datenschutz, Widerruf, Versand &amp; Zahlung, and the terms, cookies and returns pages are legal compliance surfaces — we have left them untouched rather than put draft legal wording live. Their German text must come from Arbortech, approved by whoever owns your legal compliance. The withdrawal (Widerruf) email and form wording specifically is on the agenda for our next 1:1 session — the form works today, but no customer email can go out until that approved text lands.</p>
+      </div>
+
+      <h2 id="checklist"><span class="num">6.</span> The list, at a glance</h2>
+      <table>
+        <tr><th>#</th><th>Item</th><th>What we need</th><th>Covered in</th></tr>
+        <tr><td>1</td><td>Category page intros</td><td>Done for the 3 main pages — optional 20–50 words for the other 7</td><td><a href="#category-intros">§2</a></td></tr>
+        <tr><td>2</td><td>Bundle descriptions</td><td>One paragraph × 11 products</td><td><a href="#product-copy">§3</a></td></tr>
+        <tr><td>3</td><td>Pack classifications</td><td>Two one-line decisions</td><td><a href="#product-copy">§3</a></td></tr>
+        <tr><td>4</td><td>Audience / market copy</td><td>Only where products need it — your call</td><td><a href="#product-copy">§3</a></td></tr>
+        <tr><td>5</td><td>Overview videos &amp; imagery</td><td>Links + files, as available; Turf Blade Kit photos</td><td><a href="#media">§4</a></td></tr>
+        <tr><td>6</td><td>Event images &amp; links</td><td>One image + one link per event</td><td><a href="#media">§4</a></td></tr>
+        <tr><td>7</td><td>German review &amp; legal text</td><td>Review the first-pass German; supply approved legal-page copy</td><td><a href="#german">§5</a></td></tr>
+      </table>
+      <p>Send batches as they're ready — nothing here has to wait for anything else. Bigger items that need a conversation (payments setup, warehouse inboxes, the withdrawal email wording) aren't on this page; they're on the agenda for our next 1:1 session.</p>
+
+      <p style="margin-top:2.5em;font-size:.85em;color:var(--muted)">Written 2026-08-06 against the live store and the outstanding-actions list of the same date. The bundle list in §3 reflects our content audit of 2026-07-20; anything supplied since will be crossed off when we load your copy.</p>
+    </main>
+  </div>
+</body>
+</html>
