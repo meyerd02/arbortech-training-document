@@ -326,6 +326,16 @@
     .tab-nav a[aria-current] { color: #fff; border-bottom-color: var(--accent); background: rgba(255,255,255,0.06); }
     @media print { .tab-nav { display: none; } }
   
+    /* ── Confirm-you-can checklists ─────────────────────────── */
+    .confirm { border: 1px solid #d5e3ee; border-top: 2px solid var(--accent); border-radius: var(--radius); padding: 1rem 1.2rem; margin: 1.6em 0 2.4em; background: #fbfdfe; }
+    .confirm .confirm-title { font-weight: 700; font-size: 0.95em; margin: 0 0 0.65em; }
+    .confirm ul { list-style: none; margin: 0; padding: 0; }
+    .confirm li { display: flex; gap: 0.6em; margin: 0.55em 0; font-size: 0.93em; line-height: 1.5; }
+    .confirm input { width: 1.05em; height: 1.05em; accent-color: var(--accent); flex: none; transform: translateY(0.2em); cursor: pointer; }
+    .confirm input:checked + label { color: #7a8794; text-decoration: line-through; text-decoration-color: rgba(0,0,0,0.35); }
+    .confirm label { cursor: pointer; }
+    @media print { .confirm input { accent-color: #000; } }
+  
     .tab-nav { background: var(--ink); border-bottom: 3px solid var(--accent); }
     .tab-nav .inner { max-width: 76em; margin: 0 auto; padding: 0 1.4em; display: flex; gap: 0.4em; }
     .tab-nav a { color: #cdd6e2; text-decoration: none; padding: 0.75em 1.1em; font-size: 0.86em; font-weight: 600; letter-spacing: 0.02em; border-bottom: 3px solid transparent; margin-bottom: -3px; }
@@ -342,7 +352,7 @@
 </head>
 <body>
 
-  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html" aria-current="page">Module Guide</a><a href="catalogue-audit.html">Catalogue Audit</a></div></nav>
+  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html" aria-current="page">Module Guide</a><a href="pdp-guide.html">PDP Guide</a><a href="supplying-content.html">Supplying Content</a><a href="catalogue-audit.html">Catalogue Audit</a></div></nav>
 
   <header class="page-header">
     <div class="inner">
