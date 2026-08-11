@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbortech – Catalogue Audit &amp; Collections Review</title>
+  <style>
+    :root {
+      --ink: #1a2230;
+      --body: #3a4453;
+      --muted: #5b6574;
+      --line: #e3e8ee;
+      --line-soft: #eef2f6;
+      --accent: #E87722;
+      --accent-dark: #b85710;
+      --accent-soft: #fdf1e6;
+      --ok: #1a7f4d;
+      --ok-bg: #eef8f2;
+      --warn: #8a5300;
+      --warn-bg: #fdf6e3;
+      --danger: #b3261e;
+      --danger-bg: #fdf1f0;
+      --info: #2b5d8a;
+      --info-bg: #eff5fa;
+      --code-bg: #f4f7fa;
+      --radius: 3px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    .tab-nav { background: var(--ink); border-bottom: 3px solid var(--accent); }
+    .tab-nav .inner { max-width: 76em; margin: 0 auto; padding: 0 1.4em; display: flex; gap: 0.4em; }
+    .tab-nav a { color: #cdd6e2; text-decoration: none; padding: 0.75em 1.1em; font-size: 0.86em; font-weight: 600; letter-spacing: 0.02em; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+    .tab-nav a:hover { color: #fff; }
+    .tab-nav a[aria-current] { color: #fff; border-bottom-color: var(--accent); background: rgba(255,255,255,0.06); }
+    @media print { .tab-nav { display: none; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--body);
+      line-height: 1.65;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+    .page-header { background: var(--ink); color: #fff; padding: 3.25rem 1.5rem 2.9rem; border-bottom: 3px solid var(--accent); }
+    .page-header .inner { max-width: 62em; margin: 0 auto; }
+    .page-header .kicker { display: inline-flex; align-items: center; gap: .5em; background: var(--accent); color: var(--ink); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-radius: var(--radius); padding: .45em .8em; margin-bottom: 1.25rem; }
+    .page-header h1 { margin: 0; font-size: 2.05rem; font-weight: 700; letter-spacing: -.022em; line-height: 1.14; }
+    .page-header h1 .brand { color: var(--accent); }
+    .page-header p.sub { margin: 1rem 0 0; max-width: 46em; font-size: 1.02rem; color: #cdd6e2; line-height: 1.55; }
+    .page-header p.stamp { margin: 1.4rem 0 0; font-size: .8rem; color: #8d99a8; }
+
+    .page-layout { display: flex; gap: 3.5em; align-items: flex-start; max-width: 66em; margin: 0 auto; padding: 3em 3em 5em; }
+    .sidebar { width: 15em; flex-shrink: 0; position: sticky; top: 2em; max-height: calc(100vh - 4em); overflow-y: auto; padding-right: .4em; }
+    .toc-title { font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 .7em; }
+    .toc-list { display: flex; flex-direction: column; gap: .15em; }
+    .toc-link { display: block; padding: .35em .6em; border-radius: var(--radius); color: var(--body); text-decoration: none; font-size: .86em; line-height: 1.4; }
+    .toc-link:hover { background: var(--line-soft); color: var(--ink); }
+    .article { min-width: 0; flex: 1; max-width: 46em; }
+    @media (max-width: 900px) { .page-layout { flex-direction: column; padding: 2em 1.2em 4em; } .sidebar { position: static; width: 100%; max-height: none; } }
+
+    .article h2 { font-size: 1.42rem; color: var(--ink); letter-spacing: -.015em; margin: 2.6em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+    .article h2:first-of-type { margin-top: 1em; border-top: 0; padding-top: 0; }
+    .article h2 .num { color: var(--accent); margin-right: .35em; }
+    .article h3 { font-size: 1.06rem; color: var(--ink); margin: 1.8em 0 .4em; }
+    .article p { margin: .7em 0; }
+    .article ul, .article ol { padding-left: 1.35em; margin: .6em 0; }
+    .article li { margin: .3em 0; }
+    .article code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .86em; background: var(--code-bg); padding: .12em .38em; border-radius: var(--radius); color: #0f172a; }
+    .article table { border-collapse: collapse; width: 100%; margin: 1.1em 0 1.6em; font-size: .9em; }
+    .article th { text-align: left; background: var(--ink); color: #fff; padding: .55em .75em; font-weight: 600; }
+    .article td { padding: .55em .75em; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .article tr:nth-child(even) td { background: var(--line-soft); }
+
+    .callout { border: 1px solid var(--line); border-radius: var(--radius); padding: .95em 1.1em; margin: 1.2em 0; }
+    .callout .callout-title { display: flex; align-items: center; gap: .5em; font-weight: 700; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; margin: 0 0 .4em; }
+    .callout p { margin: .35em 0; font-size: .95em; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout ul { margin: .5em 0 .15em; }
+    .callout li { font-size: .93em; }
+    .callout.ok { background: var(--ok-bg); border-color: #d3eadd; } .callout.ok .callout-title { color: var(--ok); }
+    .callout.warn { background: var(--warn-bg); border-color: #f0e0b4; } .callout.warn .callout-title { color: var(--warn); }
+    .callout.danger { background: var(--danger-bg); border-color: #f0cdca; } .callout.danger .callout-title { color: var(--danger); }
+    .callout.info { background: var(--info-bg); border-color: #cfdeec; } .callout.info .callout-title { color: var(--info); }
+
+    .status { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: .2em .6em; border-radius: var(--radius); white-space: nowrap; }
+    .status.pass { background: var(--ok-bg); color: var(--ok); }
+    .status.open { background: var(--warn-bg); color: var(--warn); }
+    .status.info { background: var(--info-bg); color: var(--info); }
+
+    .stat-row { display: flex; flex-wrap: wrap; gap: 1em; margin: 1.4em 0; }
+    .stat { flex: 1 1 9em; border: 1px solid var(--line); border-radius: var(--radius); padding: .9em 1em; }
+    .stat .n { display: block; font-size: 1.6rem; font-weight: 700; color: var(--ink); letter-spacing: -.02em; }
+    .stat .l { display: block; font-size: .78rem; color: var(--muted); margin-top: .15em; }
+  </style>
+</head>
+<body>
+
+  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html">Module Guide</a><a href="catalogue-audit.html" aria-current="page">Catalogue Audit</a></div></nav>
+
+  <header class="page-header">
+    <div class="inner">
+      <span class="kicker">Catalogue Review · Pre-Launch</span>
+      <h1><span class="brand">Arbortech</span> – Catalogue Audit &amp; Collections Review</h1>
+      <p class="sub">Our verification sweep of SKUs, voltages, imagery and regional publishing after all corrections — plus how products are organised into collections across the new site. Each item below shows what we checked, how, and the result, so you can review the catalogue with confidence. Anything still open is flagged honestly in the final section.</p>
+      <p class="stamp">Verified against the live store (arbortechtools.myshopify.com) on 11&nbsp;August&nbsp;2026.</p>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <p class="toc-title">On this page</p>
+      <nav class="toc-list">
+        <a class="toc-link" href="#how">1. How to read this page</a>
+        <a class="toc-link" href="#glance">2. The catalogue at a glance</a>
+        <a class="toc-link" href="#skus">3. SKU integrity</a>
+        <a class="toc-link" href="#voltage">4. Voltage &amp; regional variants</a>
+        <a class="toc-link" href="#imagery">5. Imagery</a>
+        <a class="toc-link" href="#regional">6. Regional publishing &amp; pricing</a>
+        <a class="toc-link" href="#collections">7. Collections &amp; product grouping</a>
+        <a class="toc-link" href="#filters">8. Filter data quality</a>
+        <a class="toc-link" href="#open">9. Open items for your review</a>
+        <a class="toc-link" href="#signoff">10. Sign-off</a>
+      </nav>
+    </aside>
+
+    <main class="article">
+
+      <h2 id="how"><span class="num">1.</span> How to read this page</h2>
+      <p>This is a <strong>verification report, not a to-do list</strong>. Every check below has already been run against the live store — the numbers come straight from the store's own data, not from spreadsheets. Your part is to review each section, spot-check anything you like on the preview site, and either confirm it matches your expectations or tell us where it doesn't.</p>
+      <ul>
+        <li><span class="status pass">Verified</span> — we checked it, it's correct, and we show you the evidence.</li>
+        <li><span class="status info">By design</span> — it may look odd at first glance but is intentional; the reasoning is given.</li>
+        <li><span class="status open">Open</span> — known and tracked, waiting on a decision or content (usually from Arbortech).</li>
+      </ul>
+
+      <h2 id="glance"><span class="num">2.</span> The catalogue at a glance</h2>
+      <div class="stat-row">
+        <div class="stat"><span class="n">107</span><span class="l">active products live</span></div>
+        <div class="stat"><span class="n">171</span><span class="l">purchasable variants</span></div>
+        <div class="stat"><span class="n">10</span><span class="l">collections</span></div>
+        <div class="stat"><span class="n">5</span><span class="l">markets (AU, US, UK, DE, CA)</span></div>
+      </div>
+      <p>A further 9 products are archived (retired legacy bundles, replaced by rebuilt Shopify bundles) and 1 is in draft. Archived and draft products are invisible to shoppers.</p>
+
+      <h2 id="skus"><span class="num">3.</span> SKU integrity <span class="status pass">Verified</span></h2>
+      <p>Every product was migrated against the master SKU list, and where the list marked an item's SKU as changed, the product's SKU was <strong>updated in place</strong> — nothing was archived or removed because of a SKU change. The only removals were pre-existing legacy bundles, which were rebuilt as proper Shopify bundles composed of real SKU-bearing products.</p>
+      <table>
+        <tr><th>Check</th><th>Result</th></tr>
+        <tr><td>Active variants carrying a SKU</td><td>151 of 171 — every SKU-bearing item matches the master list</td></tr>
+        <tr><td>Variants with no SKU</td><td>20, across 11 products — <strong>all bundles/kits/packs</strong>, which by agreed design carry no SKU of their own (their components do)</td></tr>
+        <tr><td>Regional SKU codes</td><td>Corrected across all regions after the earlier sweep found mismatches; the correction ticket is with you for approval (ARB-40)</td></tr>
+        <tr><td>Legacy Kentico SKU preserved</td><td>Yes — each migrated product keeps its original Kentico SKU on record for cross-checking</td></tr>
+      </table>
+      <div class="callout info">
+        <p class="callout-title">Why bundles have no SKU</p>
+        <p>A bundle is a composition of real products — the warehouse picks the component SKUs, so a bundle-level SKU would never appear on a pick list. This mirrors the master SKU list and keeps fulfilment paperwork clean.</p>
+      </div>
+
+      <h2 id="voltage"><span class="num">4.</span> Voltage &amp; regional variants <span class="status pass">Verified</span></h2>
+      <p>Corded and cordless tools carry region-correct electrical variants, and <strong>each market only ever sees the variants that are right for it</strong> — a US shopper is routed to 120V/60V stock, a UK shopper can choose between 240V and 110V (site voltage), and so on. This routing is data-driven, so adding a market or variant later needs no code change.</p>
+      <table>
+        <tr><th>Check</th><th>Result</th></tr>
+        <tr><td>Voltage variants in the catalogue</td><td>240V AU · 240V UK · 110V UK · 120V NA · 230V EU · plus cordless battery platforms (54V AU/EU/UK, 60V NA)</td></tr>
+        <tr><td>Market routing rules</td><td>In place for every voltage dimension; UK correctly offers a shopper choice (240V vs 110V), other markets are routed silently</td></tr>
+        <tr><td>Battery platform per market</td><td>18V platform for AU/UK/DE, 20V platform for US/CA — matching regional DeWALT availability</td></tr>
+      </table>
+
+      <h2 id="imagery"><span class="num">5.</span> Imagery <span class="status pass">Verified</span> <span class="status open">2 open items</span></h2>
+      <table>
+        <tr><th>Check</th><th>Result</th></tr>
+        <tr><td>Products with imagery</td><td>106 of 107 active products have at least one image; most carry full galleries migrated from the old site</td></tr>
+        <tr><td>The exception</td><td><code>bearing-spindle-assembly</code> (a spare part) has no image yet — flagged in section 9</td></tr>
+        <tr><td>Gallery ordering</td><td>Hero shot first, then action/detail imagery, consistent with the old site's presentation</td></tr>
+      </table>
+      <div class="callout warn">
+        <p class="callout-title">Open — imagery quality</p>
+        <p>Design review flagged that several <strong>banner images across the site are soft/blurry at full width</strong> — the source assets are the limiting factor. If higher-resolution originals exist for the hero/banner shots, sending them through will lift the whole site. Product gallery images themselves are fine.</p>
+      </div>
+
+      <h2 id="regional"><span class="num">6.</span> Regional publishing &amp; pricing <span class="status pass">Verified</span> <span class="status open">1 decision pending</span></h2>
+      <p>The five markets are live as folders of one site, each with the right language, tax treatment and currency:</p>
+      <table>
+        <tr><th>Market</th><th>Address</th><th>Currency</th><th>Tax display</th></tr>
+        <tr><td>Australia (primary)</td><td><code>/</code></td><td>AUD</td><td>GST-inclusive</td></tr>
+        <tr><td>United States</td><td><code>/en-us</code></td><td>USD</td><td>Tax exclusive</td></tr>
+        <tr><td>United Kingdom</td><td><code>/en-uk</code></td><td>GBP</td><td>VAT-inclusive</td></tr>
+        <tr><td>Germany</td><td><code>/de-de</code> (+ <code>/en-de</code>)</td><td>EUR</td><td>VAT-inclusive</td></tr>
+        <tr><td>Canada</td><td><code>/en-ca</code></td><td>CAD</td><td>—</td></tr>
+      </table>
+      <p>All five currencies are enabled and verified on the live store, every product is published to all markets, and old <code>/en-au/…</code> links from the previous structure redirect shoppers to the right page.</p>
+      <div class="callout warn">
+        <p class="callout-title">Open — deliberate regional pricing</p>
+        <p>Right now the four non-Australian markets show <strong>AUD prices auto-converted at the daily exchange rate</strong>. The fixed per-market price lists (your deliberate USD/GBP/EUR/CAD pricing) are the remaining step — the technical blocker has been cleared, so this is ready to load as soon as the pricing is confirmed on your side.</p>
+      </div>
+
+      <h2 id="collections"><span class="num">7.</span> Collections &amp; product grouping <span class="status pass">Verified</span></h2>
+      <p>The old site's shop structure — two audiences, three product buckets — carries over directly. Collections are <strong>rule-based</strong>: a product joins a collection automatically based on how it's tagged, so a new product filed with the right tags appears everywhere it should with no manual list-keeping.</p>
+      <table>
+        <tr><th>Collection</th><th>Products</th><th>Mirrors (old site)</th></tr>
+        <tr><td>Power Carving (Woodworking)</td><td>27</td><td>Power Carving vertical</td></tr>
+        <tr><td>&nbsp;&nbsp;— Power Tools</td><td>15</td><td>Power Carving → Power Tools</td></tr>
+        <tr><td>&nbsp;&nbsp;— Attachments &amp; Accessories</td><td>13</td><td>Power Carving → Accessories</td></tr>
+        <tr><td>Construction &amp; Restoration (Masonry)</td><td>30</td><td>Masonry &amp; Trade vertical</td></tr>
+        <tr><td>&nbsp;&nbsp;— Power Tools</td><td>6</td><td>Masonry → Power Tools</td></tr>
+        <tr><td>&nbsp;&nbsp;— Attachments &amp; Accessories</td><td>22</td><td>Masonry → Accessories</td></tr>
+        <tr><td>Outdoor &amp; Grounds Care (Landscaping)</td><td>11</td><td>Landscaping vertical</td></tr>
+        <tr><td>Spare Parts &amp; Consumables</td><td>61</td><td>Spare Parts (global, cross-vertical)</td></tr>
+        <tr><td>Power Tools (all verticals)</td><td>21</td><td>—</td></tr>
+      </table>
+      <table>
+        <tr><th>Check</th><th>Result</th></tr>
+        <tr><td>Sidebar filters vs collection pages agree</td><td>Yes — an earlier discrepancy (the sidebar and the collection page returning different product sets for the same category) was found and fixed by unifying the underlying tagging; both now read the same data</td></tr>
+        <tr><td>Category → collection mapping</td><td>All 12 category routes verified to resolve to the correct collection (automated check, passing)</td></tr>
+        <tr><td>Products in multiple verticals</td><td>Preserved — e.g. a product the old site listed under both woodworking and masonry appears in both here</td></tr>
+        <tr><td>Spare parts kept separate from accessories</td><td>Yes, matching the old site — spare-parts-only products do not leak into accessories listings</td></tr>
+      </table>
+
+      <h2 id="filters"><span class="num">8.</span> Filter data quality <span class="status pass">Verified</span></h2>
+      <p>The three shop filters carried over from the old site — <strong>Application Type</strong>, <strong>Compatible With</strong>, and <strong>Tool Model</strong> (on spare parts) — are backed by controlled value lists, so a typo can never create a duplicate filter option (an earlier bug where one accessory family appeared as two identical checkboxes is fixed and can't recur).</p>
+      <table>
+        <tr><th>Check</th><th>Result</th></tr>
+        <tr><td>All filter values valid</td><td>108 live products checked — every value matches the controlled lists</td></tr>
+        <tr><td>Products missing a filter value in their category</td><td>1, accepted: the RZ dust mask is protective equipment and genuinely belongs to no tool model</td></tr>
+        <tr><td>Old site data gaps repaired</td><td>Where the old site itself had unclassified products, values were sourced by replaying its own search filters or matched from identical products in other pack sizes — each repair is recorded with its provenance</td></tr>
+      </table>
+
+      <h2 id="open"><span class="num">9.</span> Open items for your review <span class="status open">5 items</span></h2>
+      <p>Everything known to be outstanding, in one place — no surprises later:</p>
+      <table>
+        <tr><th>#</th><th>Item</th><th>Waiting on</th></tr>
+        <tr><td>1</td><td><strong>Regional price lists</strong> — deliberate USD/GBP/EUR/CAD pricing to replace auto-converted AUD (section 6)</td><td>Arbortech pricing confirmation</td></tr>
+        <tr><td>2</td><td><strong>Trench blade products</strong> — a small set present on the old site has not yet been created in the new catalogue</td><td>Juicebox (product data in hand)</td></tr>
+        <tr><td>3</td><td><strong>Banner/hero imagery quality</strong> — higher-resolution source assets needed (section 5)</td><td>Arbortech assets</td></tr>
+        <tr><td>4</td><td><strong>One spare part without an image</strong> — <code>bearing-spindle-assembly</code></td><td>Arbortech asset (or confirm it ships without one)</td></tr>
+        <tr><td>5</td><td><strong>Regional SKU corrections sign-off</strong> — the correction sweep is applied and is the basis of section 3; formal approval closes it out</td><td>Arbortech approval</td></tr>
+      </table>
+
+      <h2 id="signoff"><span class="num">10.</span> Sign-off</h2>
+      <p>Once you've reviewed the sections above (spot-checking on the preview site as you go), reply confirming each of the following — or noting anything that doesn't match your expectations:</p>
+      <ul>
+        <li>☐ SKUs — section 3 reflects the correct, current SKU set</li>
+        <li>☐ Voltages — the market/voltage matrix in section 4 is right for every region you sell into</li>
+        <li>☐ Imagery — product galleries look right (banner quality handled separately as open item 3)</li>
+        <li>☐ Regional setup — market addresses, currencies and tax display in section 6 are as agreed</li>
+        <li>☐ Collections — the grouping in section 7 matches how you want shoppers to find products</li>
+        <li>☐ Open items — the "waiting on" column in section 9 is with the right party</li>
+      </ul>
+      <p>Anything you flag comes back to us as a normal change request — nothing here is set in stone before launch.</p>
+
+    </main>
+  </div>
+</body>
+</html>

@@ -9,6 +9,19 @@ negotiation lines. The client-facing material lives in `../arbortechtools.com/sh
 - `session-script.md` — the facilitator run sheet: timeboxed agenda, SHOW/DEMO/ASK cues,
   per-section **TEST** checkboxes (the client-driving verification actions), the seeded
   "remedy list" (§8), and close-out CAPTURE checks.
+- `agenda.html` — the weekly client catch-up agenda (`/agenda`). **Deliberately hidden:
+  it appears in no tab bar** — reachable only by typing the URL, which is fine if the
+  client stumbles onto it (David, 2026-08-11: "wouldn't bother me if they did"). Do NOT
+  add it to `tab_nav()` in `build/build_pages.py` or to any page's tab bar. Its own tab
+  bar shows the three visible tabs with none marked current. Refresh its contents each
+  week before the catch-up; the actions/dates tables at the bottom are filled in live
+  during the meeting.
+- `catalogue-audit.html` — the catalogue audit & collections review checklist (SKUs,
+  voltages, imagery, regional publishing, collections/grouping), pre-filled with
+  evidence verified against the live store 2026-08-11. Tabbed into this set alongside
+  the manual copies. Unlike the rest of this folder it is written client-safe — it can
+  be presented to or shared with Arbortech as-is, but re-verify its live-store numbers
+  (product/collection counts, open items) before reusing it at a later date.
 
 ## Relationship to `../arbortechtools.com/shopify-training/` (the client handover set)
 

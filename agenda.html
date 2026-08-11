@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbortech – Weekly Agenda</title>
+  <style>
+    :root {
+      --ink: #1a2230;
+      --body: #3a4453;
+      --muted: #5b6574;
+      --line: #e3e8ee;
+      --line-soft: #eef2f6;
+      --accent: #E87722;
+      --accent-dark: #b85710;
+      --accent-soft: #fdf1e6;
+      --ok: #1a7f4d;
+      --ok-bg: #eef8f2;
+      --warn: #8a5300;
+      --warn-bg: #fdf6e3;
+      --danger: #b3261e;
+      --danger-bg: #fdf1f0;
+      --info: #2b5d8a;
+      --info-bg: #eff5fa;
+      --code-bg: #f4f7fa;
+      --radius: 3px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--body);
+      line-height: 1.65;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+    .tab-nav { background: var(--ink); border-bottom: 3px solid var(--accent); }
+    .tab-nav .inner { max-width: 76em; margin: 0 auto; padding: 0 1.4em; display: flex; gap: 0.4em; }
+    .tab-nav a { color: #cdd6e2; text-decoration: none; padding: 0.75em 1.1em; font-size: 0.86em; font-weight: 600; letter-spacing: 0.02em; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+    .tab-nav a:hover { color: #fff; }
+    .tab-nav a[aria-current] { color: #fff; border-bottom-color: var(--accent); background: rgba(255,255,255,0.06); }
+    @media print { .tab-nav { display: none; } }
+
+    .page-header { background: var(--ink); color: #fff; padding: 3.25rem 1.5rem 2.9rem; border-bottom: 3px solid var(--accent); }
+    .page-header .inner { max-width: 62em; margin: 0 auto; }
+    .page-header .kicker { display: inline-flex; align-items: center; gap: .5em; background: var(--accent); color: var(--ink); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-radius: var(--radius); padding: .45em .8em; margin-bottom: 1.25rem; }
+    .page-header h1 { margin: 0; font-size: 2.05rem; font-weight: 700; letter-spacing: -.022em; line-height: 1.14; }
+    .page-header h1 .brand { color: var(--accent); }
+    .page-header p.sub { margin: 1rem 0 0; max-width: 46em; font-size: 1.02rem; color: #cdd6e2; line-height: 1.55; }
+
+    .page-layout { display: flex; gap: 3.5em; align-items: flex-start; max-width: 66em; margin: 0 auto; padding: 3em 3em 5em; }
+    .sidebar { width: 15em; flex-shrink: 0; position: sticky; top: 2em; max-height: calc(100vh - 4em); overflow-y: auto; padding-right: .4em; }
+    .toc-title { font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 .7em; }
+    .toc-list { display: flex; flex-direction: column; gap: .15em; }
+    .toc-link { display: block; padding: .35em .6em; border-radius: var(--radius); color: var(--body); text-decoration: none; font-size: .86em; line-height: 1.4; }
+    .toc-link:hover { background: var(--line-soft); color: var(--ink); }
+    .article { min-width: 0; flex: 1; max-width: 46em; }
+    @media (max-width: 900px) { .page-layout { flex-direction: column; padding: 2em 1.2em 4em; } .sidebar { position: static; width: 100%; max-height: none; } }
+
+    .article h2 { font-size: 1.42rem; color: var(--ink); letter-spacing: -.015em; margin: 2.6em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+    .article h2:first-of-type { margin-top: 1em; border-top: 0; padding-top: 0; }
+    .article h2 .num { color: var(--accent); margin-right: .35em; }
+    .article h3 { font-size: 1.06rem; color: var(--ink); margin: 1.8em 0 .4em; }
+    .article p { margin: .7em 0; }
+    .article ul, .article ol { padding-left: 1.35em; margin: .6em 0; }
+    .article li { margin: .3em 0; }
+    .article code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .86em; background: var(--code-bg); padding: .12em .38em; border-radius: var(--radius); color: #0f172a; }
+    .article table { border-collapse: collapse; width: 100%; margin: 1.1em 0 1.6em; font-size: .9em; }
+    .article th { text-align: left; background: var(--ink); color: #fff; padding: .55em .75em; font-weight: 600; }
+    .article td { padding: .55em .75em; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .article tr:nth-child(even) td { background: var(--line-soft); }
+
+    .callout { border: 1px solid var(--line); border-radius: var(--radius); padding: .95em 1.1em; margin: 1.2em 0; }
+    .callout .callout-title { display: flex; align-items: center; gap: .5em; font-weight: 700; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; margin: 0 0 .4em; }
+    .callout p { margin: .35em 0; font-size: .95em; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout ul { margin: .5em 0 .15em; }
+    .callout li { font-size: .93em; }
+    .callout.ok { background: var(--ok-bg); border-color: #d3eadd; } .callout.ok .callout-title { color: var(--ok); }
+    .callout.warn { background: var(--warn-bg); border-color: #f0e0b4; } .callout.warn .callout-title { color: var(--warn); }
+    .callout.info { background: var(--info-bg); border-color: #cfdeec; } .callout.info .callout-title { color: var(--info); }
+
+    .tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: .2em .6em; border-radius: var(--radius); white-space: nowrap; background: var(--accent-soft); color: var(--accent-dark); margin-right: .4em; }
+  </style>
+</head>
+<body>
+
+  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html">Module Guide</a><a href="catalogue-audit.html">Catalogue Audit</a></div></nav>
+
+  <header class="page-header">
+    <div class="inner">
+      <span class="kicker">Weekly Catch-Up · Agenda</span>
+      <h1><span class="brand">Arbortech</span> – This Week's Agenda</h1>
+      <p class="sub">What's landed, what we'll demo, what's now in your hands, and what we need from you — plus the runway to launch.</p>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <p class="toc-title">Agenda</p>
+      <nav class="toc-list">
+        <a class="toc-link" href="#landed">1. What's landed since last week</a>
+        <a class="toc-link" href="#demos">2. Demos</a>
+        <a class="toc-link" href="#your-hands">3. Now in your hands</a>
+        <a class="toc-link" href="#need">4. What we need from you</a>
+        <a class="toc-link" href="#launch">5. Launch preparation</a>
+        <a class="toc-link" href="#post-launch">6. Post-launch</a>
+        <a class="toc-link" href="#next-week">7. Next week</a>
+        <a class="toc-link" href="#actions">8. Actions, owners &amp; dates</a>
+      </nav>
+    </aside>
+
+    <main class="article">
+
+      <h2 id="landed"><span class="num">1.</span> What's landed since last week</h2>
+      <p>Quick recap — most items closed this cycle:</p>
+      <ul>
+        <li><strong>Catalogue audit</strong> — the full verification sweep of SKUs, voltages, imagery and regional publishing (see the <a href="catalogue-audit.html">Catalogue Audit</a> tab for the evidence)</li>
+        <li><strong>Accessibility pass</strong></li>
+        <li><strong>Region publishing &amp; pricing</strong> — five markets live with correct currency and tax display</li>
+        <li><strong>Homepage</strong></li>
+        <li><strong>Templates</strong></li>
+        <li><strong>Site transfer</strong> — the full move onto the production store, completed 1:1</li>
+      </ul>
+
+      <h2 id="demos"><span class="num">2.</span> Demos</h2>
+      <ol type="a">
+        <li><strong>Post CMS-training fixes</strong> — the items you raised in the training session, including the events calendar updates</li>
+        <li><strong>Product page checkout improvements</strong></li>
+        <li><strong>Cross-sell recommendations</strong> — Leigh-Ann's recommendations, now live on product pages</li>
+        <li><strong>Filtering</strong> — on collection and overview pages</li>
+      </ol>
+
+      <h2 id="your-hands"><span class="num">3.</span> Now in your hands</h2>
+      <ol type="a">
+        <li><strong>German translations are complete</strong> — ready for your review/sign-off on the German storefront</li>
+        <li><strong>Arbortechie Club categories are editable directly in Shopify</strong> — a simple comma-separated list; anything you add flows through to Mailchimp automatically if you ever want a new category</li>
+        <li><strong>Mailchimp is now linked</strong> — abandoned-cart emails (firing 30–60 minutes after a cart is left) can be switched on and styled from your side whenever you're ready</li>
+      </ol>
+
+      <h2 id="need"><span class="num">4.</span> What we need from you this week</h2>
+      <ol type="a">
+        <li><span class="tag">By end of week</span> <strong>All tickets reviewed in Trello</strong></li>
+        <li><span class="tag">Confirm a time</span> <strong>30-minute demo training for Max</strong></li>
+      </ol>
+
+      <h2 id="launch"><span class="num">5.</span> Launch preparation</h2>
+      <p><strong>DNS discussion</strong> — what we need from you, and when, so the domain switch is a non-event on launch day.</p>
+
+      <h2 id="post-launch"><span class="num">6.</span> Post-launch</h2>
+      <p><strong>Retainer and ongoing support</strong> — how support, small changes and monitoring work after launch.</p>
+
+      <h2 id="next-week"><span class="num">7.</span> Next week</h2>
+      <ol type="a">
+        <li><strong>Design review feedback</strong> — actioning the design pass</li>
+        <li><strong>Arbortech feedback</strong> — the smaller items raised in the Google doc, now tracked in Trello</li>
+        <li><strong>Internal QA</strong></li>
+        <li><strong>Pre-launch SEO checks</strong></li>
+      </ol>
+
+      <h2 id="actions"><span class="num">8.</span> Actions, owners &amp; next two dates</h2>
+      <table>
+        <tr><th>Action</th><th>Owner</th><th>Due</th></tr>
+        <tr><td>Review all tickets in Trello</td><td>Arbortech</td><td>End of this week</td></tr>
+        <tr><td>Confirm time for Max's 30-minute demo training</td><td>Arbortech</td><td>This week</td></tr>
+        <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      </table>
+      <table>
+        <tr><th>Upcoming</th><th>Date</th></tr>
+        <tr><td>Next catch-up</td><td>&nbsp;</td></tr>
+        <tr><td>Following milestone</td><td>&nbsp;</td></tr>
+      </table>
+
+    </main>
+  </div>
+</body>
+</html>

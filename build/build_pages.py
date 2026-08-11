@@ -20,7 +20,7 @@ TAB_CSS = """
 """
 
 def tab_nav(current):
-    tabs = [('index.html', 'CMS Manual'), ('modules.html', 'Module Guide')]
+    tabs = [('index.html', 'CMS Manual'), ('modules.html', 'Module Guide'), ('catalogue-audit.html', 'Catalogue Audit')]
     cur_attr = ' aria-current="page"'
     links = ''.join(
         f'<a href="{href}"{cur_attr if href == current else ""}>{label}</a>'
