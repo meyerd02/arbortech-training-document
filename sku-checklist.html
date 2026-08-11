@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbortech – SKU Review Checklist</title>
+  <style>
+    :root {
+      --ink: #1a2230;
+      --body: #3a4453;
+      --muted: #5b6574;
+      --line: #e3e8ee;
+      --line-soft: #eef2f6;
+      --accent: #E87722;
+      --accent-dark: #b85710;
+      --accent-soft: #fdf1e6;
+      --ok: #1a7f4d;
+      --ok-bg: #eef8f2;
+      --warn: #8a5300;
+      --warn-bg: #fdf6e3;
+      --danger: #b3261e;
+      --danger-bg: #fdf1f0;
+      --info: #2b5d8a;
+      --info-bg: #eff5fa;
+      --code-bg: #f4f7fa;
+      --radius: 3px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    .tab-nav { background: var(--ink); border-bottom: 3px solid var(--accent); }
+    .tab-nav .inner { max-width: 76em; margin: 0 auto; padding: 0 1.4em; display: flex; gap: 0.4em; }
+    .tab-nav a { color: #cdd6e2; text-decoration: none; padding: 0.75em 1.1em; font-size: 0.86em; font-weight: 600; letter-spacing: 0.02em; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+    .tab-nav a:hover { color: #fff; }
+    .tab-nav a[aria-current] { color: #fff; border-bottom-color: var(--accent); background: rgba(255,255,255,0.06); }
+    @media print { .tab-nav { display: none; } }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--body);
+      line-height: 1.65;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+    .page-header { background: var(--ink); color: #fff; padding: 3.25rem 1.5rem 2.9rem; border-bottom: 3px solid var(--accent); }
+    .page-header .inner { max-width: 62em; margin: 0 auto; }
+    .page-header .kicker { display: inline-flex; align-items: center; gap: .5em; background: var(--accent); color: var(--ink); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-radius: var(--radius); padding: .45em .8em; margin-bottom: 1.25rem; }
+    .page-header h1 { margin: 0; font-size: 2.05rem; font-weight: 700; letter-spacing: -.022em; line-height: 1.14; }
+    .page-header h1 .brand { color: var(--accent); }
+    .page-header p.sub { margin: 1rem 0 0; max-width: 46em; font-size: 1.02rem; color: #cdd6e2; line-height: 1.55; }
+
+    .page-layout { display: flex; gap: 3.5em; align-items: flex-start; max-width: 66em; margin: 0 auto; padding: 3em 3em 5em; }
+    .sidebar { width: 15em; flex-shrink: 0; position: sticky; top: 2em; max-height: calc(100vh - 4em); overflow-y: auto; padding-right: .4em; }
+    .toc-title { font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 .7em; }
+    .toc-list { display: flex; flex-direction: column; gap: .15em; }
+    .toc-link { display: block; padding: .35em .6em; border-radius: var(--radius); color: var(--body); text-decoration: none; font-size: .86em; line-height: 1.4; }
+    .toc-link:hover { background: var(--line-soft); color: var(--ink); }
+    .article { min-width: 0; flex: 1; max-width: 46em; }
+    @media (max-width: 900px) { .page-layout { flex-direction: column; padding: 2em 1.2em 4em; } .sidebar { position: static; width: 100%; max-height: none; } }
+
+    .article h2 { font-size: 1.42rem; color: var(--ink); letter-spacing: -.015em; margin: 2.6em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+    .article h2:first-of-type { margin-top: 1em; border-top: 0; padding-top: 0; }
+    .article h2 .num { color: var(--accent); margin-right: .35em; }
+    .article h3 { font-size: 1.06rem; color: var(--ink); margin: 1.8em 0 .4em; }
+    .article p { margin: .7em 0; }
+    .article ul, .article ol { padding-left: 1.35em; margin: .6em 0; }
+    .article li { margin: .3em 0; }
+    .article code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .86em; background: var(--code-bg); padding: .12em .38em; border-radius: var(--radius); color: #0f172a; }
+    .article table { border-collapse: collapse; width: 100%; margin: 1.1em 0 1.6em; font-size: .9em; }
+    .article th { text-align: left; background: var(--ink); color: #fff; padding: .55em .75em; font-weight: 600; }
+    .article td { padding: .55em .75em; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .article tr:nth-child(even) td { background: var(--line-soft); }
+
+    .callout { border: 1px solid var(--line); border-radius: var(--radius); padding: .95em 1.1em; margin: 1.2em 0; }
+    .callout .callout-title { display: flex; align-items: center; gap: .5em; font-weight: 700; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; margin: 0 0 .4em; }
+    .callout p { margin: .35em 0; font-size: .95em; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout ul { margin: .5em 0 .15em; }
+    .callout li { font-size: .93em; }
+    .callout.warn { background: var(--warn-bg); border-color: #f0e0b4; } .callout.warn .callout-title { color: var(--warn); }
+    .callout.info { background: var(--info-bg); border-color: #cfdeec; } .callout.info .callout-title { color: var(--info); }
+
+    .where { font-size: .86em; color: var(--muted); margin: .2em 0 .8em; }
+    .where strong { color: var(--body); }
+
+    .check { list-style: none; padding-left: 0; }
+    .check li { padding-left: 1.7em; position: relative; margin: .45em 0; }
+    .check li::before { content: "☐"; position: absolute; left: 0; top: 0; color: var(--accent-dark); font-size: 1.05em; }
+  </style>
+</head>
+<body>
+
+  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html">Module Guide</a><a href="pdp-guide.html">PDP Guide</a><a href="supplying-content.html">Supplying Content</a><a href="catalogue-audit.html">Catalogue Audit</a></div></nav>
+
+  <header class="page-header">
+    <div class="inner">
+      <span class="kicker">Catalogue Review · Per-SKU Checklist</span>
+      <h1><span class="brand">Arbortech</span> – SKU Review Checklist</h1>
+      <p class="sub">A short run-through for one product at a time: pick a SKU, work down the list, and you'll have confirmed everything that matters — the SKU itself, visibility, collections, tags, filters, variants, imagery and price. Ten minutes per product, start to finish.</p>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <p class="toc-title">The checklist</p>
+      <nav class="toc-list">
+        <a class="toc-link" href="#find">1. Find the product &amp; check its SKU</a>
+        <a class="toc-link" href="#visible">2. Confirm it's visible (three gates)</a>
+        <a class="toc-link" href="#tags">3. Check the tags</a>
+        <a class="toc-link" href="#collections">4. See it in its collections</a>
+        <a class="toc-link" href="#filters">5. Check the filter fields</a>
+        <a class="toc-link" href="#variants">6. Variants, voltage &amp; price</a>
+        <a class="toc-link" href="#imagery">7. Imagery</a>
+        <a class="toc-link" href="#storefront">8. Final storefront pass</a>
+      </nav>
+    </aside>
+
+    <main class="article">
+
+      <h2 id="find"><span class="num">1.</span> Find the product &amp; check its SKU</h2>
+      <p class="where"><strong>Where:</strong> Shopify admin → <strong>Products</strong> → search by SKU or product name → open the product, SKU field is on each variant.</p>
+      <ul class="check">
+        <li>The SKU on each variant matches the master SKU list (searching the admin by the SKU finds the product directly).</li>
+        <li>If it's a <strong>bundle, kit or pack</strong>: no SKU on the bundle itself is correct — the component products carry the SKUs.</li>
+        <li>Title, description and variant names read correctly (voltage / size / pack quantity spelled out).</li>
+      </ul>
+
+      <h2 id="visible"><span class="num">2.</span> Confirm it's visible — the three gates</h2>
+      <p class="where"><strong>Where:</strong> all three are on the product page itself.</p>
+      <p>A product can look complete and still be invisible on the shop. All three gates must pass:</p>
+      <table>
+        <tr><th>Gate</th><th>Where to check</th></tr>
+        <tr><td>Status is <strong>Active</strong></td><td>Status box, top of the product page</td></tr>
+        <tr><td>Published to <strong>Online Store</strong></td><td>Publishing / sales channels box</td></tr>
+        <tr><td>Included in the right <strong>markets</strong></td><td>Markets section of the publishing box</td></tr>
+      </table>
+      <div class="callout warn">
+        <p class="callout-title">Held back on purpose?</p>
+        <p>A tag starting <code>arbt-</code> (e.g. <code>arbt-duplicate-product</code>) or the tag <code>scope-review</code> means the product is deliberately on hold — don't publish it without checking with us first.</p>
+      </div>
+
+      <h2 id="tags"><span class="num">3.</span> Check the tags</h2>
+      <p class="where"><strong>Where:</strong> Tags box, right-hand side of the product page.</p>
+      <p>Tags decide which collections the product joins — collections are rule-based, so the tags <em>are</em> the filing system. Every shoppable product should carry:</p>
+      <table>
+        <tr><th>Tag group</th><th>Values</th><th>What it controls</th></tr>
+        <tr><td>Vertical</td><td><code>power-carving</code> · <code>masonry-trade</code> · <code>outdoor-grounds-care</code></td><td>Which vertical(s) list the product — a product can carry more than one</td></tr>
+        <tr><td>Product bucket</td><td><code>power-tools</code> · <code>attachments-accessories</code> · <code>spare-parts-consumables</code></td><td>Which bucket it sits in, and which contextual filters its pages show</td></tr>
+      </table>
+      <ul class="check">
+        <li>At least one vertical tag and the right bucket tag are present.</li>
+        <li>Spelling matches exactly — copy the tag from a similar existing product rather than typing it fresh.</li>
+      </ul>
+
+      <h2 id="collections"><span class="num">4.</span> See it in its collections</h2>
+      <p class="where"><strong>Where:</strong> on the storefront — the vertical's shop pages (e.g. Woodworking → Power Tools) — or admin → <strong>Products → Collections</strong> → open the collection and confirm the product is listed.</p>
+      <ul class="check">
+        <li>The product appears in every collection its tags say it should: its vertical(s), its bucket within each vertical, and Spare Parts &amp; Consumables if it's a spare/consumable.</li>
+        <li>If the old site listed it under two verticals, it appears under both here.</li>
+        <li>Spare-parts-only items do <strong>not</strong> appear in accessories listings.</li>
+      </ul>
+
+      <h2 id="filters"><span class="num">5.</span> Check the filter fields</h2>
+      <p class="where"><strong>Where:</strong> metafields at the bottom of the product page (or ⋯ menu → <strong>Edit metafields</strong>). All three are pickers — you choose from a list, never type.</p>
+      <table>
+        <tr><th>Field</th><th>Fill it in when the product is…</th></tr>
+        <tr><td>Application type</td><td>A power tool or accessory</td></tr>
+        <tr><td>Compatible with</td><td>An accessory (which tools does it fit?)</td></tr>
+        <tr><td>Tool model</td><td>A spare part or consumable (which tool is it for?)</td></tr>
+      </table>
+      <div class="callout warn">
+        <p class="callout-title">A blank field is not neutral</p>
+        <p>A product with an empty filter field disappears the moment a customer ticks any box in that filter — there is no "unassigned" group. If the value you need isn't in the picker list, ask us to add it; don't work around it.</p>
+      </div>
+
+      <h2 id="variants"><span class="num">6.</span> Variants, voltage &amp; price</h2>
+      <p class="where"><strong>Where:</strong> the variants list on the product page; prices per variant.</p>
+      <ul class="check">
+        <li>Every voltage / size / pack variant that should exist is there, and none that shouldn't.</li>
+        <li>Prices (and compare-at prices, if on promotion) are right per variant.</li>
+        <li>On the storefront, each market shows only its correct electrical options (e.g. a US shopper never sees 240V). If a variant is missing in one country only, tell us — that's the market routing rules, not the product.</li>
+      </ul>
+
+      <h2 id="imagery"><span class="num">7.</span> Imagery</h2>
+      <p class="where"><strong>Where:</strong> the media gallery at the top of the product page.</p>
+      <ul class="check">
+        <li>At least one image, with the <strong>hero shot first</strong> — the first image is the tile shoppers see on collection pages.</li>
+        <li>Action/detail shots follow the hero, matching how the old site presented the product.</li>
+      </ul>
+
+      <h2 id="storefront"><span class="num">8.</span> Final storefront pass</h2>
+      <p class="where"><strong>Where:</strong> the storefront, in a private/incognito window.</p>
+      <ul class="check">
+        <li>Search the product name — it comes up, and its page loads.</li>
+        <li>Open its collection page and find it via the sidebar filters (tick the value you set in step 5 — the product stays in the results).</li>
+        <li>Add it to the cart — the right variant, price and image carry through.</li>
+      </ul>
+      <div class="callout info">
+        <p class="callout-title">If a check fails</p>
+        <p>Re-check the three gates (step 2) and the tags (step 3) first — they explain most "missing product" cases. Anything that still doesn't add up, send us the SKU and which step it failed; that's everything we need to chase it.</p>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>

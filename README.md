@@ -16,6 +16,16 @@ negotiation lines. The client-facing material lives in `../arbortechtools.com/sh
   bar shows the three visible tabs with none marked current. Refresh its contents each
   week before the catch-up; the actions/dates tables at the bottom are filled in live
   during the meeting.
+- `events-guide.html` — standalone one-pager on updating the events calendar
+  (Content → Metaobjects → Event: add/edit/hide, country targeting incl. the GB-not-UK
+  quirk, auto-expiry, and the theme-section vs entries split). Not in any tab bar —
+  condensed from CMS Manual §3.4; if §3.4 changes, update this page too.
+- `sku-checklist.html` — the per-SKU review checklist linked from the final section of
+  `catalogue-audit.html` (not in any tab bar). Client-safe: walks one product through
+  SKU check, the three visibility gates, tags → collections, filter metafields, variants
+  & voltage, imagery and a storefront pass. Conventions in it (tag slugs, metafield
+  names, gate list) mirror the CMS manual — if those change in `index.html`, update
+  this page too.
 - `catalogue-audit.html` — the catalogue audit & collections review checklist (SKUs,
   voltages, imagery, regional publishing, collections/grouping), pre-filled with
   evidence verified against the live store 2026-08-11. Tabbed into this set alongside

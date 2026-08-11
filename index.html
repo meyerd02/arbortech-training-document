@@ -654,6 +654,23 @@
         <p>The existing story articles (the ones with quote banners, image carousels and video embeds) render from a structured layout field maintained by Juicebox; <strong>on those posts, editing the Content box changes nothing on the storefront</strong>. Ask us for text, image or layout changes to a story article. New posts you create yourself render the Content box as normal.</p>
       </div>
 
+      <h3>3.4 The events calendar</h3>
+      <p>Events (open days, trade shows, in-store demos) are not pages — they live as structured entries under <strong>Content → Metaobjects → Event</strong>. The Events Calendar section on the site reads this list automatically: add an entry and it appears, and once an event's date (or end date, if it has one) has passed, it drops off the site by itself. You never need to delete old events.</p>
+      <p>To add an event, open <strong>Content → Metaobjects → Event → Add entry</strong> and fill in:</p>
+      <ul>
+        <li><strong>Title, Date and time</strong> — what shows on the card. Add an <strong>End date</strong> for multi-day events; the event stays visible until that day has passed.</li>
+        <li><strong>Image and Blurb</strong> — the card image and a sentence or two about the event.</li>
+        <li><strong>Location</strong> — the venue as you want it displayed, e.g. <em>Timbecon, Balcatta</em> or <em>Melbourne Convention and Exhibition Centre (MCEC)</em>.</li>
+        <li><strong>Link and Link label</strong> — optional; where "View event" should send people (the organiser's site, a ticket page). Leave blank for no button.</li>
+        <li><strong>Show in countries</strong> — who sees the event. See below.</li>
+      </ul>
+      <div class="callout warn">
+        <div class="callout-title"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 2.6 17.2a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 16.5h.01"/></svg> Show in countries — and the UK is "GB"</div>
+        <p>A local open day in Perth means nothing to a customer in Munich. The <strong>Show in countries</strong> field controls which storefronts display the event: pick one or more from <strong>AU, US, GB, DE, CA</strong> (they match the site's five markets) and only visitors browsing those countries' versions of the site will see it. <strong>Leave it empty to show the event everywhere</strong> — right for online events or international shows.</p>
+        <p>One quirk to remember: the United Kingdom's code is <strong>GB</strong>, not UK — the picker only offers the valid codes, so you can't get this wrong, just don't go looking for "UK" in the list.</p>
+      </div>
+      <p>The <strong>Active</strong> tick-box is a master switch — untick it to hide an event immediately without deleting it (useful if an event is postponed). And if you run German-language events, the event text can be translated the same way as other content through Translate &amp; Adapt (section 10).</p>
+
       <div class="confirm">
         <p class="confirm-title">Confirm you can — tick each one off once you've done it yourself:</p>
         <ul>
@@ -662,6 +679,7 @@
           <li><input type="checkbox" id="confirm-pages-3"><label for="confirm-pages-3">Edit a standard page (e.g. a support article) and see the change live.</label></li>
           <li><input type="checkbox" id="confirm-pages-4"><label for="confirm-pages-4">Open a designed page (e.g. Woodworking) and name where its real content lives (theme sections — or call Juicebox).</label></li>
           <li><input type="checkbox" id="confirm-pages-5"><label for="confirm-pages-5">Create a draft blog post with a featured image, schedule it, then delete it.</label></li>
+          <li><input type="checkbox" id="confirm-pages-6"><label for="confirm-pages-6">Add a test event with a past date under Content → Metaobjects → Event, confirm it does <em>not</em> appear on the site, then delete it.</label></li>
         </ul>
       </div>
 
