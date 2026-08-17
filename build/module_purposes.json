@@ -41,7 +41,7 @@
     {"type": "arb-product-artists", "group": "Product page modules", "purpose": "\"Artists using this tool\" cards – renders the artist pages referenced by the product's related-artists metafield."},
     {"type": "arb-product-overview-video", "group": "Product page modules", "purpose": "The product overview video band – video and poster come from product metafields."},
     {"type": "arbt-accessory-hub", "group": "Product page modules", "purpose": "Accessory listing hub grouped by category, with compatibility links – used on the accessories overview."},
-    {"type": "arbt-blade-compat", "group": "Product page modules", "purpose": "Blade ↔ tool compatibility table driven by the compatible-with metafield."},
+    {"type": "arbt-blade-compat", "group": "Product page modules", "purpose": "Blade ↔ tool compatibility tiles on an accessory page. Two fields on the accessory can feed it: the Compatible tools product picker (arbt.compatible_tools) is preferred and links survive a tool being renamed; the Compatible with name list (arbortech.compatible_with_filter) is used when the picker is empty. The picker REPLACES the names wholesale, so leave it empty on products whose fitment includes a generic value that is not an Arbortech product (e.g. \"Standard Angle Grinder 100 - 125 mm\") or that unlinked tile disappears. See Section 2.6."},
     {"type": "arbt-test-accessories", "group": "Product page modules", "purpose": "Related-accessories test harness for the accessories display – internal QA page module."},
     {"type": "arb-artist-hero", "group": "Artists & people", "purpose": "Artist page opener: hero image, script-style name treatment and role – pulled from the artist page's metafields."},
     {"type": "arb-about-quote", "group": "Artists & people", "purpose": "Artist bio band: portrait, detail shot, bio text and pull-quote, all from artist metafields with settings fallbacks."},
@@ -57,7 +57,6 @@
     {"type": "arbt-widerruf-form", "group": "Data-driven utilities", "purpose": "The German statutory cancellation (Widerruf) form – submissions post to an automation webhook. Legal plumbing: don't edit without us."},
     {"type": "arb-footer", "group": "Data-driven utilities", "purpose": "The site footer: newsletter signup, social links, menu columns and legal menu (with a German variant). The column links come from Shopify menus where the matching menu exists."},
     {"type": "arb-testing-image-audit", "group": "Internal / not in use", "purpose": "Internal image-audit surface used during the build – ignore."},
-    {"type": "arb-feature-tool", "group": "Internal / not in use", "purpose": "A featured-tool spotlight (intro + product + checklist) built during development – currently on no page."},
-    {"type": "arb-split-feature-callout", "group": "Internal / not in use", "purpose": "A context-aware split image/copy callout that adapts to the visitor's vertical – currently on no page."}
+    {"type": "arb-feature-tool", "group": "Internal / not in use", "purpose": "A featured-tool spotlight (intro + product + checklist) built during development – currently on no page."}
   ]
 }

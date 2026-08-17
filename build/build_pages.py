@@ -22,8 +22,11 @@ TAB_CSS = """
 
 def tab_nav(current):
     tabs = [('index.html', 'CMS Manual'), ('modules.html', 'Module Guide'),
-            ('pdp-guide.html', 'PDP Guide'), ('supplying-content.html', 'Supplying Content'),
-            ('catalogue-audit.html', 'Catalogue Audit'), ('sku-checklist.html', 'SKU Checklist')]
+            ('pdp-guide.html', 'PDP Guide'),
+            ('collections-filtering.html', 'Collections &amp; Filtering'),
+            ('supplying-content.html', 'Supplying Content'),
+            ('catalogue-audit.html', 'Catalogue Audit'),
+            ('sku-checklist.html', 'SKU Checklist')]
     cur_attr = ' aria-current="page"'
     links = ''.join(
         f'<a href="{href}"{cur_attr if href == current else ""}>{label}</a>'
@@ -71,12 +74,12 @@ for p in sorted(pages, key=lambda x: x['title'].lower()):
 
 GROUP_NOTES = {
     'Standard pages': 'Default template – the rich-text Content box renders. These are yours to edit freely (Manual §3.1).',
-    'Artist profile pages': 'One per artist, all on the <code>artist</code> template. The layout is driven by artist metafields (portrait, quote, tools, techniques) – text edits are a call-us item.',
-    'Tool resource pages': 'One per tool, on the <code>arbt-tool-resource</code> template – manuals, videos and FAQs pulled from structured data.',
-    'Power-carving landing pages': 'Bespoke designed template per tool – layout lives in the theme, call us for changes.',
-    'Vertical landing pages': 'The three audience gateways (Woodworking / Masonry / Landscaping) – bespoke templates.',
-    'Shop-by-project pages': 'Project-led shopping pages, one bespoke template each.',
-    'One-off designed pages': 'Each has its own designed template (About, Support, Inspiration, Events, Stories, etc.). The Content box is usually secondary to theme sections – see Manual §3.1\'s warning.',
+    'Artist profile pages': 'One per artist, all on the <code>artist</code> template. The portrait, pull-quote, tools and techniques come from artist metafields – those are a call-us item. The bio is different: it is the page\'s own rich-text Content box, so artist bios are yours to edit (Manual §3.1).',
+    'Tool resource pages': 'One per tool, on the <code>arbt-tool-resource</code> template – manuals, videos and FAQs pulled from structured data. The Content box is not rendered on these pages: editing it changes nothing on the storefront.',
+    'Power-carving landing pages': 'Bespoke designed template per tool – layout lives in the theme, call us for changes. The Content box is not rendered on these pages: editing it changes nothing on the storefront.',
+    'Vertical landing pages': 'The three audience gateways (Woodworking / Masonry / Landscaping) – bespoke templates. The Content box is not rendered on these pages: editing it changes nothing on the storefront.',
+    'Shop-by-project pages': 'Project-led shopping pages, one bespoke template each. The Content box is not rendered on these pages: editing it changes nothing on the storefront.',
+    'One-off designed pages': 'Each has its own designed template (About, Support, Inspiration, Events, Stories, etc.), built from theme sections. The Content box is not rendered on these pages: editing it changes nothing on the storefront – ask us for text or layout changes. The one exception is the German Widerrufsrecht page, which is entirely its Content box.',
 }
 
 sitemap_body = f"""

@@ -3485,6 +3485,7 @@
   ],
   "custom": true,
   "metafield_hits": [
+   "arbt.compatible_tools",
    "arbortech.compatible_with_filter"
   ],
   "metaobject_hits": []

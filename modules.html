@@ -12,7 +12,6 @@
       --line: #e3e8ee;
       --line-soft: #eef2f6;
       --accent: #E87722;
-      --accent-dark: #b85710;
       --accent-soft: #fdf1e6;
       --ok: #1a7f4d;
       --ok-bg: #eef8f2;
@@ -163,7 +162,7 @@
       height: 2.1em;
       margin-right: 0.45em;
       background: var(--accent-soft);
-      color: var(--accent-dark);
+      color: var(--ink);
       border-radius: var(--radius);
       font-weight: 800;
       font-variant-numeric: tabular-nums;
@@ -352,7 +351,7 @@
 </head>
 <body>
 
-  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html" aria-current="page">Module Guide</a><a href="pdp-guide.html">PDP Guide</a><a href="supplying-content.html">Supplying Content</a><a href="catalogue-audit.html">Catalogue Audit</a><a href="sku-checklist.html">SKU Checklist</a></div></nav>
+  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html" aria-current="page">Module Guide</a><a href="pdp-guide.html">PDP Guide</a><a href="collections-filtering.html">Collections &amp; Filtering</a><a href="supplying-content.html">Supplying Content</a><a href="catalogue-audit.html">Catalogue Audit</a><a href="sku-checklist.html">SKU Checklist</a></div></nav>
 
   <header class="page-header">
     <div class="inner">
@@ -505,8 +504,8 @@
       <p style="font-size:0.86em"><strong>Settings (10):</strong> Padding Top, Eyebrow, Heading, Intro text, Group order, Products per row (mobile)… &nbsp;·&nbsp; <strong>Repeatable blocks:</strong> Compatibility link</p>
       <p style="font-size:0.86em"><em>No screenshot – its collection (Spare Parts, Blades &amp; Accessories) is not yet published to the Online Store, so its page currently returns a 404.</em></p>
       <h3>ARBT Blade Compatibility <code style="font-weight:400;font-size:0.72em">arbt-blade-compat</code></h3>
-      <p>Blade ↔ tool compatibility table driven by the compatible-with metafield. <em>(used on 1 template.)</em></p>
-      <p style="font-size:0.86em"><strong>Settings (3):</strong> Eyebrow, Heading, Intro text &nbsp;·&nbsp; <strong>Data source:</strong> <code>arbortech.compatible_with_filter</code></p>
+      <p>Blade ↔ tool compatibility tiles on an accessory page. Two fields on the accessory can feed it: the Compatible tools product picker (arbt.compatible_tools) is preferred and links survive a tool being renamed; the Compatible with name list (arbortech.compatible_with_filter) is used when the picker is empty. The picker REPLACES the names wholesale, so leave it empty on products whose fitment includes a generic value that is not an Arbortech product (e.g. "Standard Angle Grinder 100 - 125 mm") or that unlinked tile disappears. See Section 2.6. <em>(used on 1 template.)</em></p>
+      <p style="font-size:0.86em"><strong>Settings (3):</strong> Eyebrow, Heading, Intro text &nbsp;·&nbsp; <strong>Data source:</strong> <code>arbt.compatible_tools</code>, <code>arbortech.compatible_with_filter</code></p>
       <p style="font-size:0.86em"><em>No screenshot – this module is deliberately hidden pending design review; once enabled it renders the "Compatible tools" cards on accessory pages.</em></p>
       <h3>ARBT Test Accessories <code style="font-weight:400;font-size:0.72em">arbt-test-accessories</code></h3>
       <p>Related-accessories test harness for the accessories display – internal QA page module. <em>(used on 1 template.)</em></p>
@@ -576,9 +575,6 @@
       <h3>Featured Tool <code style="font-weight:400;font-size:0.72em">arb-feature-tool</code></h3>
       <p>A featured-tool spotlight (intro + product + checklist) built during development – currently on no page. <em>(not currently placed on any page.)</em></p>
       <p style="font-size:0.86em"><strong>Settings (14):</strong> Padding Top, Eyebrow, Heading, Heading accent, Text, Image… &nbsp;·&nbsp; <strong>Repeatable blocks:</strong> Checklist item, Side product</p>
-      <h3>Split Feature Callout <code style="font-weight:400;font-size:0.72em">arb-split-feature-callout</code></h3>
-      <p>A context-aware split image/copy callout that adapts to the visitor's vertical – currently on no page. <em>(not currently placed on any page.)</em></p>
-      <p style="font-size:0.86em"><strong>Settings (13):</strong> Padding Top, Image, Fallback image (theme asset filename), Image alt text, Eyebrow, Heading… &nbsp;·&nbsp; <strong>Data source:</strong> <code>arbortech.primary_vertical</code>, <code>arbortech.vertical_landscaping</code>, <code>arbortech.vertical_masonry</code></p>
 
       <h2 id="base-modules">Base theme modules</h2>
       <p>These ship with the underlying theme and run the structural pages. They rarely need touching, and several are safest left to us:</p>

@@ -12,6 +12,10 @@
       --line: #e3e8ee;
       --line-soft: #eef2f6;
       --accent: #E87722;
+      /* Retired from index/sitemap/modules (brand rule: #E87722 only). Survives here
+         solely for the 9-12px SVG diagram labels below: brand orange scores 2.96:1 on
+         white where WCAG AA needs 4.5:1, this scores 4.76:1. Pending David's call on
+         re-colouring those labels to --body (9.85:1) — do not delete before then. */
       --accent-dark: #b85710;
       --accent-soft: #fdf1e6;
       --ok: #1a7f4d;
@@ -93,7 +97,7 @@
   </style>
 </head>
 <body>
-  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html">Module Guide</a><a href="pdp-guide.html" aria-current="page">PDP Guide</a><a href="supplying-content.html">Supplying Content</a><a href="catalogue-audit.html">Catalogue Audit</a><a href="sku-checklist.html">SKU Checklist</a></div></nav>
+  <nav class="tab-nav"><div class="inner"><a href="index.html">CMS Manual</a><a href="modules.html">Module Guide</a><a href="pdp-guide.html" aria-current="page">PDP Guide</a><a href="collections-filtering.html">Collections &amp; Filtering</a><a href="supplying-content.html">Supplying Content</a><a href="catalogue-audit.html">Catalogue Audit</a><a href="sku-checklist.html">SKU Checklist</a></div></nav>
 
   <header class="page-header">
     <div class="inner">
@@ -365,7 +369,8 @@
       <p>Everything above is driven by product data — mostly metafields on the product, editable in Shopify admin. The load-bearing ones:</p>
       <table>
         <tr><th>Setting (metafield)</th><th>What it does</th></tr>
-        <tr><td><code>arbortech.related_accessories</code></td><td>Default Attachments &amp; Accessories list for the tool.</td></tr>
+        <tr><td><code>arbortech.related_accessories</code></td><td>Default Attachments &amp; Accessories list for the tool. Spares and consumables in it are filtered out.</td></tr>
+        <tr><td><code>arbt.works_best_products</code> — “Works best with (fallback)”</td><td>Last-resort list for the same rail, shown <em>as-is</em> (spares included). Only consulted when the vertical list, the filtered Related accessories and the section’s manual picks are all empty — which is how Power Chisel shows its oil and service kit.</td></tr>
         <tr><td><code>arbortech.vertical_woodworking / _masonry / _landscaping</code></td><td>Per-vertical content pack: description lead, image order, video, and its own <code>accessories</code> list.</td></tr>
         <tr><td><code>arbortech.primary_vertical</code></td><td>Fallback vertical when the shopper arrives without a journey.</td></tr>
         <tr><td><code>arbt.related_bundles</code></td><td>Which bundle products appear under “Bundle with”.</td></tr>
@@ -396,7 +401,7 @@
         <ul>
           <li><strong>Don’t price a bundle below its biggest component.</strong> Tool-inclusive bundles replace the tool in the cart — an under-priced bundle sells the tool at that price.</li>
           <li><strong>Don’t set a compare-at below the price.</strong> It will simply never show; the page refuses to display negative savings.</li>
-          <li><strong>Don’t add spare parts to <code>related_accessories</code></strong> expecting them to appear — they’re filtered out by category everywhere on the PDP.</li>
+          <li><strong>Don’t add spare parts to <code>related_accessories</code></strong> expecting them to appear — they’re filtered out by category everywhere on the PDP. If a spare genuinely must appear in that rail, use <code>arbt.works_best_products</code> (“Works best with (fallback)”), which is shown as-is.</li>
           <li><strong>Keep bundle component lists truthful.</strong> The substitution and no-double-charging logic trusts <code>bundle_components</code> / <code>bundle_includes</code>; a wrong list means wrong carts.</li>
           <li><strong>Vertical content is optional but all-or-nothing per block</strong> — a vertical with its own accessory list fully replaces the default list in that context.</li>
         </ul>
