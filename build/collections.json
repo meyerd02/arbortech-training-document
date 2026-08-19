@@ -3,83 +3,72 @@
     "nodes": [
       {
         "title": "Woodworking",
-        "handle": "power-carving",
+        "handle": "woodworking",
         "productsCount": {
-          "count": 20
+          "count": 17
         }
       },
       {
         "title": "Woodworking - Power Tools",
-        "handle": "power-carving-power-tools",
+        "handle": "woodworking-power-tools",
         "productsCount": {
-          "count": 8
+          "count": 5
         }
       },
       {
         "title": "Woodworking - Attachments & Accessories",
-        "handle": "power-carving-attachments-accessories",
+        "handle": "woodworking-attachments-accessories",
         "productsCount": {
-          "count": 13
+          "count": 12
         }
       },
       {
-        "title": "Masonry / Trade",
-        "handle": "masonry-trade",
+        "title": "Masonry & Trade",
+        "handle": "masonry-and-trade",
         "productsCount": {
-          "count": 33
+          "count": 29
         }
       },
       {
-        "title": "Masonry / Trade - Power Tools",
-        "handle": "masonry-trade-power-tools",
+        "title": "Masonry & Trade - Power Tools",
+        "handle": "masonry-and-trade-power-tools",
         "productsCount": {
-          "count": 8
+          "count": 4
         }
       },
       {
-        "title": "Masonry / Trade - Attachments & Accessories",
-        "handle": "masonry-trade-attachments-accessories",
+        "title": "Masonry & Trade - Attachments & Accessories",
+        "handle": "masonry-and-trade-attachments-accessories",
         "productsCount": {
-          "count": 25
+          "count": 24
         }
       },
       {
         "title": "Spare Parts & Consumables",
         "handle": "spare-parts-consumables",
         "productsCount": {
-          "count": 61
+          "count": 60
         }
       },
       {
         "title": "Power Tools",
         "handle": "power-tools",
         "productsCount": {
-          "count": 14
+          "count": 9
         }
       },
       {
         "title": "Spare Parts, Blades & Accessories",
         "handle": "spare-parts-accessories",
         "productsCount": {
-          "count": 60
+          "count": 59
         }
       },
       {
-        "title": "Outdoor Grounds Care",
-        "handle": "outdoor-grounds-care",
+        "title": "Landscaping",
+        "handle": "landscaping",
         "productsCount": {
-          "count": 12
-        }
-      }
-    ]
-  },
-  "blogs": {
-    "nodes": [
-      {
-        "title": "News",
-        "handle": "news",
-        "articlesCount": {
-          "count": 65
+          "count": 5
         }
       }
     ]

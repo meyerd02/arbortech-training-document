@@ -11,50 +11,58 @@
             "items": []
           },
           {
-            "title": "Woodworking",
-            "url": "/collections/power-carving",
+            "title": "Power Carving",
+            "url": "/collections/woodworking",
             "items": [
               {
                 "title": "Woodworking Tools",
-                "url": "/collections/power-carving-power-tools",
+                "url": "/collections/woodworking-power-tools",
                 "items": [
                   {
                     "title": "Mini Grinder MG1000",
-                    "url": "/collections/power-carving/products/mini-grinder-mg1000"
+                    "url": "/collections/woodworking/products/mini-grinder-mg1000",
+                    "items": []
                   },
                   {
                     "title": "Power Carving Unit",
-                    "url": "/products/power-carving-unit"
+                    "url": "/products/power-carving-unit",
+                    "items": []
                   },
                   {
                     "title": "Power Chisel",
-                    "url": "/products/power-chisel"
+                    "url": "/products/power-chisel",
+                    "items": []
                   }
                 ]
               },
               {
                 "title": "Accessories",
-                "url": "/collections/power-carving-attachments-accessories",
+                "url": "/collections/woodworking-attachments-accessories",
                 "items": [
                   {
-                    "title": "Power Carving Attachments",
-                    "url": "/collections/power-carving-attachments-accessories"
+                    "title": "Woodworking Attachments",
+                    "url": "/collections/woodworking-attachments-accessories",
+                    "items": []
                   },
                   {
                     "title": "TURBOPlane",
-                    "url": "/products/turboplane"
+                    "url": "/products/turboplane",
+                    "items": []
                   },
                   {
                     "title": "Ball Gouge",
-                    "url": "/products/ball-gouge"
+                    "url": "/products/ball-gouge",
+                    "items": []
                   },
                   {
                     "title": "Contour Sander",
-                    "url": "/products/contour-sander"
+                    "url": "/products/contour-sander",
+                    "items": []
                   },
                   {
                     "title": "100mm Sanding Discs",
-                    "url": "/products/100mm-sanding-discs"
+                    "url": "/products/100mm-sanding-discs",
+                    "items": []
                   }
                 ]
               },
@@ -64,154 +72,136 @@
                 "items": [
                   {
                     "title": "Spoon & Bowl Carving",
-                    "url": "/pages/spoon-and-bowl-carving"
+                    "url": "/pages/spoon-and-bowl-carving",
+                    "items": []
                   },
                   {
                     "title": "Furniture & Sculpting",
-                    "url": "/pages/furniture-and-sculpting"
+                    "url": "/pages/furniture-and-sculpting",
+                    "items": []
                   },
                   {
                     "title": "Detail & Texturing",
-                    "url": "/pages/detail-and-texturing"
+                    "url": "/pages/detail-and-texturing",
+                    "items": []
                   }
                 ]
               }
             ]
           },
           {
-            "title": "Masonry",
-            "url": "/collections/masonry-trade",
+            "title": "Construction / Restoration",
+            "url": "/collections/masonry-and-trade",
             "items": [
               {
-                "title": "Masonry Tools",
-                "url": "/collections/masonry-trade-power-tools",
+                "title": "Masonry & Trade Tools",
+                "url": "/collections/masonry-and-trade-power-tools",
                 "items": [
                   {
                     "title": "Mini Grinder MG1000",
-                    "url": "/collections/masonry-trade/products/mini-grinder-mg1000"
+                    "url": "/collections/masonry-and-trade/products/mini-grinder-mg1000",
+                    "items": []
                   },
                   {
                     "title": "Mini Grinder Trade",
-                    "url": "/products/mini-grinder-trade"
+                    "url": "/products/mini-grinder-trade",
+                    "items": []
                   },
                   {
                     "title": "Allsaw AS200X",
-                    "url": "/products/allsaw-200x"
+                    "url": "/products/allsaw-200x",
+                    "items": []
                   },
                   {
-                    "title": "ALLSAW BA200X",
-                    "url": "/products/allsaw-ba200x-cordless"
+                    "title": "Allsaw BA200X",
+                    "url": "/products/allsaw-ba200x-cordless",
+                    "items": []
                   }
                 ]
               },
               {
                 "title": "Accessories",
-                "url": "/collections/masonry-trade-attachments-accessories",
+                "url": "/collections/masonry-and-trade-attachments-accessories",
                 "items": [
                   {
-                    "title": "Masonry Attachments",
-                    "url": "/collections/masonry-trade-attachments-accessories"
+                    "title": "Masonry & Trade Attachments",
+                    "url": "/collections/masonry-and-trade-attachments-accessories",
+                    "items": []
                   },
                   {
                     "title": "Tuckpointing Blade",
-                    "url": "/products/allsaw-200x-tuckpointing-blade"
+                    "url": "/products/allsaw-200x-tuckpointing-blade",
+                    "items": []
                   },
                   {
                     "title": "General Purpose Blade",
-                    "url": "/products/allsaw-200x-general-purpose-blade"
+                    "url": "/products/allsaw-200x-general-purpose-blade",
+                    "items": []
                   },
                   {
                     "title": "Head Joint Blade",
-                    "url": "/products/allsaw-200x-head-joint-blade"
-                  }
-                ]
-              },
-              {
-                "title": "Shop by Project",
-                "url": "/pages/shop-by-project",
-                "items": [
-                  {
-                    "title": "Tuckpointing & Repointing",
-                    "url": "/pages/tuckpointing-and-repointing"
-                  },
-                  {
-                    "title": "Brick & Block Repair",
-                    "url": "/pages/brick-and-block-repair"
-                  },
-                  {
-                    "title": "Heritage Masonry Repairs",
-                    "url": "/pages/heritage-masonry-repairs"
+                    "url": "/products/allsaw-200x-head-joint-blade",
+                    "items": []
                   }
                 ]
               }
             ]
           },
           {
-            "title": "Landscaping",
-            "url": "/collections/outdoor-grounds-care",
+            "title": "Outdoor / Grounds Care",
+            "url": "/collections/landscaping",
             "items": [
               {
-                "title": "Outdoor Tools",
-                "url": "/collections/outdoor-grounds-care",
+                "title": "Landscaping Tools",
+                "url": "/collections/landscaping",
                 "items": [
                   {
                     "title": "Mini Grinder MG1000",
-                    "url": "/collections/outdoor-grounds-care/products/mini-grinder-mg1000"
+                    "url": "/collections/landscaping/products/mini-grinder-mg1000",
+                    "items": []
                   },
                   {
                     "title": "Allsaw AS200X",
-                    "url": "/products/allsaw-200x"
+                    "url": "/products/allsaw-200x",
+                    "items": []
                   },
                   {
-                    "title": "ALLSAW BA200X",
-                    "url": "/products/allsaw-ba200x-cordless"
+                    "title": "Allsaw BA200X",
+                    "url": "/products/allsaw-ba200x-cordless",
+                    "items": []
                   }
                 ]
               },
               {
                 "title": "Accessories",
-                "url": "/collections/outdoor-grounds-care",
+                "url": "/collections/landscaping",
                 "items": [
                   {
                     "title": "Turf Blade",
-                    "url": "/products/allsaw-200x-turf-blade"
+                    "url": "/products/allsaw-200x-turf-blade",
+                    "items": []
                   },
                   {
                     "title": "Wood Blade",
-                    "url": "/products/allsaw-200x-wood-blade"
+                    "url": "/products/allsaw-200x-wood-blade",
+                    "items": []
                   },
                   {
                     "title": "General Purpose Blades",
-                    "url": "/products/allsaw-200x-xl-general-purpose-blades"
+                    "url": "/products/allsaw-200x-xl-general-purpose-blades",
+                    "items": []
                   },
                   {
                     "title": "Replacement Parts",
-                    "url": "/collections/spare-parts-consumables"
-                  }
-                ]
-              },
-              {
-                "title": "Shop by Project",
-                "url": "/pages/shop-by-project",
-                "items": [
-                  {
-                    "title": "Timber Landscaping",
-                    "url": "/pages/timber-landscaping"
-                  },
-                  {
-                    "title": "Turf & Grounds Care",
-                    "url": "/pages/turf-and-grounds-care"
-                  },
-                  {
-                    "title": "Edging & Trenches",
-                    "url": "/pages/edging-and-trenches"
+                    "url": "/collections/spare-parts-consumables",
+                    "items": []
                   }
                 ]
               }
             ]
           },
           {
-            "title": "Inspiration",
+            "title": "About",
             "url": "/pages/inspiration",
             "items": [
               {
@@ -220,19 +210,23 @@
                 "items": [
                   {
                     "title": "Our Story",
-                    "url": "/pages/our-story"
+                    "url": "/pages/our-story",
+                    "items": []
                   },
                   {
                     "title": "Research & Development",
-                    "url": "/pages/research-and-development"
+                    "url": "/pages/research-and-development",
+                    "items": []
                   },
                   {
                     "title": "Sustainability & Values",
-                    "url": "/pages/sustainability-and-values"
+                    "url": "/pages/sustainability-and-values",
+                    "items": []
                   },
                   {
                     "title": "Investors",
-                    "url": "/pages/investors"
+                    "url": "/pages/investors",
+                    "items": []
                   }
                 ]
               },
@@ -242,15 +236,18 @@
                 "items": [
                   {
                     "title": "Events & Shows",
-                    "url": "/pages/events"
+                    "url": "/pages/events",
+                    "items": []
                   },
                   {
                     "title": "Workshops",
-                    "url": "/pages/events"
+                    "url": "/pages/events",
+                    "items": []
                   },
                   {
                     "title": "Product Updates",
-                    "url": "/blogs/news"
+                    "url": "/blogs/news",
+                    "items": []
                   }
                 ]
               },
@@ -260,28 +257,27 @@
                 "items": [
                   {
                     "title": "News & Stories",
-                    "url": "/blogs/news"
+                    "url": "/blogs/news",
+                    "items": []
                   },
                   {
                     "title": "Project Stories",
-                    "url": "/pages/projects"
+                    "url": "/pages/projects",
+                    "items": []
                   },
                   {
                     "title": "Guides",
-                    "url": "/pages/guides"
+                    "url": "/pages/guides",
+                    "items": []
                   },
                   {
                     "title": "Staff Competitions",
-                    "url": "/pages/staff-competition"
+                    "url": "/pages/staff-competition",
+                    "items": []
                   }
                 ]
               }
             ]
-          },
-          {
-            "title": "Support",
-            "url": "/pages/support",
-            "items": []
           }
         ]
       },
@@ -355,6 +351,74 @@
           {
             "title": "Vertrag widerrufen",
             "url": "/pages/widerruf",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "about",
+        "title": "About",
+        "items": [
+          {
+            "title": "Our Story",
+            "url": "/pages/our-story",
+            "items": []
+          },
+          {
+            "title": "Research & Development",
+            "url": "/pages/research-and-development",
+            "items": []
+          },
+          {
+            "title": "Sustainability",
+            "url": "/pages/sustainability-and-values",
+            "items": []
+          },
+          {
+            "title": "Investors",
+            "url": "/pages/investors",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "contact",
+        "title": "Contact",
+        "items": [
+          {
+            "title": "Contact Us",
+            "url": "/pages/contact",
+            "items": []
+          },
+          {
+            "title": "Find a Retailer",
+            "url": "/pages/find-a-retailer",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "support",
+        "title": "Support",
+        "items": [
+          {
+            "title": "Tool Resources",
+            "url": "/pages/tool-resources",
+            "items": []
+          },
+          {
+            "title": "Service, Repair & Warranty",
+            "url": "/pages/warranty",
+            "items": []
+          },
+          {
+            "title": "Shipping & Refunds",
+            "url": "/pages/shipping-and-returns",
+            "items": []
+          },
+          {
+            "title": "Catalogues",
+            "url": "/pages/resource-hub",
             "items": []
           }
         ]

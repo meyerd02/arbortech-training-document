@@ -49,13 +49,13 @@
     {"type": "arb-artists-techniques", "group": "Artists & people", "purpose": "Techniques list on artist pages – one block per technique."},
     {"type": "arb-our-story", "group": "Artists & people", "purpose": "The company timeline on Our Story – each milestone (year, copy, image) is a block."},
     {"type": "arbt-page-story-blocks", "group": "Data-driven utilities", "purpose": "Renders a designed story layout (the same block system as the story articles) on a page instead of a blog post. No settings – entirely driven by the page's story data. Maintained by Juicebox."},
-    {"type": "arb-events-calendar", "group": "Data-driven utilities", "purpose": "Upcoming events cards – events are metaobjects under Settings → Custom data; the module handles ordering, timezone and empty states."},
+    {"type": "arb-events-calendar", "group": "Data-driven utilities", "purpose": "Upcoming events from Content → Metaobjects, with an editor-selectable three-column card grid (default) or retained interactive calendar; handles date ordering, market visibility and empty states."},
     {"type": "arbt-retailer-locator", "group": "Data-driven utilities", "purpose": "Find-a-retailer listing grouped by region – retailers are metaobjects under Settings → Custom data."},
     {"type": "arbt-technical-resources", "group": "Data-driven utilities", "purpose": "The technical documents library with filters – documents are metaobjects; the module controls grouping and labels."},
     {"type": "arbt-tool-resources-grid", "group": "Data-driven utilities", "purpose": "The tool resources index – one tile block per tool linking to its resource page."},
     {"type": "arbt-tool-resource-detail", "group": "Data-driven utilities", "purpose": "A single tool's resource page body (manuals, videos, FAQs) – driven by the page's tool-resource metafield data."},
     {"type": "arbt-widerruf-form", "group": "Data-driven utilities", "purpose": "The German statutory cancellation (Widerruf) form – submissions post to an automation webhook. Legal plumbing: don't edit without us."},
-    {"type": "arb-footer", "group": "Data-driven utilities", "purpose": "The site footer: newsletter signup, social links, menu columns and legal menu (with a German variant). The column links come from Shopify menus where the matching menu exists."},
+    {"type": "arb-footer", "group": "Data-driven utilities", "purpose": "The site footer: newsletter signup, social links, menu columns and legal menu (with a German variant). Each link column binds a Shopify menu (About / Contact / Support under Online Store → Navigation) — edit those menus to change the column links."},
     {"type": "arb-testing-image-audit", "group": "Internal / not in use", "purpose": "Internal image-audit surface used during the build – ignore."},
     {"type": "arb-feature-tool", "group": "Internal / not in use", "purpose": "A featured-tool spotlight (intro + product + checklist) built during development – currently on no page."}
   ]

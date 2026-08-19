@@ -12,11 +12,6 @@
       --line: #e3e8ee;
       --line-soft: #eef2f6;
       --accent: #E87722;
-      /* Retired from index/sitemap/modules (brand rule: #E87722 only). Survives here
-         solely for the 9-12px SVG diagram labels below: brand orange scores 2.96:1 on
-         white where WCAG AA needs 4.5:1, this scores 4.76:1. Pending David's call on
-         re-colouring those labels to --body (9.85:1) — do not delete before then. */
-      --accent-dark: #b85710;
       --accent-soft: #fdf1e6;
       --ok: #1a7f4d;
       --ok-bg: #eef8f2;
@@ -138,7 +133,7 @@
           <circle cx="44" cy="44" r="12" fill="var(--accent)"/><text x="44" y="48.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">1</text>
           <!-- breadcrumb -->
           <rect x="348" y="24" width="348" height="22" rx="3" fill="var(--accent-soft)"/>
-          <text x="360" y="39" font-size="11" fill="var(--accent-dark)">Home / Woodworking / TURBOPlane</text>
+          <text x="360" y="39" font-size="11" fill="var(--body)">Home / Woodworking / TURBOPlane</text>
           <circle cx="684" cy="35" r="12" fill="var(--accent)"/><text x="684" y="39.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">2</text>
           <!-- title/price -->
           <text x="348" y="80" font-size="20" font-weight="700" fill="var(--ink)">POWER CARVING UNIT</text>
@@ -170,7 +165,7 @@
           <circle cx="684" cy="314" r="12" fill="var(--accent)"/><text x="684" y="318.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">7</text>
           <!-- summary -->
           <rect x="348" y="378" width="348" height="46" rx="3" fill="var(--accent-soft)"/>
-          <text x="360" y="396" font-size="11" fill="var(--accent-dark)">Order summary — line items · discount · subtotal</text>
+          <text x="360" y="396" font-size="11" fill="var(--body)">Order summary — line items · discount · subtotal</text>
           <circle cx="684" cy="401" r="12" fill="var(--accent)"/><text x="684" y="405.5" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">8</text>
           <!-- ATC -->
           <rect x="348" y="434" width="348" height="26" rx="3" fill="var(--accent)"/>
@@ -183,12 +178,12 @@
       <p>Products with more than one variant show pill-style pickers for each choice the shopper should make (e.g. <strong>Voltage</strong>). Some variant dimensions are <em>market-routed</em> and never shown: a shopper in Australia silently gets the AU/UK/EU stock unit, a US shopper the US/Canada one. Which markets see which values is data-driven (admin-editable “market option rules”), not code.</p>
       <ul>
         <li>Prices always render with their currency (<code>$429.00 AUD</code>) and follow the shopper’s market.</li>
-        <li>An accessory with no purchasable variant in the current market simply doesn’t appear.</li>
+        <li>An accessory that is not in the current market’s catalogue, or has no purchasable market-routed variant, simply doesn’t appear.</li>
         <li>Everything else that differs per region — availability, price, wording — is covered in <a href="#regional">§7 Regional editing</a>.</li>
       </ul>
 
       <h2 id="attachments"><span class="num">3.</span> Attachments &amp; Accessories</h2>
-      <p>Compatible add-ons for the tool being viewed. Each row is a full-width tick box — ticking adds it to the order as its <em>own</em> cart line at its own price.</p>
+      <p>Compatible add-ons for the tool being viewed. Each row is a full-width tick box — ticking adds it to the order as its <em>own</em> cart line at its own price. Shopify automatically uses the region-correct variant, such as 5/8-11 for US/Canada rather than M14.</p>
 
       <figure class="diagram">
         <svg viewBox="0 0 720 96" role="img" aria-label="Anatomy of one accessory row">
@@ -206,6 +201,7 @@
 
       <ul>
         <li>Rows are <strong>vertical-aware</strong>: if the product has an accessory list for the shopper’s current context (say, masonry), that list is shown instead of the default (see <a href="#context">§6</a>).</li>
+        <li>When there is no vertical list, the default is generated from the accessory products’ <strong>Compatible With</strong> and <strong>Associated Tool / Model</strong> fields. Juicebox currently runs the reconciliation after those fields change; this is not a second list for merchants to maintain.</li>
         <li><strong>Spare parts never appear here</strong> — anything categorised <code>spares-consumables</code> is excluded from the PDP by design.</li>
       </ul>
 
@@ -244,7 +240,7 @@
           <rect x="30" y="64" width="300" height="30" rx="3" fill="var(--line-soft)"/>
           <text x="42" y="84" font-size="12" fill="var(--body)">Power Carving Unit — $429.00</text>
           <rect x="30" y="102" width="300" height="30" rx="3" fill="var(--accent-soft)"/>
-          <text x="42" y="122" font-size="12" fill="var(--accent-dark)">+ Accessory bundle — its own price</text>
+          <text x="42" y="122" font-size="12" fill="var(--body)">+ Accessory bundle — its own price</text>
           <text x="30" y="160" font-size="12" font-weight="700" fill="var(--ok)">Cart: 2 lines, side by side</text>
           <!-- divider -->
           <line x1="360" y1="24" x2="360" y2="196" stroke="var(--line)"/>
@@ -255,7 +251,7 @@
           <text x="402" y="84" font-size="12" fill="var(--muted)" text-decoration="line-through">Power Carving Unit — $429.00</text>
           <line x1="390" y1="79" x2="690" y2="79" stroke="var(--danger)" stroke-width="1.5" opacity="0.6"/>
           <rect x="390" y="102" width="300" height="30" rx="3" fill="var(--accent-soft)"/>
-          <text x="402" y="122" font-size="12" fill="var(--accent-dark)">Bundle (tool included) — $590.50</text>
+          <text x="402" y="122" font-size="12" fill="var(--body)">Bundle (tool included) — $590.50</text>
           <text x="390" y="160" font-size="12" font-weight="700" fill="var(--ok)">Cart: 1 line — the bundle REPLACES the tool</text>
           <text x="390" y="182" font-size="11" fill="var(--muted)">The shopper is never charged for the tool twice.</text>
         </svg>
@@ -281,8 +277,8 @@
           <rect x="0" y="0" width="720" height="240" fill="#fff"/>
           <text x="30" y="34" font-size="12" font-weight="700" fill="var(--ink)">How the vertical is decided</text>
           <rect x="30" y="48" width="270" height="34" rx="3" fill="var(--accent-soft)"/>
-          <text x="45" y="70" font-size="11" fill="var(--accent-dark)">1. Collection route in the URL</text>
-          <text x="310" y="70" font-size="10" fill="var(--muted)">/collections/masonry-trade/products/…</text>
+          <text x="45" y="70" font-size="11" fill="var(--body)">1. Collection route in the URL</text>
+          <text x="310" y="70" font-size="10" fill="var(--muted)">/collections/masonry-and-trade/products/…</text>
           <rect x="30" y="92" width="270" height="34" rx="3" fill="var(--line-soft)"/>
           <text x="45" y="114" font-size="11" fill="var(--body)">2. else: the product’s primary vertical</text>
           <text x="310" y="114" font-size="10" fill="var(--muted)">set per product in admin</text>
@@ -321,16 +317,16 @@
           <defs><marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="var(--accent)"/></marker></defs>
           <text x="254" y="34" font-size="11" font-weight="700" fill="var(--ink)">Regional layers (each optional, per market)</text>
           <rect x="254" y="46" width="330" height="38" rx="3" fill="var(--accent-soft)"/>
-          <text x="266" y="62" font-size="11" font-weight="700" fill="var(--accent-dark)">Availability — Markets / Catalogs toggles</text>
+          <text x="266" y="62" font-size="11" font-weight="700" fill="var(--body)">Availability — Markets / Catalogs toggles</text>
           <text x="266" y="77" font-size="10" fill="var(--muted)">sell in AU + US only, hide from DE…</text>
           <rect x="254" y="92" width="330" height="38" rx="3" fill="var(--accent-soft)"/>
-          <text x="266" y="108" font-size="11" font-weight="700" fill="var(--accent-dark)">Price — catalog price lists</text>
+          <text x="266" y="108" font-size="11" font-weight="700" fill="var(--body)">Price — catalog price lists</text>
           <text x="266" y="123" font-size="10" fill="var(--muted)">a different price for one market</text>
           <rect x="254" y="138" width="330" height="38" rx="3" fill="var(--accent-soft)"/>
-          <text x="266" y="154" font-size="11" font-weight="700" fill="var(--accent-dark)">Wording — Translate &amp; Adapt app</text>
+          <text x="266" y="154" font-size="11" font-weight="700" fill="var(--body)">Wording — Translate &amp; Adapt app</text>
           <text x="266" y="169" font-size="10" fill="var(--muted)">German translation, or reworded English for US / CA / UK</text>
           <rect x="254" y="184" width="330" height="38" rx="3" fill="var(--accent-soft)"/>
-          <text x="266" y="200" font-size="11" font-weight="700" fill="var(--accent-dark)">Custom sections — per-market metafields</text>
+          <text x="266" y="200" font-size="11" font-weight="700" fill="var(--body)">Custom sections — per-market metafields</text>
           <text x="266" y="215" font-size="10" fill="var(--muted)">story panels, description leads (…_us / _au / _ca / _de)</text>
           <path d="M584 125 h40" stroke="var(--accent)" stroke-width="2" marker-end="url(#arr2)"/>
           <rect x="624" y="90" width="80" height="70" rx="3" fill="var(--line-soft)" stroke="var(--line)"/>
@@ -369,7 +365,7 @@
       <p>Everything above is driven by product data — mostly metafields on the product, editable in Shopify admin. The load-bearing ones:</p>
       <table>
         <tr><th>Setting (metafield)</th><th>What it does</th></tr>
-        <tr><td><code>arbortech.related_accessories</code></td><td>Default Attachments &amp; Accessories list for the tool. Spares and consumables in it are filtered out.</td></tr>
+        <tr><td><code>arbortech.related_accessories</code> — generated internal fallback</td><td>Generated from <strong>Compatible With</strong> and <strong>Associated Tool / Model</strong>; it is not displayed as another list to edit. A populated vertical-content Accessories list overrides it, and spare-only products are excluded.</td></tr>
         <tr><td><code>arbt.works_best_products</code> — “Works best with (fallback)”</td><td>Last-resort list for the same rail, shown <em>as-is</em> (spares included). Only consulted when the vertical list, the filtered Related accessories and the section’s manual picks are all empty — which is how Power Chisel shows its oil and service kit.</td></tr>
         <tr><td><code>arbortech.vertical_woodworking / _masonry / _landscaping</code></td><td>Per-vertical content pack: description lead, image order, video, and its own <code>accessories</code> list.</td></tr>
         <tr><td><code>arbortech.primary_vertical</code></td><td>Fallback vertical when the shopper arrives without a journey.</td></tr>

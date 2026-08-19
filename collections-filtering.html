@@ -12,11 +12,6 @@
       --line: #e3e8ee;
       --line-soft: #eef2f6;
       --accent: #E87722;
-      /* Retired from index/sitemap/modules (brand rule: #E87722 only). Survives here
-         solely for the 9-12px SVG diagram labels below: brand orange scores 2.96:1 on
-         white where WCAG AA needs 4.5:1, this scores 4.76:1. Pending David's call on
-         re-colouring those labels to --body (9.85:1) — do not delete before then. */
-      --accent-dark: #b85710;
       --accent-soft: #fdf1e6;
       --ok: #1a7f4d;
       --ok-bg: #eef8f2;
@@ -140,20 +135,20 @@
 
       <h2 id="axes"><span class="num">1.</span> The two axes</h2>
       <p>Every listing on the store is built from two axes, and they do different jobs.</p>
-      <p><strong>Vertical</strong> — <code>power-carving</code>, <code>masonry-trade</code>, <code>outdoor-grounds-care</code>. This only narrows the product set. It never changes which filters exist.</p>
-      <p><strong>By Product</strong> (the bucket) — <code>power-tools</code>, <code>attachments-accessories</code>, <code>spare-parts-consumables</code>. This narrows the product set <em>and</em> decides which filter groups appear at all.</p>
-      <p>That asymmetry is the whole model. If a set of checkboxes you expected isn't on the page, the answer is almost always the bucket, not the vertical.</p>
+      <p><strong>Vertical</strong> — <code>woodworking</code>, <code>masonry</code>, <code>landscaping</code>. This only narrows the product set. It never changes which filters exist.</p>
+      <p><strong>By Product</strong> (the bucket) — <code>power-tools</code>, <code>attachments-accessories</code>, <code>spare-parts-consumables</code>. This also narrows the product set. Application Type, Compatible With and Associated Tool stay under this group on every listing; empty values disable rather than hiding the group.</p>
+      <p>Click a filter on and off. Checking a second box in the same set is additive. <strong>View all</strong> is the only exclusive control — it unclicks the rest of that set. Filter clicks stay on the page you are on; they do not send you to a different collection.</p>
 
       <div class="callout info">
         <p class="callout-title">Stored twice, on purpose</p>
-        <p>On a <strong>product</strong>, both axes are tags — that is what the smart-collection rules match on. On a <strong>collection</strong>, they are the metafields <code>arbt.vertical</code> and <code>arbt.bucket</code> — that is what tells the sidebar which radio button to pre-tick. The tags are the truth; the metafields describe the page.</p>
+        <p>On a <strong>product</strong>, both axes are tags — that is what the smart-collection rules match on. On a <strong>collection</strong>, they are the metafields <code>arbt.vertical</code> and <code>arbt.bucket</code> — that is what tells the sidebar which checkbox to pre-tick. The tags are the truth; the metafields describe the page.</p>
       </div>
 
       <h2 id="fields"><span class="num">2.</span> Product fields → sidebar</h2>
-      <p>Six fields feed three outcomes. Only one path changes the <em>shape</em> of the sidebar rather than its contents — it is drawn in orange.</p>
+      <p>Six fields feed three outcomes: which listings a product appears in, which sidebar checkboxes are pre-ticked, and which values inside the (always-present) metafield groups are available.</p>
 
       <figure class="diagram">
-        <svg viewBox="0 0 720 420" role="img" aria-label="Three bands showing how product tags and metafields produce three outcomes: which listings a product appears in, which sidebar radios are pre-ticked, and which filter groups render. The bucket path to filter visibility is highlighted in orange.">
+        <svg viewBox="0 0 720 420" role="img" aria-label="Three bands showing how product tags and metafields produce three outcomes: which listings a product appears in, which sidebar checkboxes are pre-ticked, and which values inside the filter groups are available.">
           <rect x="0" y="0" width="720" height="420" fill="#fff"/>
           <defs>
             <marker id="cf-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -198,14 +193,14 @@
           <text x="274" y="196" font-size="9.5" fill="var(--muted)">resolved once, per page</text>
           <line x1="454" y1="185" x2="482" y2="185" stroke="#1a2230" stroke-width="1.2" marker-end="url(#cf-ar)"/>
           <rect x="486" y="161" width="218" height="48" rx="3" fill="#fff" stroke="#1a2230" stroke-width="1.4"/>
-          <text x="498" y="181" font-size="10.5" font-weight="700" fill="var(--ink)">radios already ticked on load</text>
+          <text x="498" y="181" font-size="10.5" font-weight="700" fill="var(--ink)">checkboxes ticked on load</text>
           <text x="498" y="197" font-size="9.5" fill="var(--muted)">labels come from collection titles</text>
 
           <line x1="16" y1="246" x2="704" y2="246" stroke="var(--line)" stroke-width="1"/>
 
           <!-- band 3 -->
           <rect x="16" y="264" width="214" height="28" rx="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6"/>
-          <text x="28" y="282" font-size="10.5" font-weight="700" fill="var(--accent-dark)">the bucket now in play</text>
+          <text x="28" y="282" font-size="10.5" font-weight="700" fill="var(--body)">the bucket now in play</text>
 
           <rect x="16" y="316" width="214" height="24" rx="3" fill="#fff" stroke="var(--line)"/>
           <text x="28" y="332" font-size="9.5" fill="var(--ink)">arbortech.application_type</text>
@@ -218,8 +213,8 @@
           <line x1="232" y1="356" x2="258" y2="356" stroke="#1a2230" stroke-width="1.2" marker-end="url(#cf-ar)"/>
 
           <rect x="262" y="258" width="190" height="40" rx="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8"/>
-          <text x="274" y="275" font-size="10.5" font-weight="700" fill="var(--accent-dark)">facet visibility gate</text>
-          <text x="274" y="289" font-size="9.5" fill="var(--accent-dark)">one bucket, one set of groups</text>
+          <text x="274" y="275" font-size="10.5" font-weight="700" fill="var(--body)">value availability</text>
+          <text x="274" y="289" font-size="9.5" fill="var(--body)">empty values disable, groups stay</text>
 
           <rect x="262" y="336" width="190" height="40" rx="3" fill="var(--line-soft)" stroke="var(--line)"/>
           <text x="274" y="353" font-size="10.5" font-weight="700" fill="var(--ink)">the values inside them</text>
@@ -229,50 +224,50 @@
           <polyline points="454,356 468,356 468,300 482,300" fill="none" stroke="#1a2230" stroke-width="1.2" marker-end="url(#cf-ar)"/>
 
           <rect x="486" y="254" width="218" height="62" rx="3" fill="#fff" stroke="var(--accent)" stroke-width="1.8"/>
-          <text x="498" y="274" font-size="10.5" font-weight="700" fill="var(--accent-dark)">which checkbox groups exist</text>
+          <text x="498" y="274" font-size="10.5" font-weight="700" fill="var(--body)">which values are available</text>
           <text x="498" y="291" font-size="9.5" fill="var(--muted)">…and whether this product</text>
           <text x="498" y="305" font-size="9.5" fill="var(--muted)">survives being filtered by them</text>
         </svg>
-        <figcaption><strong>The orange path is the load-bearing one.</strong> Change a product's vertical tag and it moves between listings. Change its bucket tag and the sidebar on those listings gains or loses whole groups of checkboxes. The three metafields only ever fill in options inside a group the bucket has already decided to show.</figcaption>
+        <figcaption><strong>Membership is still tag-driven.</strong> Change a product's vertical tag and it moves between listings. Change its bucket tag and it moves between Power Tools / Attachments / Spare Parts. The three metafields fill in options under By product on every listing; a blank value disables that option rather than hiding the group.</figcaption>
       </figure>
 
       <h2 id="collections"><span class="num">3.</span> The collections</h2>
       <p>Ten collections, nine of them rule-based. Three carry a vertical, two carry only a bucket, four carry both, and one is hand-picked with no rule at all.</p>
 
       <figure class="diagram">
-        <svg viewBox="0 0 720 470" role="img" aria-label="Diagram of the ten collections: three vertical hubs with their bucket sub-collections, Outdoor Grounds Care having none, plus three collections outside the verticals, one of which shows no filters.">
+        <svg viewBox="0 0 720 470" role="img" aria-label="Diagram of the ten collections: three vertical hubs with their bucket sub-collections, Landscaping having none, plus three collections outside the verticals, one of which shows no filters.">
           <rect x="0" y="0" width="720" height="470" fill="#fff"/>
 
           <text x="16" y="20" font-size="9" font-weight="700" letter-spacing="1.1" fill="var(--muted)">THE THREE VERTICALS</text>
           <line x1="16" y1="28" x2="704" y2="28" stroke="var(--line)" stroke-width="1"/>
 
-          <!-- Power Carving -->
+          <!-- Woodworking -->
           <rect x="16" y="42" width="248" height="50" rx="3" fill="#fff" stroke="#1a2230" stroke-width="1.5"/>
-          <text x="30" y="63" font-size="12" font-weight="700" fill="var(--ink)">Power Carving</text>
-          <text x="30" y="79" font-size="9" fill="var(--muted)">power-carving · own template</text>
+          <text x="30" y="63" font-size="12" font-weight="700" fill="var(--ink)">Woodworking</text>
+          <text x="30" y="79" font-size="9" fill="var(--muted)">woodworking · tag woodworking</text>
           <polyline points="264,67 282,67 282,54 300,54" fill="none" stroke="var(--line)" stroke-width="1.2"/>
           <polyline points="282,67 282,86 300,86" fill="none" stroke="var(--line)" stroke-width="1.2"/>
           <rect x="300" y="42" width="404" height="24" rx="3" fill="var(--line-soft)" stroke="var(--line)"/>
-          <text x="312" y="58" font-size="10" fill="var(--ink)">Power Carving — Power Tools</text>
+          <text x="312" y="58" font-size="10" fill="var(--ink)">Woodworking — Power Tools</text>
           <rect x="300" y="74" width="404" height="24" rx="3" fill="var(--line-soft)" stroke="var(--line)"/>
-          <text x="312" y="90" font-size="10" fill="var(--ink)">Power Carving — Attachments &amp; Accessories</text>
+          <text x="312" y="90" font-size="10" fill="var(--ink)">Woodworking — Attachments &amp; Accessories</text>
 
           <!-- Construction & Restoration -->
           <rect x="16" y="118" width="248" height="50" rx="3" fill="#fff" stroke="#1a2230" stroke-width="1.5"/>
-          <text x="30" y="139" font-size="12" font-weight="700" fill="var(--ink)">Construction &amp; Restoration</text>
-          <text x="30" y="155" font-size="9" fill="var(--muted)">construction-restoration · tag masonry-trade</text>
+          <text x="30" y="139" font-size="12" font-weight="700" fill="var(--ink)">Masonry &amp; Trade</text>
+          <text x="30" y="155" font-size="9" fill="var(--muted)">masonry-and-trade · tag masonry</text>
           <polyline points="264,143 282,143 282,130 300,130" fill="none" stroke="var(--line)" stroke-width="1.2"/>
           <polyline points="282,143 282,162 300,162" fill="none" stroke="var(--line)" stroke-width="1.2"/>
           <rect x="300" y="118" width="404" height="24" rx="3" fill="var(--line-soft)" stroke="var(--line)"/>
-          <text x="312" y="134" font-size="10" fill="var(--ink)">Masonry / Trade — Power Tools</text>
+          <text x="312" y="134" font-size="10" fill="var(--ink)">Masonry &amp; Trade — Power Tools</text>
           <rect x="300" y="150" width="404" height="24" rx="3" fill="var(--line-soft)" stroke="var(--line)"/>
-          <text x="312" y="166" font-size="10" fill="var(--ink)">Masonry / Trade — Attachments &amp; Accessories</text>
-          <text x="300" y="190" font-size="9" fill="var(--accent-dark)">both still use masonry-trade-… web addresses, not construction-restoration</text>
+          <text x="312" y="166" font-size="10" fill="var(--ink)">Masonry &amp; Trade — Attachments &amp; Accessories</text>
+          <text x="300" y="190" font-size="9" fill="var(--body)">handles use masonry-and-trade-…; the tag is masonry</text>
 
-          <!-- Outdoor Grounds Care -->
+          <!-- Landscaping -->
           <rect x="16" y="212" width="248" height="50" rx="3" fill="#fff" stroke="#1a2230" stroke-width="1.5"/>
-          <text x="30" y="233" font-size="12" font-weight="700" fill="var(--ink)">Outdoor Grounds Care</text>
-          <text x="30" y="249" font-size="9" fill="var(--muted)">outdoor-grounds-care · own template</text>
+          <text x="30" y="233" font-size="12" font-weight="700" fill="var(--ink)">Landscaping</text>
+          <text x="30" y="249" font-size="9" fill="var(--muted)">landscaping · tag landscaping</text>
           <polyline points="264,237 282,237 300,237" fill="none" stroke="var(--line)" stroke-width="1.2" stroke-dasharray="4 3"/>
           <rect x="300" y="225" width="404" height="24" rx="3" fill="#fff" stroke="var(--line)" stroke-dasharray="4 3"/>
           <text x="312" y="241" font-size="10" fill="var(--muted)">no sub-collections exist for this vertical</text>
@@ -295,7 +290,7 @@
           <line x1="16" y1="398" x2="704" y2="398" stroke="var(--line)" stroke-width="1"/>
           <text x="16" y="420" font-size="11" font-weight="700" fill="var(--ink)">The indenting above is a naming convention, nothing more.</text>
           <text x="16" y="437" font-size="9.5" fill="var(--muted)">Shopify collections are flat — there is no parent/child relationship in the data.</text>
-          <text x="16" y="452" font-size="9.5" fill="var(--muted)">“Power Carving — Power Tools” is simply a two-tag rule plus a matching title.</text>
+          <text x="16" y="452" font-size="9.5" fill="var(--muted)">“Woodworking — Power Tools” is simply a two-tag rule plus a matching title.</text>
           <text x="16" y="464" font-size="9.5" fill="var(--muted)">Deleting a hub does not touch its “children”, and renaming one does not rename them.</text>
         </svg>
         <figcaption><strong>Dashed connectors show which collections read as a set to a shopper</strong> — not a structure Shopify enforces. The dashed box bottom-right is the one collection that shows no filters, because it uses a bespoke hub layout instead of the standard collection layout.</figcaption>
@@ -309,32 +304,32 @@
           </thead>
           <tbody>
             <tr>
-              <td>Power Carving</td><td><code>power-carving</code></td><td>Power Carving</td>
-              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296329838663">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/power-carving?preview_theme_id=143813640263">Preview</a></td>
+              <td>Woodworking</td><td><code>woodworking</code></td><td>Woodworking</td>
+              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296329838663">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/woodworking?preview_theme_id=143813640263">Preview</a></td>
             </tr>
             <tr>
-              <td>Power Carving — Power Tools</td><td><code>power-carving-power-tools</code></td><td>Default</td>
-              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296329904199">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/power-carving-power-tools?preview_theme_id=143813640263">Preview</a></td>
+              <td>Woodworking — Power Tools</td><td><code>woodworking-power-tools</code></td><td>Default</td>
+              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296329904199">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/woodworking-power-tools?preview_theme_id=143813640263">Preview</a></td>
             </tr>
             <tr>
-              <td>Power Carving — Attachments &amp; Accessories</td><td><code>power-carving-attachments-accessories</code></td><td>Default</td>
-              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296329936967">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/power-carving-attachments-accessories?preview_theme_id=143813640263">Preview</a></td>
+              <td>Woodworking — Attachments &amp; Accessories</td><td><code>woodworking-attachments-accessories</code></td><td>Default</td>
+              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296329936967">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/woodworking-attachments-accessories?preview_theme_id=143813640263">Preview</a></td>
             </tr>
             <tr>
-              <td>Construction &amp; Restoration</td><td><code>construction-restoration</code></td><td>Masonry / Trade</td>
-              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296329969735">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/construction-restoration?preview_theme_id=143813640263">Preview</a></td>
+              <td>Masonry &amp; Trade</td><td><code>masonry-and-trade</code></td><td>Masonry &amp; Trade</td>
+              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296329969735">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/masonry-and-trade?preview_theme_id=143813640263">Preview</a></td>
             </tr>
             <tr>
-              <td>Masonry / Trade — Power Tools</td><td><code>masonry-trade-power-tools</code></td><td>Default</td>
-              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296330002503">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/masonry-trade-power-tools?preview_theme_id=143813640263">Preview</a></td>
+              <td>Masonry &amp; Trade — Power Tools</td><td><code>masonry-and-trade-power-tools</code></td><td>Default</td>
+              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296330002503">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/masonry-and-trade-power-tools?preview_theme_id=143813640263">Preview</a></td>
             </tr>
             <tr>
-              <td>Masonry / Trade — Attachments &amp; Accessories</td><td><code>masonry-trade-attachments-accessories</code></td><td>Default</td>
-              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296330035271">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/masonry-trade-attachments-accessories?preview_theme_id=143813640263">Preview</a></td>
+              <td>Masonry &amp; Trade — Attachments &amp; Accessories</td><td><code>masonry-and-trade-attachments-accessories</code></td><td>Default</td>
+              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296330035271">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/masonry-and-trade-attachments-accessories?preview_theme_id=143813640263">Preview</a></td>
             </tr>
             <tr>
-              <td>Outdoor Grounds Care</td><td><code>outdoor-grounds-care</code></td><td>Outdoor Grounds Care</td>
-              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296559837255">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/outdoor-grounds-care?preview_theme_id=143813640263">Preview</a></td>
+              <td>Landscaping</td><td><code>landscaping</code></td><td>Landscaping</td>
+              <td><a href="https://admin.shopify.com/store/arbortechtools/collections/296559837255">Admin</a> · <a href="https://arbortechtools.myshopify.com/collections/landscaping?preview_theme_id=143813640263">Preview</a></td>
             </tr>
             <tr>
               <td>Power Tools</td><td><code>power-tools</code></td><td>Default</td>
@@ -358,36 +353,20 @@
       </div>
 
       <h2 id="matrix"><span class="num">4.</span> Which filters appear where</h2>
-      <p>Two radio groups are Arbortech's own; three checkbox groups are Shopify's native metafield filters, gated by bucket. Read a row as “land on this kind of page, see these controls”.</p>
+      <p>Every filterable listing uses the same sidebar. Two additive checkbox groups are Arbortech's own (View all unclicks the rest of that set; everything else stacks); three checkbox groups are Shopify's native metafield filters, nested under By product, and those also allow more than one value. Search is the exception: it has the three metafields and no Product categories / By product groups.</p>
 
       <div class="scroller">
         <table class="matrix">
           <thead>
             <tr>
-              <th>Page</th><th>Vertical</th><th>By Product</th><th>Tool family</th>
+              <th>Page</th><th>Product categories</th><th>By product</th><th>Tool family</th>
               <th>Application Type</th><th>Compatible With</th><th>Associated Tool</th><th>Product Type</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Vertical hub<span class="qual">Power Carving, Construction &amp; Restoration, Outdoor Grounds Care</span></td>
-              <td class="yes">●</td><td class="yes">●</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
-            </tr>
-            <tr>
-              <td>Vertical + Power Tools</td>
-              <td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
-            </tr>
-            <tr>
-              <td>Vertical + Attachments &amp; Accessories</td>
-              <td class="yes">●</td><td class="yes">●</td><td class="no">—</td><td class="yes">●</td><td class="yes">●</td><td class="no">—</td><td class="no">—</td>
-            </tr>
-            <tr>
-              <td>Power Tools<span class="qual">whole catalogue</span></td>
-              <td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
-            </tr>
-            <tr>
-              <td>Spare Parts &amp; Consumables<span class="qual">whole catalogue</span></td>
-              <td class="yes">●</td><td class="yes">●</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">●</td><td class="no">—</td>
+              <td>Any filterable collection<span class="qual">hubs, sub-collections, Shop All, Power Tools, Spare Parts</span></td>
+              <td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="no">—</td>
             </tr>
             <tr>
               <td>Spare Parts, Blades &amp; Accessories<span class="qual">bespoke hub layout</span></td>
@@ -403,14 +382,14 @@
 
       <h3>Three things this table is telling you</h3>
       <ul>
-        <li><strong>Tool family nests inside Power Tools.</strong> The family options — Mini Grinder, ALLSAW, AS200X, BA200X, AS175, Power Carving Unit, Power Chisel, TurboPlane, Standard Angle Grinder — only unfold once <em>Power Tools</em> is the selected bucket. All nine currently have products behind them.</li>
-        <li><strong>Search deliberately skips the gate.</strong> All three metafield filters appear together there, and the two Arbortech radio groups do not appear at all — those are collection-page controls.</li>
-        <li><strong>Product Type is retired everywhere</strong>, search included. By Product replaced it. Switching it back on in Search &amp; Discovery will not bring it back.</li>
+        <li><strong>Tool family sits under Power Tools</strong> and stays there. The nine families — Mini Grinder, ALLSAW, AS200X, BA200X, AS175, Power Carving Unit, Power Chisel, TurboPlane, Standard Angle Grinder — do not remount when you click around. A family with no products in the current view is disabled.</li>
+        <li><strong>Search deliberately skips the taxonomy groups.</strong> The three metafield filters appear as top-level accordions there. Product categories and By product are collection-page controls.</li>
+        <li><strong>Product Type is retired everywhere</strong>, search included. By product replaced it. Switching it back on in Search &amp; Discovery will not bring it back.</li>
       </ul>
 
       <div class="callout info">
         <p class="callout-title">Two switches, not one</p>
-        <p>A filter has to be switched on in the <strong>Search &amp; Discovery</strong> app to exist at all. The bucket only decides whether an already-enabled filter is shown on a given page — it cannot bring back one that Search &amp; Discovery has turned off.</p>
+        <p>A metafield filter has to be switched on in the <strong>Search &amp; Discovery</strong> app to exist at all. The theme always mounts Application Type, Compatible With and Associated Tool under By product; turning one off in the app is what removes it, not the collection you landed on.</p>
       </div>
 
       <h2 id="gotchas"><span class="num">5.</span> Three things that catch people out</h2>
@@ -428,8 +407,10 @@
       <div class="callout warn">
         <p class="callout-title">Worth knowing before you trust older notes</p>
         <ul>
-          <li>The masonry hub is now titled <strong>Construction &amp; Restoration</strong> and sits at <code>construction-restoration</code>, but its two sub-collections still use <code>masonry-trade-…</code> web addresses and the underlying tag is still <code>masonry-trade</code>. Title, web address and tag are three different things here — do not assume one from another.</li>
-          <li><strong>Filter labels follow the collection title</strong>, so the Vertical options now read Power Carving / Construction &amp; Restoration / Outdoor Grounds Care. Rename a hub collection and you rename a filter option. Attachments &amp; Accessories has no hub collection of its own, so its label is fixed in the theme.</li>
+          <li>The masonry hub is titled <strong>Masonry &amp; Trade</strong> and sits at <code>masonry-and-trade</code>. Its two sub-collections use <code>masonry-and-trade-…</code> web addresses; the underlying tag is <code>masonry</code>. Title, web address and tag are separate fields even when their wording now aligns — do not infer one from another.</li>
+          <li><strong>Four listing templates, one listing chrome.</strong> Woodworking, Masonry &amp; Trade and Landscaping each have their own layout so extra unique sections can be added in the theme editor on that vertical only. Title, image and intro still come from the collection in admin — do not paste the same paragraph into a theme section. Every other filterable collection uses Default collection. Spare Parts, Blades &amp; Accessories is the accessory hub (no filters).</li>
+          <li><strong>The sidebar no longer rebuilds when you click a filter.</strong> Product categories and By product stay put. Application Type, Compatible With and Associated Tool sit under By product on every listing. Click a filter on and off; View all unclicks the rest of that set; everything else is additive. Clicks stay on the collection you opened — they do not send you to Shop All.</li>
+          <li><strong>Filter labels follow the collection title</strong>, so the Product categories options read Woodworking / Masonry &amp; Trade / Landscaping. Rename a hub collection and you rename a filter option. Attachments &amp; Accessories has no hub collection of its own, so its label is fixed in the theme.</li>
           <li>The retired <code>accessories</code> tag is present again, on exactly the same products as <code>attachments-accessories</code> with no difference between them. Nothing reads it — no collection rule, no filter — so it is harmless today. It is also the same shape as the fault that once split one filter across two look-alike options: edit one tag without the other and they will drift apart.</li>
           <li><strong>Spare Parts, Blades &amp; Accessories is published</strong> to the Online Store now. Older notes record it returning “page not found”; that is no longer true.</li>
         </ul>
@@ -450,9 +431,9 @@
         <dd>The Search &amp; Discovery app, under <a href="https://admin.shopify.com/store/arbortechtools/apps">Apps</a>. Turning one off removes it from every page, search included.</dd>
 
         <dt>Which layout a collection uses</dt>
-        <dd>The <em>Theme template</em> selector on the collection page in admin. Switching a collection onto the accessory hub layout removes its filters entirely.</dd>
+        <dd>The <em>Theme template</em> selector on the collection page in admin. The three vertical hubs use their named layouts (Woodworking, Masonry &amp; Trade, Landscaping). Other filterable listings use Default collection. Switching a collection onto the accessory hub layout removes its filters entirely.</dd>
 
-        <dt>Which radio is pre-ticked on a page</dt>
+        <dt>Which checkbox is pre-ticked on a page</dt>
         <dd>The collection's own <code>arbt.vertical</code> and <code>arbt.bucket</code> metafields, edited on the collection in admin.</dd>
       </dl>
 
@@ -460,8 +441,8 @@
       <table>
         <thead><tr><th>What you're seeing</th><th>Where to look first</th></tr></thead>
         <tbody>
-          <tr><td>A filter group is missing from a page</td><td>Check the bucket, not the vertical. Then check the filter is still switched on in Search &amp; Discovery.</td></tr>
-          <tr><td>A radio isn't pre-ticked when it should be</td><td>The collection is missing <code>arbt.vertical</code> or <code>arbt.bucket</code>. Nothing errors when it is absent — the sidebar just sits neutral.</td></tr>
+          <tr><td>A filter group is missing from a page</td><td>The page is on the accessory hub layout (no filters), or the filter is switched off in Search &amp; Discovery. The three vertical hubs and Default collection all show the same filter groups.</td></tr>
+          <tr><td>A checkbox isn't pre-ticked when it should be</td><td>The collection is missing <code>arbt.vertical</code> or <code>arbt.bucket</code>. Nothing errors when it is absent — the sidebar just sits neutral.</td></tr>
           <tr><td>A product disappears when a box is ticked</td><td>It has no value for that filter. Fill the field in on the product.</td></tr>
           <tr><td>Two filter options look identical</td><td>Two near-identical values in the choice list, or a stale tag sitting alongside its replacement. Merge them in Settings → Custom data.</td></tr>
           <tr><td>The page says “not found” but admin looks fine</td><td>Not published to the Online Store sales channel.</td></tr>

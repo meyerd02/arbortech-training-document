@@ -77,7 +77,7 @@ GROUP_NOTES = {
     'Artist profile pages': 'One per artist, all on the <code>artist</code> template. The portrait, pull-quote, tools and techniques come from artist metafields – those are a call-us item. The bio is different: it is the page\'s own rich-text Content box, so artist bios are yours to edit (Manual §3.1).',
     'Tool resource pages': 'One per tool, on the <code>arbt-tool-resource</code> template – manuals, videos and FAQs pulled from structured data. The Content box is not rendered on these pages: editing it changes nothing on the storefront.',
     'Power-carving landing pages': 'Bespoke designed template per tool – layout lives in the theme, call us for changes. The Content box is not rendered on these pages: editing it changes nothing on the storefront.',
-    'Vertical landing pages': 'The three audience gateways (Woodworking / Masonry / Landscaping) – bespoke templates. The Content box is not rendered on these pages: editing it changes nothing on the storefront.',
+    'Vertical landing pages': 'The three audience gateways (Woodworking / Masonry &amp; Trade / Landscaping) – bespoke templates. The Content box is not rendered on these pages: editing it changes nothing on the storefront.',
     'Shop-by-project pages': 'Project-led shopping pages, one bespoke template each. The Content box is not rendered on these pages: editing it changes nothing on the storefront.',
     'One-off designed pages': 'Each has its own designed template (About, Support, Inspiration, Events, Stories, etc.), built from theme sections. The Content box is not rendered on these pages: editing it changes nothing on the storefront – ask us for text or layout changes. The one exception is the German Widerrufsrecht page, which is entirely its Content box.',
 }
@@ -112,7 +112,7 @@ for c in cols['collections']['nodes']:
     sitemap_body += f"          <tr><td>{esc(c['title'])}</td><td><code>/collections/{esc(c['handle'])}</code></td><td>{c['productsCount']['count']}</td></tr>\n"
 sitemap_body += f"""        </tbody>
       </table>
-      <p>Plus <code>/collections/all</code> (Shop All – every active product). The vertical collections (Woodworking, Masonry&nbsp;/&nbsp;Trade, Outdoor Grounds Care) are <em>smart</em> collections driven by tags – products join them via tagging, not manual lists (Manual §2.4).</p>
+      <p>Plus <code>/collections/all</code> (Shop All – every active product). The vertical collections (Woodworking, Masonry &amp; Trade, Landscaping) are <em>smart</em> collections driven by tags – products join them via tagging, not manual lists (Manual §2.4).</p>
 
       <h2 id="blog">3. The News blog</h2>
       <p><code>/blogs/news</code> – <strong>{sum(1 for p in pages if False) or 65} articles</strong>, including the designed story articles and their per-market copies (handles prefixed <code>story-au-</code>, <code>story-us-</code>, <code>story-uk-</code>, <code>story-ca-</code>, <code>story-de-</code>). See Manual §3.3 for what is and isn't editable on story articles.</p>

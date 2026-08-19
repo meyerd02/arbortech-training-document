@@ -24,7 +24,7 @@ EXTRA_CSS = """
     .check-item label { cursor: pointer; }
     .check-item input:checked + label { color: var(--muted); text-decoration: line-through; text-decoration-color: rgba(232,119,34,.55); }
     ul.check-list { padding-left: 0.2em; border-left: 3px solid var(--accent); padding-left: 1em; margin: 0.8em 0 1.6em; }
-    .test-head { color: var(--accent-dark); font-weight: 700; margin: 1.3em 0 0.2em; }
+    .test-head { color: var(--body); font-weight: 700; margin: 1.3em 0 0.2em; }
     .script-quote { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 0.8em 1.1em; margin: 1em 0; border-radius: 0 6px 6px 0; }
     .reset-bar { text-align: right; margin: 0.5em 0 1.5em; }
     .reset-bar button { font: inherit; font-size: 0.8em; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 6px; padding: 0.35em 0.8em; cursor: pointer; }

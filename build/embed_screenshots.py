@@ -48,11 +48,11 @@ FIGURES = [
 
     ("collections-list", "collections-list.jpg",
      "<li><strong>Automated collection</strong> – rules (e.g. tag contains <code>power-tools</code>) pull products in automatically. Most of your shop collections are automated, driven by <strong>tags</strong> – so tagging a product correctly is how it lands in the right place.</li>\n      </ul>",
-     "<strong>Products → Collections.</strong> The Conditions column shows which collections are automated (e.g. “Tag includes masonry-trade”) – the two Spare Parts collections at the top with no conditions are manual."),
+     "<strong>Products → Collections.</strong> The Conditions column shows which collections are automated (e.g. “Tag includes masonry”) – the two Spare Parts collections at the top with no conditions are manual."),
 
     ("collection-detail", "collection-detail.jpg",
      None,  # placed immediately after collections-list figure
-     "Inside the Woodworking collection: the rule (<em>Tag includes power-carving</em>, top right) pulls the 20 products in automatically. The description and search-engine listing are edited here too."),
+     "Inside the Woodworking collection: the rule (<em>Tag includes woodworking</em>, top right) pulls the products in automatically. The description and search-engine listing are edited here too."),
 
     ("pages-list", "pages-list.jpg",
      "<p><strong>Online Store → Pages</strong> (also under Content → Pages). This is where About, Contact, Support, Sustainability, and the vertical pages (Woodworking, Masonry, Landscaping), Artists &amp; Makers, Project Stories, How-to Guides and Competitions live. The <a href=\"sitemap.html\"><strong>Sitemap</strong></a> tab lists every page on the site, grouped by how editable it is – check there before diving into an unfamiliar page.</p>",

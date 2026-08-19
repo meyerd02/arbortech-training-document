@@ -788,9 +788,6 @@
   "used_in": [
    "templates/blog.json",
    "templates/collection.arbt-accessory-hub.json",
-   "templates/collection.arbt-masonry-trade.json",
-   "templates/collection.arbt-outdoor-grounds-care.json",
-   "templates/collection.arbt-power-carving.json",
    "templates/collection.json",
    "templates/page.arbt-power-carve-ball-gouge.json",
    "templates/page.arbt-power-carve-contour-sander.json",
@@ -1190,9 +1187,6 @@
   ],
   "blocks": [],
   "used_in": [
-   "templates/collection.arbt-masonry-trade.json",
-   "templates/collection.arbt-outdoor-grounds-care.json",
-   "templates/collection.arbt-power-carving.json",
    "templates/index.json",
    "templates/page.find-a-retailer.json",
    "templates/page.inspiration.json",
@@ -1209,13 +1203,18 @@
  {
   "file": "arb-events-calendar.liquid",
   "type": "arb-events-calendar",
-  "name": "Events Calendar",
+  "name": "Events",
   "presets": true,
   "settings": [
    {
     "id": "section_spacing",
     "type": "select",
     "label": "Padding Top"
+   },
+   {
+    "id": "display_mode",
+    "type": "select",
+    "label": "Display"
    },
    {
     "id": "eyebrow",
@@ -1260,7 +1259,12 @@
    {
     "id": "no_events_text",
     "type": "text",
-    "label": "No events text"
+    "label": "Custom no events text"
+   },
+   {
+    "id": "show_empty_state",
+    "type": "checkbox",
+    "label": "Show message when there are no upcoming events"
    },
    {
     "id": "show_location",
@@ -2853,9 +2857,6 @@
   "blocks": [],
   "used_in": [
    "templates/collection.arbt-accessory-hub.json",
-   "templates/collection.arbt-masonry-trade.json",
-   "templates/collection.arbt-outdoor-grounds-care.json",
-   "templates/collection.arbt-power-carving.json",
    "templates/collection.json",
    "templates/page.arbt-power-carve-ball-gouge.json",
    "templates/page.arbt-power-carve-contour-sander.json",
@@ -6318,9 +6319,6 @@
    }
   ],
   "used_in": [
-   "templates/collection.arbt-masonry-trade.json",
-   "templates/collection.arbt-outdoor-grounds-care.json",
-   "templates/collection.arbt-power-carving.json",
    "templates/collection.json"
   ],
   "custom": false,
